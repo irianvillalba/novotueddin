@@ -53,6 +53,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('cadastro', {
     url: '/cadastro',
     templateUrl: 'templates/cadastro.html'
+  })
+
+.state('match1', {
+    url: '/match1',
+    templateUrl: 'templates/match1.html'
+  })
+  
+.state('match2', {
+    url: '/match2',
+    templateUrl: 'templates/match2.html'
   });
 
   // if none of the above states are matched, use this as the fallback
