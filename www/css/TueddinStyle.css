@@ -166,9 +166,9 @@
     margin-right:5px;
 }
 
-.marginlocalizacao2{
+/*.marginlocalizacao2{
     margin-left:5px;
-}
+}*/
 
 .selecao1{
     border-style:none; 
@@ -323,7 +323,10 @@
     padding-top: 6.5%; 
     padding-bottom: 6.5%; 
     padding-left:0;
-    min-width:150px;
+}
+
+.colsexoidade{
+    margin:0 8;
 }
 
 .cadastrobotao{
@@ -363,6 +366,7 @@
     border-style: none;
     border-color: transparent;
     border-image: none;
+    background-color: transparent;
     background-color: transparent;
 }*/
 
@@ -576,11 +580,10 @@
     z-index:2;
     top:0;
     left:20%;
-    background:-webkit-radial-gradient(circle, black 60%, rgba(255, 0, 0, 0) 99%);
-    
+    background:-webkit-radial-gradient(circle, black 60%, rgba(255, 0, 0, 0) 99%);    
 }
 
-    .overlay:hover{
+    .overlay.activated{
         opacity:0;
         content:;
         position: absolute;
@@ -593,7 +596,7 @@
         top:0;
         left:20%;
         color:transparent;
-        text-decoration: none;
+        text-decoration: none;        
     }
 
 .overlaytext{
@@ -608,10 +611,10 @@
     opacity:1;
     top:0%;
     left:1%;
-    font-size:14px;
+    font-size:14px;    
 }
 
-    .overlaytext:hover{
+    .overlaytext.activated{
         opacity:0;
         content:;
         padding:0;
@@ -624,7 +627,7 @@
         z-index:1;  
         top:0%;
         left:1%;
-        font-size:14px;
+        font-size:14px;        
     }
 
 .overlayimg{
@@ -635,7 +638,7 @@
     height:10px;
 }
 
-.botaoImg{
+.botaoImgperfil{
     text-align:center;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -983,6 +986,14 @@ font-family: "Tueddin";
         padding-bottom: 5%;
         padding-top: 5%;
     }
+    
+    .inputsexoidade {
+        padding-top: 6.5%;
+        padding-bottom: 6.5%;
+        padding-left: 0;
+    
+    }
+    
     
 }
 
