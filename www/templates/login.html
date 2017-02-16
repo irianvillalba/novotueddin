@@ -1,47 +1,49 @@
  <ion-view view-title="login" ng-controller="loginCtrl">
-        <ion-content  class="bckground">
-            <div class="row">
-<!--logo-->
-                <div class="col col-center col-100 logo">
-                    <img src="img/tueddinlogo.png">
+        <ion-content  class="bckground fontetueddin">
+            
+<!--logo--> 
+            <div class="row">               
+                <div class="col col-center col-100 logo ">
+                    <img src="img/tueddinlogo.png" class="logocadastro">
                 </div>
-
-            </div>
-<!--facebook-->
+                
+            </div>        
+<!--facebook-->    
             <div class="row">
                 <div class="col"></div>
+            <div class="col col-75">    								
+					<button class="button button-full icon-left ion-social-facebook login botaofb" ui-sref="cadastro" ng-click="loginFacebook()">Entrar com Facebook</button>				             
+            </div> 
+                <div class="col"></div>
+          </div>
+          
+          <div class="row">
+              <div class="col"></div>
+<!--twitter-->               
             <div class="col col-75">
-					<button class="button button-full icon-left ion-social-facebook login" style="opacity:1.0; background-color: #3b5998; color:white; padding-left:7%" ng-click="loginFacebook()">Entrar com Facebook</button>
-            </div>
-                <div class="col"></div>
-          </div>
-
-          <div class="row">
-              <div class="col"></div>
-<!--twitter-->
-            <!--<div class="col col-75">
-                <button class="button button-full icon-left ion-social-twitter login" style="opacity:1.0; background-color: #00aced; color:white;" ng-click="loginTwitter()">Entrar com Twitter</button>
+                <button class="button button-full icon-left ion-social-twitter login botaotw"  ui-sref="mainmenu">Entrar com Twitter</button>
             </div>
               <div class="col"></div>
-          </div>
-
+          </div> 
+          
           <div class="row">
-              <div class="col"></div>-->
-
-<!--googleplus-->
-            <!--<div class="col col-75">
-                <button class="button button-full icon-left ion-social-googleplus login" style="opacity:1.0; background-color: #DD4B39; color:white;" ng-click="loginGoogle()">Entrar com Google+</button>
-            </div>-->
               <div class="col"></div>
-          </div>
-
+              
+<!--googleplus--> 
+            <div class="col col-75">
+                <button class="button button-full icon-left ion-social-googleplus login botaogplus" ui-sref="mainmenu">Entrar com Google+</button>
+            </div>
+              <div class="col"></div>
+          </div> 
+            
             <br>
-
+        
             <div class="row">
                 <div class="col"></div>
-<!--politica de privacidade-->
+                    
+<!--politica de privacidade--> 
                 <div class="col col-75">
-                    <p class="textLogin">Não postamos nada no Facebook, Twitter e Google+. Ao continuar, você concorda com nossos <span style="text-decoration:underline; text-decoration-color:white;" href="">Termos de serviço e Política de privacidade.</span></p>
+                    <p class="textLogin">Não postamos nada no Facebook, Twitter e Google+. Ao continuar, você concorda com nossos <span class="textolink" href="">Termos de serviço e Política de privacidade.</span></p>
                 </div>
                 <div class="col"></div>
             </div>

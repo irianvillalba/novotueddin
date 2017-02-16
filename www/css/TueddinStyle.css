@@ -1,383 +1,1140 @@
-/* Empty. Add your own CSS if you like */
+/*--------------------------------------Geral*/
 .bckground{
-  text-align:center;
-  color:#161820;
-  background-color: #161820;
-}
-
-.logo{
-  height:28%;
-  margin-top:25%;
-  opacity:0.9;
-  background-repeat: no-repeat;
+    text-align:center;
+    color:#161820;
+    background-color: #161820;
 }
 
 .bgmain{
-  background-color:#161820;
-  color:#161820;
+    background-color:#161820;
+    color:#161820;    
 }
+
 
 .bgconfig{
-  background-color:#F6F6F6;
-  color:#F6F6F6;
+    background-color:#F6F6F6;
+    color:#F6F6F6;
 }
 
-.buttonmain{
-  border-radius:4px;
-  border-style: none;
-  flex: 0 0 42%;
-  max-width: 42%;
-  padding-bottom: 3%;
-  padding-top: 3%;
+.fontetueddin{
+    font-family:"Tueddin", "HelveticaNeue-Medium";
 }
 
-.login{
-  padding-bottom:2%;
-  padding-top:2%;
-  font-size:15px;
-  border-radius:10px;
-  opacity:0.8;
-  text-decoration-color: White;
+.fontetueddin2{
+    font-family:"Tueddin", "HelveticaNeue";
 }
 
-.svg{
-  height:10%;
+/*-----------------------------------Login*/
+.logo{
+    height:28%;
+    margin-top:25%;
+    opacity:0.9;
+    background-repeat: no-repeat;
 }
 
-.textLogin{
-  padding:10%;
-  color:darkgray;
-  font-size:8px;
-  text-align: center;
-  line-height: 1.2;
-  word-spacing: 2px;
+.logocadastro{
+    width:80%;
 }
 
-.iconeperfiltela{
-  position:relative;
-  background:0;
-  top:0px;
-  left:50px;
-}
-
-.fotoperfiltela{
-  max-height:98px;
-  max-width:98px;
-  min-height:98px;
-  min-width:98px;
-  margin-top: 25%;
-  border-radius:50%;
-  border: 2px solid white;
-  margin-bottom:-37%;
-}
-
-.inputcadastro{
-  border-color: #7F7F7F;
-  color: #444;
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin: -1px;
-  padding-top: 3.5px;
-  padding-bottom: 3.5px;
-  border-width: 2px;
-  border-style: solid;
-  font-size: 16px;
-  border-radius: 6px;
-}
-
-.inputidadeesexo{
-  -webkit-appearance: menulist;
-  box-sizing: border-box;
-  align-items: center;
-  white-space: pre;
-  -webkit-rtl-ordering: logical;
-  color: #C0C0C0;
-  cursor: default;
-  border-width: 0px;
-  border-style: none;
-  border-color: transparent;
-  border-image: none;
-  background-color: transparent;
-}
-
-.termos{
-  border-color: transparent;
-  background-color: transparent;
-  color: #C0C0C0;
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin-left:15px;
-  margin-right:15px;
-  padding-left:13%;
-  padding-top:8%;
-  border-width: 0px;
-  border-style: none;
-  font-size: 12px;
-}
-
-.cadastro{
-  border-color: transparent;
-  background-color: transparent;
-  width: 100px;
-  padding-left: 5px;
-  padding-right:5px;
-  font-size: 14px;
-  line-height: 1;
-  border:0px;
-  background: url(../img/cadastro/arrow.png) no-repeat right #161820;
-  -webkit-appearance: none;
-  height:3%;
-  color: #C0C0C0;
-}
-
-
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue.ttf");
-  src: url("../img/Fontes/HelveticaNeue.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue-Bold.ttf");
-  src: url("../img/fontes/HelveticaNeue-Bold.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue-BoldItalic.ttf");
-  src: url("../img/fontes/HelveticaNeue-BoldItalic.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue-CondensedBlack.ttf");
-  src: url("../img/fontes/HelveticaNeue-CondenseBlack.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue-CondensedBold.ttf");
-  src: url("../img/fontes/HelveticaNeue-CondensedBold.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue-Italic.ttf");
-  src: url("../img/fontes/HelveticaNeue-Italic.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue-Light.ttf");
-  src: url("../img/fontes/HelveticaNeue-Light.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue-LightItalic.ttf");
-  src: url("../img/fontes/HelveticaNeue-LightItalic.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Tueddin";
-  src: url("../img/fontes/HelveticaNeue-Medium.ttf");
-  src: url("../img/fontes/HelveticaNeue-Medium.ttf") format("truetype"),
-font-weight: normal;
-  font-style: normal;
-}
-
-
-
-@media screen and (min-width:321px) and (max-width:390px){
-  .iconeperfiltela{
-    position:relative;
-    background:0;
-    top:0px;
-    left:52%;
-  }
-
-  .fotoperfiltela{
-    max-height:98px;
-    max-width:98px;
-    min-height:98px;
-    min-width:98px;
-    margin-top: 25%;
-    border-radius:50%;
-    border: 2px solid white;
-    margin-bottom:-37%;
-  }
-
-  .buttonmain{
+.buttonmain{  
     border-radius:4px;
     border-style: none;
     flex: 0 0 42%;
     max-width: 42%;
-    padding-bottom: 5%;
-    padding-top: 5%;
-  }
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
 
+.login{
+    padding-bottom:2%; 
+    padding-top:2%;
+    font-size:15px;
+    border-radius:10px;
+    opacity:0.8;
+    text-decoration-color: White;
+}
+
+
+.svg{
+    height:10%;
+}
+
+.textLogin{
+    padding:10%;
+    color:darkgray;
+    font-size:8px;
+    text-align: center;
+    line-height: 1.2;
+    word-spacing: 2px;
+}
+
+
+.botaofb{
+    opacity:1.0; 
+    background-color: #3b5998; 
+    color:white; 
+    padding-left:7%
+}
+
+.botaotw{
+    opacity:1.0; 
+    background-color: #00aced; 
+    color:white;
+}
+
+.botaogplus{
+    opacity:1.0; 
+    background-color: #DD4B39; 
+    color:white;
+}
+
+
+.textolink{
+    text-decoration:underline; 
+    text-decoration-color:white;
+}
+
+
+
+/*----------------------------------User Config*/
+
+.rowcabecalho{
+    color:#FAFAFA; 
+    background-color:#FAFAFA;
+}
+
+.colcabecalho{
+    text-align:center; 
+    padding-top:1.9%; 
+    padding-right:8%;
+}
+
+.colcabecalho h1{
+    font-size:22;
+}
+
+.rowtextoimg{
+    width: 100%; 
+    margin-top: 3%; 
+    color:4A4A4A; 
+    min-height:5%;
+}
+
+.rowtextoimg2{
+    text-align:center;
+}
+
+.rowtextoimgcima{
+    font-size:15px;
+}
+
+.textocimaconfig{
+    color:black; 
+    font-size:14px;
+}
+
+.textodentroconfig{
+    color:#9B9B9B; 
+    margin-left:5%;
+}
+
+.textobaixoconfig{
+    color:#9B9B9B; 
+    font-size:11px; 
+    line-height: 1.2; 
+    word-spacing: 1px;
+}
+
+.coltextocima{
+    padding:0; 
+    margin-left:5%;
+}
+
+.coltextobaixo{
+    padding-top:0; 
+    padding-right:10%;
+    margin-left:5%;
+}
+
+.colconfig{
+    border-radius:8px; 
+    color:#FCFCFC; 
+    background-color:#FCFCFC;
+}
+
+.marginlocalizacao1{
+    margin-right:5px;
+}
+
+.marginlocalizacao2{
+    margin-left:5px;
+}
+
+.selecao1{
+    border-style:none; 
+    border-width:0px; 
+    border-color:none; 
+    background:0; 
+    font-size:15px;
+}
+
+.textoarea{
+    color:#9B9B9B; 
+    text-align:center;
+}
+
+.areaselecao{
+    border-width:0px; 
+    background:0;
+    border-style:none; 
+    border-color:none; 
+}
+
+.iconecontas{
+    margin-right:6px; 
+    float:left;
+}
+
+.botajuda{
+    margin:0;
+    color:#444;
+    background: transparent;
+    width: 100%;
+}
+
+.botindica{
+    margin:0;
+    color:#444;
+    background: transparent;
+}
+
+.botlegal{
+    margin-left:5%; 
+    border-radius:0;
+    color:#444;
+    background: transparent;
+}
+
+.logobaixo{
+    text-align:center; 
+    margin-top:15%; 
+    margin-bottom:15%;
+}
+
+.textologobaixo{
+    float:right; 
+    width:100%; 
+    color:black; 
+    margin-top:7%;
+}
+
+.rowapagar{
+    margin-bottom:5%;
+}
+
+
+/*----------------------------------Main*/
+
+.botpontodeencontro{
+    background-image:url('../img/main/fotos/pontoDeEncontro.png'); background-size:cover;
+}
+.botlocais{
+    background-image:url('../img/main/fotos/locais.png'); 
+    background-size:cover;
+}
+
+.botpessoas{
+    background-image:url('../img/main/fotos/pessoas.png'); 
+    background-size:cover;
+}
+.botcriarponto{
+    background-image:url('../img/main/fotos/criarPonto.png'); 
+    background-size:cover;
+}
+
+.botturistico{
+    background-image:url('../img/main/fotos/pontosTuristicos.png'); background-size:cover;
+}
+.botconversas{
+    background-image:url('../img/main/fotos/conversas.png'); 
+    background-size:cover;
+}
+
+.botfavoritos{
+    background-image:url('../img/main/fotos/favoritos.png'); 
+    background-size:cover;
+}
+.botexplorar{
+    background-image:url('../img/main/fotos/explorar.png'); 
+    background-size:cover;
+}
+
+
+/*---------------------------------Perfil*/
+
+.iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:0px;
+        left:50px;
+        
+}
+
+.iconeperfiltela:after{
+        position:relative; 
+        background:0; 
+        top:0px;
+        left:50px;
+        
+}
+    
+.fotoperfiltela{
+        max-height:98px;
+        max-width:98px;
+        min-height:98px;
+        min-width:98px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+}
+
+/*---------------------------------Cadastro*/
+.inputcadastro{
+    border-color: #7F7F7F;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+    .inputcadastro input{
+        color:#C0C0C0;
+    }
+
+.inputsexoidade{
+    padding-top: 6.5%; 
+    padding-bottom: 6.5%; 
+    padding-left:0;
+    min-width:150px;
+}
+
+.cadastrobotao{
+    border-radius:6px;
+}
+
+.inputrow{
+    margin-top:1%;
+}
+
+.termos{
+    border-color: transparent; 
+    background-color: transparent; 
+    color: #C0C0C0; 
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-left:15px;
+    margin-right:15px;
+    padding-left:13%;
+    padding-top:8%;
+    border-width: 0px;
+    border-style: none;
+    font-size: 12px;
+    border: 0;
+}
+
+/*.inputidadeesexo{
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: #C0C0C0;
+    cursor: default;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    border-image: none;
+    background-color: transparent;
+}*/
+
+
+.termosbox{
+    top:57%;
+}
+
+.termostexto{
+    white-space:normal;
+    padding-left:3%; 
+    text-align:left;
+}
+
+.cadastro{
+    border-color: transparent; 
+    background-color: transparent; 
+    width: 100px;
+    padding-left: 5px;
+    padding-right:5px;
+    font-size: 14px;
+    line-height: 1;
+    border:0px;
+    background: url(../img/cadastro/arrow.png) no-repeat right #161820;
+    -webkit-appearance: none;
+    height:3%;
+    color: #C0C0C0;
+}
+
+/*----------------------------------------Barra de nav*/
+
+.barra{
+    padding:0;
+}
+
+.barraimg{
+    position: relative;
+    top: -84%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 82px;
+}
+
+.barrabotaopessoas{
+    position: absolute;
+    left: 20px;
+    top: 4px;
+}
+
+.barrabotaochat{
+    position: absolute;
+    left: 84px;
+    top: 4px;
+}
+
+.barrabotaomain{
+    position: absolute;
+    left: 138.5px;
+    top: -35px;
+}
+
+.barrabotaotimeline{
+    position: absolute;
+    left: 237px;
+    top: 4px;
+}
+
+.barrabotaouserconfig{
+    position: absolute;
+    left: 306px;
+    top: 4px;
+}
+
+
+/*----------------------------------------Perfil*/
+.voltarPerfil{
+    padding-left:5%; 
+    margin-top:5%; 
+    margin-right:58%;
+}
+
+.sharePerfil{
+    margin-right:5%; 
+    margin-top:5%;
+}
+
+.opcoesPerfil{
+    padding-left:2%; 
+    margin-right:2%; 
+    padding-top:8%;
+}
+
+.textoPerfil{
+    float:right; 
+    width: 100%; 
+    margin-top: 40%; 
+    min-height:12%; 
+    color:white; 
+    position:relative; 
+    z-index:2; 
+    text-align:center;
+}
+
+.textoCima{
+    font-size:16; 
+    font-weight:bold;
+}
+
+.seguindoPerfil{
+    float:left; 
+    margin-top: 1%; 
+    min-height:12%; 
+    color:white; 
+    position:relative; 
+    z-index:2; 
+    text-align:center; 
+    padding-left:7%;
+    top:-2%;
+}
+
+.textocimaSeguindo{
+    font-size:16;
+}
+
+.textobaixoSeguindo{
+    font-size:10;
+}
+
+.botaoeditar{
+    position:relative; 
+    z-index: 3; 
+    left: 13%; 
+    top:-8px;
+}
+
+.seguidoresPerfil{
+    float:right; 
+    margin-top: 1%; 
+    min-height:12%; 
+    color:white; 
+    position:relative; 
+    z-index:2; 
+    text-align:center; 
+    right:5%;
+    top:-2%;
+}
+
+.shade{
+    position:absolute; 
+    bottom:44%; 
+    right:0; 
+    left:0; 
+    z-index:1;
+    width:100%;   
+}
+
+.paddingPerfil{
+    padding:0;
+}
+
+.imgPerfil{
+    width:100%; 
+    height:56%; 
+    margin:0; 
+    padding:0; 
+    background-size:cover; 
+    float:left;
+    min-height:56%;
+}
+
+.scrollPerfil{
+    width:500px; 
+    height:75px; 
+    float:left;
+}
+
+.imgscroll{
+    margin:0; 
+    padding:0; 
+    float:left;
+    max-height: 75px;
+    max-width: 132px;
+}
+
+.div1Scroll{
+    width: 200%; 
+    height:auto; 
+    float:left;
+    padding:0;
+}
+
+.div2Scroll{
+    margin:0; 
+    padding:0;
+}
+
+.div3Scroll{
+    width:100%; 
+    margin:0; 
+    padding:0;
+}
+
+.overlay{
+    position: absolute;
+    opacity: 0.3;
+    height: 75px;
+    width: 265px; 
+    margin:0;
+    padding:0;   
+    z-index:2;
+    top:0;
+    left:20%;
+    background:-webkit-radial-gradient(circle, black 60%, rgba(255, 0, 0, 0) 99%);
+    
+}
+
+    .overlay:hover{
+        opacity:0;
+        content:;
+        position: absolute;
+        background-color: black;
+        height: 75px;
+        width: 265px; 
+        margin:0;
+        padding:0;   
+        z-index:2;
+        top:0;
+        left:20%;
+        color:transparent;
+        text-decoration: none;
+    }
+
+.overlaytext{
+    padding:0;
+    margin:11 0 0 0;
+    color:white;
+    text-align:center;
+    height:75px;
+    width:165px;
+    position:absolute;
+    z-index:1;  
+    opacity:1;
+    top:0%;
+    left:1%;
+    font-size:14px;
+}
+
+    .overlaytext:hover{
+        opacity:0;
+        content:;
+        padding:0;
+        margin:0;
+        color:white;
+        text-align:center;
+        height:75px;
+        width:155px;
+        position:absolute;
+        z-index:1;  
+        top:0%;
+        left:1%;
+        font-size:14px;
+    }
+
+.overlayimg{
+    height:11px;
+}
+
+.iconeoverlay{
+    height:10px;
+}
+
+.botaoImg{
+    text-align:center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.botaomid{
+    border-left: 2px #d3d3d3 solid;
+    border-right: 2px #d3d3d3 solid;
+}
+
+.localPerfil{
+    color:white;
+    background-image:url(../img/perfil/local/barra.png);
+    height:6%;
+    text-align:center;
+}
+
+.iconelocal{
+    float:left;
+    margin-left:35%;
+    margin-top:2%;
+    margin-right:-32%;
+}
+
+.textolocal{
+    margin-top:2.5%;
+}
+
+.sobreBalao{
+    width: 327px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+}
+
+.sobreTexto{
+    width: 285px;
+    margin-left: 10%;
+    position: relative;
+    top: -79px;
+    text-align: left;
+}
+
+.sobreTextocima{
+    position:relative;
+    top: -1px;
+    left: -1px;
+}
+
+.sobreTextobaixo{
+    position: relative;
+    top: -2px;
+    font-size: 12px;
+    color: #d3d3d3;
+    text-align: left;
+    
+}
+
+.divSobre{
+    height:100px;
+}
+
+.instagramTexto{
+    margin-left:3%;
+    font-size:10px;
+    float:left;
+    
+}
+
+.instagramBotao{
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    min-width: 0px;
+    min-height: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+.instagramBotaop{
+    position: relative;
+    right: -199px;
+    top: 9px;
+}
+
+.fotosInstagram{
+    max-width:118px;
+    max-height:118px;
+}
+
+.paddingInstagram{
+    padding-left:0.5%;
+    padding-right:0.5%;
+    padding-top:0.25%;
+    padding-bottom:0.25%;
+}
+
+/*-------------------------------------MATCH*/
+
+.botaovisual{
+    width: 180px;
+    height: 28px;
+    margin-top: 4%;
+}
+
+.botaograde{
+    position:absolute;
+    top:17px;
+    left:194px;
+    background-color: transparent;
+    border:0;
+    padding:0;
+    margin:0;
+    min-height:28px;
+    max-height:28px;
+    width:78px;
+}
+
+    .botaograde.activated{
+    position:absolute;
+    top:17px;
+    left:194px;
+    background-color: black;
+    border-radius:50%;
+    opacity:0.1;
+    border:0;
+    padding:0;
+    margin:0;
+    max-height:28px;
+    width:78px;
+}
+
+.botaouma{
+    position:absolute;
+    top:17px;
+    left:103px;
+    background-color: transparent;
+    border:0;
+    border-radius:50%;
+    padding:0;
+    margin:0;  
+    max-height:28px;
+    min-height:28px;
+    max-height:28px;
+    width:78px;
+}
+    .botaouma.activated{
+        position:absolute;
+        top:17px;
+        left:93px;
+        background-color: black;
+        opacity:0.1;
+        border-radius:50%;
+        border:0;
+        padding:0;
+        margin:0;  
+        max-height:50px;
+        min-height:28px;
+        max-height:28px;
+        width:100px;
+    }
+
+.opcoesMatch{
+    padding-left: 40%;
+    margin-right: 2%;
+    margin-top: 15%
+}
+
+
+.rowcartao{
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:0;
+    padding-bottom:0;
+    margin-top:-5%;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:0;
+}
+
+.cartaopessoa{
+    height:450px;
+    width:100%;
+    background-color:snow;
+    border-radius:3%;
+    padding:0;
+    
+}
+
+.cartaopessoaimg{
+    height:400px;
+    width:100%;
+    background-color:transparent;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    padding:0;
+
+}
+
+    .cartaopessoa p{       
+        margin-left:5%;
+        margin-top:5%;
+        font-size: 18px;
+        color:grey;
+    }
+
+.botaolista{
+    position:relative;
+    top:-97%;
+}
+
+.botaoimg{
+    position:absolute;
+    right:5px;
+    float:right;
+    background:0;
+    background-color:transparent;
+    border-radius:50%;
+    border:0;
+    margin:;
+}
+
+    .botaoimg img{
+        width:10px;
+        height:10px;
+    }
+
+.rowlike{
+    position:relative;
+    top:-253px;
+    padding: 0 60;
+}
+
+.rowlike img{
+    height:65px;
+}
+
+.botaolike{
+    background: 0;
+    border: 0;
+    padding:0;
+    margin:0;
+}
+
+    .botaolike.activated{
+        background:black;
+        opacity:0.1;
+    }
+
+
+/*-------------------------------------FONTES*/
+@font-face {
+  font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue.ttf");
+    src: url("../img/Fontes/HelveticaNeue.ttf") format("truetype"),
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue-Bold.ttf");
+    src: url("../img/fontes/HelveticaNeue-Bold.ttf") format("truetype"),
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue-BoldItalic.ttf");
+    src: url("../img/fontes/HelveticaNeue-BoldItalic.ttf") format("truetype"), 
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue-CondensedBlack.ttf");
+    src: url("../img/fontes/HelveticaNeue-CondenseBlack.ttf") format("truetype"), 
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue-CondensedBold.ttf");
+     src: url("../img/fontes/HelveticaNeue-CondensedBold.ttf") format("truetype"),
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue-Italic.ttf");
+     src: url("../img/fontes/HelveticaNeue-Italic.ttf") format("truetype"), 
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue-Light.ttf");
+     src: url("../img/fontes/HelveticaNeue-Light.ttf") format("truetype"),
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue-LightItalic.ttf");
+     src: url("../img/fontes/HelveticaNeue-LightItalic.ttf") format("truetype"),
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+font-family: "Tueddin";
+  src: url("../img/fontes/HelveticaNeue-Medium.ttf");
+     src: url("../img/fontes/HelveticaNeue-Medium.ttf") format("truetype"), 
+        font-weight: normal;
+        font-style: normal;
+}
+
+
+
+/*--------------------------Media Query*/
+
+
+@media screen and (min-width:321px) and (max-width:390px){
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:0px; 
+        left:52%;
+    }
+    
+    .fotoperfiltela{
+        max-height:98px;
+        max-width:98px;
+        min-height:98px;
+        min-width:98px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 42%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    
 }
 
 
 
 @media screen and (min-width:390px) and (max-width:420px){
-  .iconeperfiltela{
-    position:relative;
-    background:0;
-    top:0px;
-    left:52%;
-  }
-
-  .fotoperfiltela{
-    max-height:98px;
-    max-width:98px;
-    min-height:98px;
-    min-width:98px;
-    margin-top: 25%;
-    border-radius:50%;
-    border: 2px solid white;
-    margin-bottom:-37%;
-  }
-
-  .buttonmain{
-    border-radius:4px;
-    border-style: none;
-    flex: 0 0 42%;
-    max-width: 42%;
-    padding-bottom: 6%;
-    padding-top: 6%;
-  }
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:0px; 
+        left:52%;
+    }
+    
+    .fotoperfiltela{
+        max-height:98px;
+        max-width:98px;
+        min-height:98px;
+        min-width:98px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 42%;
+        padding-bottom: 6%;
+        padding-top: 6%;
+    }
 }
 
 @media screen and (min-width:420px) and (max-width:641px){
-  .iconeperfiltela{
-    position:relative;
-    background:0;
-    top:3px;
-    left:52%;
-  }
-
-  .fotoperfiltela{
-    max-height:98px;
-    max-width:98px;
-    min-height:98px;
-    min-width:98px;
-    margin-top: 25%;
-    border-radius:50%;
-    border: 2px solid white;
-    margin-bottom:-37%;
-    margin-left:6%;
-  }
-
-  .buttonmain{
-    border-radius:4px;
-    border-style: none;
-    flex: 0 0 42%;
-    max-width: 38%;
-    padding-bottom: 8%;
-    padding-top: 8%;
-  }
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:3px; 
+        left:52%;
+    }
+    
+    .fotoperfiltela{
+        max-height:98px;
+        max-width:98px;
+        min-height:98px;
+        min-width:98px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+        margin-left:6%;
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 38%;
+        padding-bottom: 8%;
+        padding-top: 8%;
+    }
 }
 
 @media screen and (min-width:642px) and (max-width:1024px){
-  .iconeperfiltela{
-    position:relative;
-    background:0;
-    top:19px;
-    left:55%;
-  }
-
-  .fotoperfiltela{
-    max-height:120px;
-    max-width:120px;
-    min-height:120px;
-    min-width:120px;
-    margin-top: 25%;
-    border-radius:50%;
-    border: 2px solid white;
-    margin-bottom:-37%;
-    margin-left:3%;
-  }
-
-  .buttonmain{
-    border-radius:4px;
-    border-style: none;
-    flex: 0 0 42%;
-    max-width: 38%;
-    padding-bottom: 8%;
-    padding-top: 8%;
-  }
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:19px; 
+        left:55%;
+    }
+    
+    .fotoperfiltela{
+        max-height:120px;
+        max-width:120px;
+        min-height:120px;
+        min-width:120px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+        margin-left:3%;
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 38%;
+        padding-bottom: 8%;
+        padding-top: 8%;
+    }
 }
 
 @media screen and (min-width:1024px){
-  .iconeperfiltela{
-    position:relative;
-    background:0;
-    top:-2px;
-    left:58%;
-  }
-
-  .fotoperfiltela{
-    max-height:150px;
-    max-width:150px;
-    min-height:150px;
-    min-width:150px;
-    margin-top: 31%;
-    border-radius:50%;
-    border: 2px solid white;
-    margin-bottom:-19%;
-    margin-left:11%
-  }
-
-  .buttonmain{
-    border-radius:4px;
-    border-style: none;
-    flex: 0 0 42%;
-    max-width: 38%;
-    padding-bottom: 10%;
-    padding-top: 10%;
-  }
-
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:-2px; 
+        left:58%;
+    }
+    
+    .fotoperfiltela{
+        max-height:150px;
+        max-width:150px;
+        min-height:150px;
+        min-width:150px;
+        margin-top: 31%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-19%;
+        margin-left:11%
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 38%;
+        padding-bottom: 10%;
+        padding-top: 10%;
+    }
+    
 }
 
 @media screen and (min-width:1366px){
-  .iconeperfiltela{
-    position:relative;
-    background:0;
-    top:195px;
-    left:-26%;
-  }
-
-  .fotoperfiltela{
-    max-height:150px;
-    max-width:150px;
-    min-height:150px;
-    min-width:150px;
-    margin-top: 31%;
-    border-radius:50%;
-    border: 2px solid white;
-    margin-bottom:-8%;
-    margin-left:21%;
-  }
-
-  .buttonmain{
-    border-radius:4px;
-    border-style: none;
-    flex: 0 0 42%;
-    max-width: 38%;
-    padding-bottom: 10%;
-    padding-top: 10%;
-  }
-
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:195px; 
+        left:-26%;
+    }
+    
+    .fotoperfiltela{
+        max-height:150px;
+        max-width:150px;
+        min-height:150px;
+        min-width:150px;
+        margin-top: 31%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-8%;
+        margin-left:21%;
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 38%;
+        padding-bottom: 10%;
+        padding-top: 10%;
+    }
+    
 }

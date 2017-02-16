@@ -1,41 +1,41 @@
 <ion-view view-title="userconfig" ng-controller="userCtrl">
-    <ion-content class="bgconfig" style="font-family:'Tueddin', 'Helvetica Neue Medium'">
-
+    <ion-content class="bgconfig fontetueddin">
+        
 <!--cabeçalho-->
-      <div class="row" style="color:#FAFAFA; background-color:#FAFAFA;">
-        <div class="col">
-          <button class="button button-icon button-small" ui-sref="mainmenu"><img src="img/userconfig/icones/Back@1x.svg"></button>
+        <div class="row rowcabecalho">
+            <div class="col">
+                <button class="button button-icon button-small" ui-sref="mainmenu"><img src="img/userconfig/icones/Back@1x.svg"></button>
+            </div>
+            <div class="col-90 colcabecalho">
+                <h1 class="title">Configurações</h1>
+            </div>  
         </div>
-        <div class="col-90" style="text-align:center; padding-top:1.9%; padding-right:8%;">
-          <h1 class="title" style="font-size:22px">Configurações</h1>
-        </div>
-      </div>
-
+        
 <!--imagem do usuário-->
-      <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col">
-          <img src="{{perfil.foto_perfil}}" class="fotoperfiltela">
-          <button class="button button-small iconeperfiltela" ui-sref="perfil"><img src="img/userconfig/icones/edicaodeperfil@1x.svg"></button>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col">                            
+                    <img src="img/userconfig/fotodoperfil/fotoFavoritos.png" class="fotoperfiltela">
+                    <button class="button button-small iconeperfiltela" ui-sref="perfil"><img src="img/userconfig/icones/edicaodeperfil@1x.svg"></button>        
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
         </div>
-        <div class="col"></div>
-        <div class="col"></div>
-      </div>
-      <div class="row" style="text-align:center;">
-        <a style="width: 100%; margin-top: 3%; color:4A4A4A; min-height:5%;">
-          <p><span style="font-size:15px">{{ perfil.nome }} {{ perfil.sobrenome }}, {{perfil.idade}}</span>
+        <div class="row rowtextoimg2">
+            <a class="rowtextoimg">
+                <p><span class="rowtextoimgcima">{{ perfil.nome }} {{ perfil.sobrenome }}, {{perfil.idade}}</span>
             <br>
             @{{ perfil.nick }}
           </p>
-        </a>
-      </div>
-
+            </a>
+        </div>
+        
 <!--descobertas-->
         <div class="row">
             <div class="col"></div>
-            <div class="col col-90" style="padding:0; margin-left:5%;">
-                <a style="color:black; font-size:15px">
+            <div class="col col-90 coltextocima">
+                <a class="textocimaconfig">
                     <p>Ajustes de Descobertas</p>
                 </a>
             </div>
@@ -43,37 +43,40 @@
         </div>
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                <a style="color:#9B9B9B; margin-left:5%;">Vendo Locais e pessoas em:</a>
+            <div class="col col-90 colconfig">
+                <a class="textodentroconfig">Vendo Locais e pessoas em:</a>
                     <br>
-                <a class="button icon-left button-clear button-dark col-offset-10"><img src="img/iconedelocalizacao/localizacao.png" style="margin-right:5px;">Localização atual <img src="img/iconecheck/check.png" style="margin-left:5px;"></a>
+                <a class="button icon-left button-clear button-dark col-offset-10">
+                    <img src="img/userconfig/icones/localizacao@1x.svg" class="marginlocalizacao1">Localização atual 
+                    <img src="img/userconfig/icones/Check.svg" class="marginlocalizacao2"></a>
                     <br>
-               <button class="button button-clear button-dark col-offset-20" style="font-size:15px">Adicionar um novo local</button>
-
+               <!--<button class="button button-clear button-dark col-offset-20" style="font-size:15px">Adicionar um novo local</button>-->
+                
             </div>
             <div class="col"></div>
         </div>
-
+        
         <div class="row">
             <div class="col"></div>
-            <div class="col col-90" style="padding-top:0; padding-right:10%; margin-left:5%;">
-                <a style="color:#9B9B9B; font-size:11px; line-height: 1.2; word-spacing: 1px;">
+            <div class="col col-90 coltextobaixo">
+                <a class="textobaixoconfig">
                     <p>Altere a localização de visualização e veja locais e eventos do Tueddin de outras cidades.</p>
                 </a>
             </div>
             <div class="col"></div>
         </div>
-
-<!--Preferência-->
+        
+<!--Preferência-->       
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                <a style="color:#9B9B9B; margin-left:5%;">Preferência por:</a>
+            <div class="col col-90 colconfig">
+                
+                <a class="textodentroconfig">Preferência por:</a>
                    <ul class="list">
-                      <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                      <li class="item item-toggle selecao1">
                          Homens
                          <label class="toggle toggle-tueddin" ng-if="perfil.pref_homem == 'n'">
-                           <input type="checkbox" ng-model="pref_homem" ng-click="mudaConfig(this,'pref_homem','bool')">
+                           <input type="checkbox" ng-model="pref_homem" ng-checked="true" ng-click="mudaConfig(this,'pref_homem','bool')">
                            <div class="track">
                              <div class="handle"></div>
                            </div>
@@ -81,14 +84,15 @@
 
                         <label class="toggle toggle-tueddin" ng-if="perfil.pref_homem == 's'">
                           <input type="checkbox" ng-model="pref_homem" ng-checked="true" ng-click="mudaConfig(this,'pref_homem', 'bool')">
-                          <div class="track">
-                            <div class="handle"></div>
-                          </div>
-                        </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
+                          
                       </li>
-                       <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                       <li class="item item-toggle selecao1">
                          Mulheres
-                         <label class="toggle toggle-tueddin"  ng-if="perfil.pref_mulher == 'n'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.pref_homem == 's'">
                            <input type="checkbox" ng-model="pref_mulher" ng-click="mudaConfig(this,'pref_mulher', 'bool')">
                            <div class="track">
                              <div class="handle"></div>
@@ -103,67 +107,67 @@
                          </label>
                       </li>
                     </ul>
-
-
+               
+                
             </div>
             <div class="col"></div>
         </div>
         <br>
-<!--área de busca-->
+<!--área de busca-->        
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
+            <div class="col col-90 colconfig">
             <div class="row">
                 <div class="col col-40">
-                    <a style="color:#9B9B9B; margin-left:5%;">Área de Busca</a>
-                </div>
+                    <a class="textodentroconfig">Área de Busca</a>    
+                </div>                
                 <div class="col"></div>
-                <div class="col" style="color:#9B9B9B; text-align:center;">{{raio_busca}}mt</div>
+                <div class="col textoarea">{{raio_busca}}mt</div>
             </div>
-                    <div class="item range range-tueddin" style=" border-width:0px; background:0;">
-                      <input type="range" ng-model="raio_busca" min="10" max="1000" my-touchend="mudaConfig(this, 'raio_busca', 'int')" value="{{perfil.raio_busca}}">
-                    </div>
+                    <div class="item range range-tueddin areaselecao">                      
+                      <input type="range" ng-model="raio_busca" min="10" max="1000" my-touchend="mudaConfig(this, 'raio_busca', 'int')" value="{{perfil.raio_busca}}">                      
+                    </div>           
             </div>
             <div class="col"></div>
-        </div>
-
+        </div>    
+                
         <br>
-<!--idades-->
+<!--idades-->       
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-
+            <div class="col col-90 colconfig">
+                
                 <div class="row">
                 <div class="col col-50">
-                    <a style="color:#9B9B9B; margin-left:5%;">Mostrar idades de </a>
-                </div>
+                    <a class="textodentroconfig">Mostrar idades de </a>    
+                </div>                
                 <div class="col"></div>
-                <div class="col" style=" color:#9B9B9B; text-align:center;">{{idade_minima}} - {{idade_maxima}}</div>
-            </div>
-                    <div class="item range range-tueddin" style="border-syle:none; border-width:0px; border-color:transparent; background:0;">
+                <div class="col textoarea">{{idade_minima}} - {{idade_maxima}}</div>
+            </div>                
+                    <div class="item range range-tueddin areaselecao">     
                       <input type="range" ng-model="idade_minima" min="16" max="80" value="{{idade_minima}}" my-touchend="mudaConfig(this, 'idade_minima', 'int')">
                       <input type="range" ng-model="idade_maxima" min="16" max="80" value="{{idade_maxima}}" my-touchend="mudaConfig(this, 'idade_maxima', 'int')">
-                    </div>
+                    </div>           
             </div>
             <div class="col"></div>
         </div>
-
+        
         <div class="row">
             <div class="col"></div>
-            <div class="col col-90" style="padding-top:0; padding-right:10%; margin-left:5%;">
-                <a style="color:#9B9B9B; font-size:11px; line-height: 1.2; word-spacing: 1px;">
+            <div class="col col-90 coltextobaixo">
+                <a class="textobaixoconfig">
                     <p>O Tueddin usa essas preferências para sugerir combinações. Aglumas sugestões podem não estar dentro dos seus parâmetros desejados.</p>
                 </a>
             </div>
             <div class="col"></div>
         </div>
-<!--mostrar-me-->
+<!--mostrar-me-->        
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                <a style="color:#9B9B9B; margin-left:5%;">Mostrar-me</a>
+            <div class="col col-90 colconfig">
+                <a class="textodentroconfig">Mostrar-me</a>
                     <ul class="list">
-                      <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                      <li class="item item-toggle selecao1">
                          Mostrar-me no Tueddin
                          <label class="toggle toggle-tueddin" ng-if="perfil.mostrar == 's' ">
                            <input type="checkbox" ng-model="mostrar" ng-click="mudaConfig(this,'mostrar', 'bool')" ng-checked="true">
@@ -174,31 +178,31 @@
 
                           <label class="toggle toggle-tueddin" ng-if="perfil.mostrar == 'n' ">
                             <input type="checkbox" ng-model="mostrar" ng-click="mudaConfig(this,'mostrar', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
-                      </li>
-                    </ul>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
+                      </li>                       
+                    </ul>            
             </div>
             <div class="col"></div>
         </div>
         <div class="row">
             <div class="col"></div>
-            <div class="col col-90" style="padding-top:0; padding-right:10%; margin-left:5%;">
-                <a style="color:#9B9B9B; font-size:11px; line-height: 1.2; word-spacing: 1px;">
+            <div class="col col-90 coltextobaixo">
+                <a class="textobaixoconfig">
                     <p>Ativar isto mostra o seu perfil a usuários(as) que estão no mesmo evento ou próximos(as) de você.</p>
                 </a>
             </div>
             <div class="col"></div>
         </div>
-
+        
 <!--notificações-->
-
+        
         <div class="row">
             <div class="col"></div>
-            <div class="col col-90" style="padding:0; margin-left:5%;">
-                <a style="color:black; font-size:15px">
+            <div class="col col-90 coltextocima">
+                <a class="textocimaconfig">
                     <p>Configurações</p>
                 </a>
             </div>
@@ -206,10 +210,10 @@
         </div>
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                <a style="color:#9B9B9B; margin-left:5%;">Notificações</a>
+            <div class="col col-90 colconfig">
+                <a class="textodentroconfig">Notificações</a>
                     <ul class="list">
-                      <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                      <li class="item item-toggle selecao1">
                          Novas combinações
                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_combinacao == 's'">
                            <input type="checkbox" ng-checked="true" ng-model="notifica_combinacao" ng-click="mudaConfig(this,'notifica_combinacao', 'bool')">
@@ -219,12 +223,12 @@
                          </label>
                           <label class="toggle toggle-tueddin" ng-if="perfil.notifica_combinacao == 'n'">
                             <input type="checkbox" ng-model="notifica_combinacao" ng-click="mudaConfig(this,'notifica_combinacao', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
                       </li>
-                       <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                       <li class="item item-toggle selecao1" >
                          Mensagens
                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_mensagem == 's'">
                            <input type="checkbox" ng-checked="true" ng-model="notifica_mensagem" ng-click="mudaConfig(this,'notifica_mensagem', 'bool')">
@@ -239,9 +243,9 @@
                            </div>
                          </label>
                       </li>
-                        <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                        <li class="item item-toggle selecao1">
                          Curtidas de postagens
-                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_curtida == 's'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.notifica_curtida == 's'">
                             <input type="checkbox" ng-checked="true" ng-model="notifica_curtida" ng-click="mudaConfig(this,'notifica_curtida', 'bool')">
                             <div class="track">
                               <div class="handle"></div>
@@ -249,14 +253,14 @@
                           </label>
                           <label class="toggle toggle-tueddin" ng-if="perfil.notifica_curtida == 'n'">
                             <input type="checkbox"ng-model="notifica_curtida" ng-click="mudaConfig(this,'notifica_curtida', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
                       </li>
-                        <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                        <li class="item item-toggle selecao1">
                          Novos Eventos
-                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_evento == 's'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.notifica_evento == 's'">
                             <input type="checkbox" ng-checked="true" ng-model="notifica_evento" ng-click="mudaConfig(this,'notifica_evento', 'bool')">
                             <div class="track">
                               <div class="handle"></div>
@@ -264,14 +268,14 @@
                           </label>
                           <label class="toggle toggle-tueddin" ng-if="perfil.notifica_evento == 'n'">
                             <input type="checkbox" ng-model="notifica_evento" ng-click="mudaConfig(this,'notifica_evento', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
                       </li>
-                        <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                        <li class="item item-toggle selecao1">
                          Novos locais
-                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_local == 's'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.notifica_local == 's'">
                             <input type="checkbox" ng-checked="true" ng-model="notifica_local" ng-click="mudaConfig(this,'notifica_local', 'bool')">
                             <div class="track">
                               <div class="handle"></div>
@@ -279,14 +283,14 @@
                           </label>
                           <label class="toggle toggle-tueddin" ng-if="perfil.notifica_local == 'n'">
                             <input type="checkbox" ng-model="notifica_local" ng-click="mudaConfig(this,'notifica_local', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
                       </li>
-                        <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                        <li class="item item-toggle selecao1">
                          Novos pontos de encontro
-                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_ponto == 's'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.notifica_ponto == 's'">
                             <input type="checkbox" ng-checked="true" ng-model="notifica_ponto" ng-click="mudaConfig(this,'notifica_ponto', 'bool')">
                             <div class="track">
                               <div class="handle"></div>
@@ -294,14 +298,14 @@
                           </label>
                           <label class="toggle toggle-tueddin" ng-if="perfil.notifica_ponto == 'n'">
                             <input type="checkbox" ng-model="notifica_ponto" ng-click="mudaConfig(this,'notifica_ponto', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
                       </li>
-                        <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                        <li class="item item-toggle selecao1">
                          Novos pontos turísticos
-                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_turistico == 's'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.notifica_turistico == 's'">
                             <input type="checkbox" ng-checked="true" ng-model="notifica_turistico" ng-click="mudaConfig(this,'notifica_turistico', 'bool')">
                             <div class="track">
                               <div class="handle"></div>
@@ -309,14 +313,14 @@
                           </label>
                           <label class="toggle toggle-tueddin" ng-if="perfil.notifica_turistico == 'n'">
                             <input type="checkbox" ng-model="notifica_turistico" ng-click="mudaConfig(this,'notifica_turistico', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
                       </li>
-                        <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                        <li class="item item-toggle selecao1">
                          Charmes
-                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_charme == 's'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.notifica_charme == 's'">
                             <input type="checkbox" ng-checked="true" ng-model="notifica_charme" ng-click="mudaConfig(this,'notifica_charme', 'bool')">
                             <div class="track">
                               <div class="handle"></div>
@@ -324,14 +328,14 @@
                           </label>
                           <label class="toggle toggle-tueddin" ng-if="perfil.notifica_charme == 'n'">
                             <input type="checkbox" ng-model="notifica_charme" ng-click="mudaConfig(this,'notifica_charme', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
                       </li>
-                      <!--  <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
+                        <!--<li class="item item-toggle selecao1">
                          Crushs
-                          <label class="toggle toggle-tueddin" ng-if="perfil.notifica_crush == 's'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.notifica_crush == 's'">
                             <input type="checkbox" checked="checked" ng-model="notifica_crush" ng-click="mudaConfig(this,'notifica_crush', 'bool')">
                             <div class="track">
                               <div class="handle"></div>
@@ -339,25 +343,25 @@
                           </label>
                           <label class="toggle toggle-tueddin" ng-if="perfil.notifica_crush == 'n'">
                             <input type="checkbox" ng-model="notifica_crush" ng-click="mudaConfig(this,'notifica_crush', 'bool')">
-                            <div class="track">
-                              <div class="handle"></div>
-                            </div>
-                          </label>
-                      </li> -->
-                    </ul>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
+                      </li>-->
+                    </ul>                         
                 </div>
             <div class="col"></div>
         </div>
         <br>
-<!--contas-->
+<!--contas-->       
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                <a style="color:#9B9B9B; margin-left:5%;">Contas conectadas</a>
+            <div class="col col-90 colconfig">
+                <a class="textodentroconfig">Contas conectadas</a>
                     <ul class="list">
-                      <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
-                         <img src="img/contasconectadas/Instagram.png" style="margin-right:6px; float:left;">Instagram
-                        <label class="toggle toggle-tueddin" ng-if="perfil.conecta_instagram == 's'">
+                      <li class="item item-toggle selecao1">
+                         <img src="img/userconfig/icones/Instagram@1x.svg" class="iconecontas">Instagram
+                         <label class="toggle toggle-tueddin" ng-if="perfil.conecta_instagram == 's'">
                           <input type="checkbox" ng-checked="true" ng-model="conecta_instagram" ng-click="mudaConfig(this,'conecta_instagram', 'bool')">
                           <div class="track">
                             <div class="handle"></div>
@@ -365,13 +369,13 @@
                         </label>
                         <label class="toggle toggle-tueddin" ng-if="perfil.conecta_instagram == 'n'">
                           <input type="checkbox" ng-model="conecta_instagram" ng-click="mudaConfig(this,'conecta_instagram', 'bool')">
-                          <div class="track">
-                            <div class="handle"></div>
-                          </div>
-                        </label>
+                           <div class="track">
+                             <div class="handle"></div>
+                           </div>
+                         </label>
                       </li>
-                       <li class="item item-toggle" style="border-syle:none; border-width:0px; border-color:none; background:0; font-size:15px;">
-                         <img src="img/contasconectadas/Spotify.png" style="margin-right:6px; float:left;">Spotify
+                       <li class="item item-toggle selecao1">
+                         <img src="img/userconfig/icones/Spotify@1x.svg" class="iconecontas">Spotify
                          <label class="toggle toggle-tueddin" ng-if="perfil.conecta_spotify == 's'">
                            <input type="checkbox" ng-checked="true" ng-model="conecta_spotify" ng-click="mudaConfig(this,'conecta_spotify', 'bool')">
                            <div class="track">
@@ -385,27 +389,29 @@
                            </div>
                          </label>
                       </li>
-                    </ul>
-
+                    </ul>    
+                
             </div>
             <div class="col"></div>
         </div>
-
-<!--Contato-->
-
+        <br>
+        
+        
+<!--Contato-->  
+        
         <div class="row">
             <div class="col"></div>
-            <div class="col col-90" style="padding:0; margin-left:5%;">
-                <a style="color:black; font-size:15px">
+            <div class="col col-90 coltextocima">
+                <a class="textocimaconfig">
                     <p>Contato</p>
                 </a>
             </div>
             <div class="col"></div>
-        </div>
+        </div>     
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                    <button class="button button-full button-clear button-dark" style="margin:0; font-family:'Tueddin', 'Helvetica Neue Medium'">Ajuda e Suporte</button>
+            <div class="col col-90 colconfig">                
+                    <button class="button botajuda fontetueddin2">Ajuda e Suporte</button>   
             </div>
             <div class="col"></div>
         </div>
@@ -413,10 +419,10 @@
 <!--compartilhar-indicar-->
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                    <button class="button button-clear button-dark" style="margin-left:5%;">Compartilhar Tueddin</button>
+            <div class="col col-90 colconfig">
+                    <button class="button botindica">Compartilhar Tueddin</button> 
                         <br>
-                    <button class="button button-clear button-dark" style="margin-left:5%;">Indicar Amigos</button>
+                    <button class="button botindica">Indicar Amigos</button>             
             </div>
             <div class="col"></div>
         </div>
@@ -424,24 +430,24 @@
 <!--legal-->
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                <a style="color:#9B9B9B; margin-left:5%;">Legal</a>
+            <div class="col col-90 colconfig">
+                <a class="textodentroconfig">Legal</a>
                     <br>
-                <button class="button button-clear button-dark" style="margin-left:5%; border-radius:0;">Licenças</button>
+                <button class="button botlegal" >Licenças</button> 
                     <br>
-                <button class="button button-clear button-dark" style="margin-left:5%; border-radius:0;">Política de privacidade</button>
+                <button class="button botlegal">Política de privacidade</button>  
                     <br>
-                <button class="button button-clear button-dark" style="margin-left:5%; border-radius:0;">Termos de serviços</button>
+                <button class="button botlegal">Termos de serviços</button>
             </div>
             <div class="col"></div>
         </div>
-
+        
         <br>
 <!--sair-->
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                   <button class="button button-full button-clear button-dark" style="margin:0;font-family:'Tueddin', 'Helvetica Neue Medium'" ng-click="sair()">Sair</button>
+            <div class="col col-90 colconfig">               
+                   <button class="button botajuda fonteteueddin2" ui-sref="login" ng-click="sair()">Sair</button>     
             </div>
             <div class="col"></div>
         </div>
@@ -449,27 +455,27 @@
 <!--versão-->
         <div class="row" >
             <div class="col"></div>
-            <div class="col col-90" style="text-align:center; margin-top:15%; margin-bottom:15%;">
+            <div class="col col-90 logobaixo">
                 <a>
                     <img src="img/tueddinlogopreto.png">
                 </a>
                     <br>
                 <a>
-                    <p style="float:right; width:100%; color:black; margin-top:7%;">Versão 1.0 (android)</p>
+                    <p class="textologobaixo">Versão 1.0 (android)</p>
                 </a>
             </div>
             <div class="col"></div>
         </div>
-
-
-
+        
+        
+        
 <!--apagar-->
-        <div class="row" style="margin-bottom:5%;">
+        <div class="row rowapagar">
             <div class="col"></div>
-            <div class="col col-90" style="border-radius:8px; color:#FCFCFC; background-color:#FCFCFC;">
-                <button class="button button-full button-clear button-dark" style="margin:0; font-family:'Tueddin', 'Helvetica Neue Medium'" ng-click="apagaConta()">Apagar conta</button>
+            <div class="col col-90 colconfig">
+                <button class="button botajuda fontetueddin2" ng-click="apagaConta()">Apagar conta</button>           
             </div>
             <div class="col"></div>
-        </div>
+        </div>          
     </ion-content>
 </ion-view>
