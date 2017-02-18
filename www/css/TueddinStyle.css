@@ -232,6 +232,89 @@
     margin-bottom:5%;
 }
 
+.iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:0px;
+        left:50px;
+        
+}
+
+    .iconeperfiltela.activated{
+            position:relative; 
+            background:0; 
+            top:0px;
+            left:50px;
+            border:0;
+            opacity:0.3;
+    }
+
+.fotoperfiltela{
+        max-height:98px;
+        max-width:98px;
+        min-height:98px;
+        min-width:98px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+}
+
+
+/*----------------------------------TIMELINE*/
+
+.textocabecalhotimeline{
+    color: black;
+    text-align: center;
+    padding-top: 3%;
+    font-size: 20px;
+    font-family: "TueddinLight";
+}
+
+.rowescrever{
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    margin-top: -2%;
+    height:50px;
+}
+
+.rowescreverimgperfil{
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    margin-top: 6%;
+}
+
+.colimagemescrever{
+    text-align:center;
+}
+
+.colclipe{
+    border-right:1px solid #D3D3D3;
+}
+
+.caixaescrever{
+    border:0;
+    width:99%;
+    padding-left:5px;
+}
+
+    .caixaescrever input{
+        font-size:12px;
+    }
+
+.imagemclipe{
+    width:25px;
+    height:25px;
+    margin-left: 26%;
+    margin-top: 40%;
+}
+
+.paddingtimeline{
+    padding:0;
+}
+
+
 
 /*----------------------------------Main*/
 
@@ -270,35 +353,6 @@
 }
 
 
-/*---------------------------------Perfil*/
-
-.iconeperfiltela{
-        position:relative; 
-        background:0; 
-        top:0px;
-        left:50px;
-        
-}
-
-.iconeperfiltela:after{
-        position:relative; 
-        background:0; 
-        top:0px;
-        left:50px;
-        
-}
-    
-.fotoperfiltela{
-        max-height:98px;
-        max-width:98px;
-        min-height:98px;
-        min-width:98px;
-        margin-top: 25%; 
-        border-radius:50%;  
-        border: 2px solid white;
-        margin-bottom:-37%;
-}
-
 /*---------------------------------Cadastro*/
 .inputcadastro{
     border-color: #7F7F7F;
@@ -325,9 +379,6 @@
     padding-left:0;
 }
 
-.colsexoidade{
-    margin:0 8;
-}
 
 .cadastrobotao{
     border-radius:6px;
@@ -404,41 +455,46 @@
 
 .barraimg{
     position: relative;
-    top: -84%;
+    top: -67%;
     width: 100%;
     margin: 0;
     padding: 0;
-    height: 82px;
+    height: 73px;
 }
 
 .barrabotaopessoas{
     position: absolute;
     left: 20px;
-    top: 4px;
+    top: 6px;
 }
 
 .barrabotaochat{
     position: absolute;
-    left: 84px;
-    top: 4px;
+    left: 77px;
+    top: 6px;
 }
 
 .barrabotaomain{
     position: absolute;
-    left: 138.5px;
-    top: -35px;
+    left: 121.5px;
+    top: -28px;
 }
+
+    .barrabotaomain img{
+        height: 70px;
+        width: 70px;
+    }
 
 .barrabotaotimeline{
     position: absolute;
-    left: 237px;
-    top: 4px;
+    left: 207px;
+    top: 6px;
 }
 
 .barrabotaouserconfig{
     position: absolute;
-    left: 306px;
-    top: 4px;
+    left: 268px;
+    top: 6px;
 }
 
 
@@ -446,7 +502,7 @@
 .voltarPerfil{
     padding-left:5%; 
     margin-top:5%; 
-    margin-right:58%;
+    margin-right:55%;
 }
 
 .sharePerfil{
@@ -499,7 +555,7 @@
 .botaoeditar{
     position:relative; 
     z-index: 3; 
-    left: 13%; 
+    left: 11%; 
     top:-8px;
 }
 
@@ -565,7 +621,7 @@
 }
 
 .div3Scroll{
-    width:100%; 
+    width:200%; 
     margin:0; 
     padding:0;
 }
@@ -659,7 +715,7 @@
 .iconelocal{
     float:left;
     margin-left:35%;
-    margin-top:2%;
+    margin-top:1.5%;
     margin-right:-32%;
 }
 
@@ -668,25 +724,19 @@
 }
 
 .sobreBalao{
-    width: 327px;
+    width: 300px;
     margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 2%;
+    margin-bottom: 5%;    
 }
 
 .sobreTexto{
-    width: 285px;
-    margin-left: 10%;
+    width: 270px;
+    margin-left: 7%;
     position: relative;
-    top: -79px;
+    top: -75px;
     text-align: left;
 }
 
-.sobreTextocima{
-    position:relative;
-    top: -1px;
-    left: -1px;
-}
 
 .sobreTextobaixo{
     position: relative;
@@ -720,13 +770,15 @@
 
 .instagramBotaop{
     position: relative;
-    right: -199px;
+    right: -166px;
     top: 9px;
 }
 
 .fotosInstagram{
-    max-width:118px;
-    max-height:118px;
+    min-width: 106px;
+    min-height: 106px;
+    max-height: 106px;
+    max-width: 106px;
 }
 
 .paddingInstagram{
@@ -898,56 +950,56 @@
         font-style: normal;
 }
 @font-face {
-font-family: "Tueddin";
+font-family: "TueddinBold";
   src: url("../img/fontes/HelveticaNeue-Bold.ttf");
     src: url("../img/fontes/HelveticaNeue-Bold.ttf") format("truetype"),
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
-font-family: "Tueddin";
+font-family: "TueddinBoldItalic";
   src: url("../img/fontes/HelveticaNeue-BoldItalic.ttf");
     src: url("../img/fontes/HelveticaNeue-BoldItalic.ttf") format("truetype"), 
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
-font-family: "Tueddin";
+font-family: "TueddinCondensedBlack";
   src: url("../img/fontes/HelveticaNeue-CondensedBlack.ttf");
     src: url("../img/fontes/HelveticaNeue-CondenseBlack.ttf") format("truetype"), 
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
-font-family: "Tueddin";
+font-family: "TueddinCondensedBold";
   src: url("../img/fontes/HelveticaNeue-CondensedBold.ttf");
      src: url("../img/fontes/HelveticaNeue-CondensedBold.ttf") format("truetype"),
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
-font-family: "Tueddin";
+font-family: "TueddinItalic";
   src: url("../img/fontes/HelveticaNeue-Italic.ttf");
      src: url("../img/fontes/HelveticaNeue-Italic.ttf") format("truetype"), 
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
-font-family: "Tueddin";
+font-family: "TueddinLight";
   src: url("../img/fontes/HelveticaNeue-Light.ttf");
      src: url("../img/fontes/HelveticaNeue-Light.ttf") format("truetype"),
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
-font-family: "Tueddin";
+font-family: "TueddinLightItalic";
   src: url("../img/fontes/HelveticaNeue-LightItalic.ttf");
      src: url("../img/fontes/HelveticaNeue-LightItalic.ttf") format("truetype"),
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
-font-family: "Tueddin";
+font-family: "TueddinMedium";
   src: url("../img/fontes/HelveticaNeue-Medium.ttf");
      src: url("../img/fontes/HelveticaNeue-Medium.ttf") format("truetype"), 
         font-weight: normal;
@@ -959,7 +1011,7 @@ font-family: "Tueddin";
 /*--------------------------Media Query*/
 
 
-@media screen and (min-width:321px) and (max-width:390px){
+@media screen and (min-width:321px) and (max-width:374px){
     .iconeperfiltela{
         position:relative; 
         background:0; 
@@ -995,11 +1047,393 @@ font-family: "Tueddin";
     }
     
     
+    
+/*---------------------------------media query perfil*/
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:58%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 13%; 
+        top:-8px;
+    }
+    
+    .sobreBalao{
+        width: 327px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+    }
+    
+    .sobreTexto{
+        width: 285px;
+        margin-left: 10%;
+        position: relative;
+        top: -79px;
+        text-align: left;
+    }
+    
+    .sobreTextocima{
+        position:relative;
+        top: -1px;
+        left: -1px;
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -199px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:119px;
+        max-height:119px;
+        min-width:119px;
+        min-height:119px;
+    }
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -84%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 82px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 137px;
+        top: -35px;
+    }
+    
+        .barrabotaomain img{
+            height: 80px;
+            width: 80px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 237px;
+        top: 4px;
+    }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 306px;
+        top: 4px;
+    }
+    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 84px;
+        top: 4px;
+    }
+    
+    
 }
 
+@media screen and (min-width:375px) and (max-width:383px){
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:0px; 
+        left:52%;
+    }
+    
+    .fotoperfiltela{
+        max-height:98px;
+        max-width:98px;
+        min-height:98px;
+        min-width:98px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 42%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    
+    .inputsexoidade {
+        padding-top: 6.5%;
+        padding-bottom: 6.5%;
+        padding-left: 0;
+    
+    }
+    
+/*---------------------------------media query perfil*/
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:58%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 13%; 
+        top:-8px;
+    }
+    
+    .sobreBalao{
+        width: 327px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+    }
+    
+    .sobreTexto{
+        width: 285px;
+        margin-left: 10%;
+        position: relative;
+        top: -79px;
+        text-align: left;
+    }
+    
+    .sobreTextocima{
+        position:relative;
+        top: -1px;
+        left: -1px;
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -199px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:124px;
+        max-height:124px;
+        min-width:124px;
+        min-height:124px;
+    }
+    
+    .seguindoPerfil{
+        float:left; 
+        margin-top: 1%; 
+        min-height:12%; 
+        color:white; 
+        position:relative; 
+        z-index:2; 
+        text-align:center; 
+        padding-left:7%;
+        top:3%;
+    }
+    .seguidoresPerfil{
+        float:right; 
+        margin-top: 1%; 
+        min-height:12%; 
+        color:white; 
+        position:relative; 
+        z-index:2; 
+        text-align:center; 
+        right:5%;
+        top:3%;
+    }
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -84%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 82px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 144px;
+        top: -35px;
+    }
+    
+        .barrabotaomain img{
+            height: 80px;
+            width: 80px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 253px;
+        top: 4px;
+    }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 318px;
+        top: 4px;
+    }
+    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 88px;
+        top: 4px;
+    }
+    
+}
 
+@media screen and (min-width:384px) and (max-width:389px){
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:0px; 
+        left:52%;
+    }
+    
+    .fotoperfiltela{
+        max-height:98px;
+        max-width:98px;
+        min-height:98px;
+        min-width:98px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 42%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    
+    .inputsexoidade {
+        padding-top: 6.5%;
+        padding-bottom: 6.5%;
+        padding-left: 0;
+    
+    }
+    
+/*---------------------------------media query perfil*/
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:58%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 16%; 
+        top:-8px;
+    }
+    
+    .sobreBalao{
+        width: 327px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+    }
+    
+    .sobreTexto{
+        width: 285px;
+        margin-left: 10%;
+        position: relative;
+        top: -79px;
+        text-align: left;
+    }
+    
+    .sobreTextocima{
+        position:relative;
+        top: -1px;
+        left: -1px;
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -199px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:127px;
+        max-height:127px;
+        min-width:127px;
+        min-height:127px;
+    }
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -84%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 82px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 149px;
+        top: -34px;
+    }
+    
+        .barrabotaomain img{
+            height: 80px;
+            width: 80px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 255px;
+        top: 4px;
+    }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 324px;
+        top: 4px;
+    }
+    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 90px;
+        top: 4px;
+    }
+    
+}
 
-@media screen and (min-width:390px) and (max-width:420px){
+@media screen and (min-width:390px) and (max-width:419px){
     .iconeperfiltela{
         position:relative; 
         background:0; 
@@ -1026,9 +1460,153 @@ font-family: "Tueddin";
         padding-bottom: 6%;
         padding-top: 6%;
     }
+    
+/*---------------------------------media query perfil*/
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:58%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 16%; 
+        top:-8px;
+    }
+    
+    .sobreBalao{
+        width: 370px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+    }
+    
+    .sobreTexto{
+        width: 310px;
+        margin-left: 10%;
+        position: relative;
+        top: -87px;
+        text-align: left;
+    }
+    
+    .sobreTextocima{
+        position:relative;
+        top: -1px;
+        left: -1px;
+    }
+    
+    .sobreTextobaixo{
+        position: relative;
+        top: -2px;
+        font-size: 14px;
+        color: #d3d3d3;
+        text-align: left;
+
+    }
+    
+    .rowfotosinstagram{
+        margin-top:3%;
+    }
+    
+    .instagramTexto{
+        margin-left:3%;
+        font-size:12px;
+        float:left;
+
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -222px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:137px;
+        max-height:137px;
+        min-width:137px;
+        min-height:137px;
+    }
+    
+    .seguindoPerfil{
+        float:left; 
+        margin-top: 1%; 
+        min-height:12%; 
+        color:white; 
+        position:relative; 
+        z-index:2; 
+        text-align:center; 
+        padding-left:7%;
+        top:6%;
+    }
+    .seguidoresPerfil{
+        float:right; 
+        margin-top: 1%; 
+        min-height:12%; 
+        color:white; 
+        position:relative; 
+        z-index:2; 
+        text-align:center; 
+        right:5%;
+        top:6%;
+    }
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -94%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 85px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 159.5;
+        top: -38px;
+    }
+    
+        .barrabotaomain img{
+            height: 87px;
+            width: 87px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 280px;
+        top: 4px;
+    }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 350px;
+        top: 4px;
+    }
+    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 90px;
+        top: 4px;
+    }
+    
+    .barrabotaopessoas{
+        position: absolute;
+        left: 20px;
+        top: 4px;
+    }
 }
 
-@media screen and (min-width:420px) and (max-width:641px){
+@media screen and (min-width:420px) and (max-width:639px){
     .iconeperfiltela{
         position:relative; 
         background:0; 
@@ -1056,9 +1634,417 @@ font-family: "Tueddin";
         padding-bottom: 8%;
         padding-top: 8%;
     }
+    
+/*---------------------------------media query perfil*/
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:58%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 16%; 
+        top:-8px;
+    }
+    
+    .sobreBalao{
+        width: 327px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+    }
+    
+    .sobreTexto{
+        width: 285px;
+        margin-left: 10%;
+        position: relative;
+        top: -79px;
+        text-align: left;
+    }
+    
+    .sobreTextocima{
+        position:relative;
+        top: -1px;
+        left: -1px;
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -199px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:136px;
+        max-height:136px;
+        min-width:136px;
+        min-height:136px;
+    }
+    
+    .seguindoPerfil{
+        float:left; 
+        margin-top: 1%; 
+        min-height:12%; 
+        color:white; 
+        position:relative; 
+        z-index:2; 
+        text-align:center; 
+        padding-left:7%;
+        top: 8%;
+    }
+
+    .seguidoresPerfil{
+        float:right; 
+        margin-top: 1%; 
+        min-height:12%; 
+        color:white; 
+        position:relative; 
+        z-index:2; 
+        text-align:center; 
+        right:5%;
+        top: 8%;
+    }
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -94%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 84px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 159.5;
+        top: -38px;
+    }
+    
+        .barrabotaomain img{
+            height: 87px;
+            width: 87px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 280px;
+        top: 4px;
+    }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 350px;
+        top: 4px;
+    }
+    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 90px;
+        top: 4px;
+    }
+    
+    .barrabotaopessoas{
+        position: absolute;
+        left: 20px;
+        top: 4px;
+    }
 }
 
-@media screen and (min-width:642px) and (max-width:1024px){
+@media screen and (min-width:640px) and (max-width:768px){
+    .iconeperfiltela{
+        position:relative; 
+        background:0; 
+        top:3px; 
+        left:52%;
+    }
+    
+    .fotoperfiltela{
+        max-height:98px;
+        max-width:98px;
+        min-height:98px;
+        min-width:98px;
+        margin-top: 25%; 
+        border-radius:50%;  
+        border: 2px solid white;
+        margin-bottom:-37%;
+        margin-left:6%;
+    }
+    
+    .buttonmain{  
+        border-radius:4px;
+        border-style: none;
+        flex: 0 0 42%;
+        max-width: 38%;
+        padding-bottom: 8%;
+        padding-top: 8%;
+    }
+    
+/*---------------------------------media query perfil*/
+    .imgPerfil{
+        width:100%; 
+        height:56%; 
+        margin:0; 
+        padding:0; 
+        background-size:cover; 
+        float:left;
+        min-height:167%;
+    }
+    
+    .shade{
+        position:absolute; 
+        bottom:-67%; 
+        right:0; 
+        left:0; 
+        z-index:1;
+        width:100%;   
+    }
+
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:68%;
+    }
+    
+    .opcoesPerfil{
+        padding-left:2%; 
+        margin-right:2%; 
+        padding-top:6%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 27%; 
+        top:2px;
+    }
+    
+    .sobreBalao{
+        width: 327px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 2%;
+    }
+    
+    .sobreTexto{
+        width: 285px;
+        margin-left: 10%;
+        position: relative;
+        top: -79px;
+        text-align: left;
+    }
+    
+    .sobreTextocima{
+        position:relative;
+        top: -1px;
+        left: -1px;
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -199px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:136px;
+        max-height:136px;
+        min-width:136px;
+        min-height:136px;
+    }
+    
+    .seguindoPerfil{
+        float:left; 
+        margin-top: 1%; 
+        min-height:12%; 
+        color:white; 
+        position:relative; 
+        z-index:2; 
+        text-align:center; 
+        padding-left:7%;
+        top: 8%;
+    }
+
+    .seguidoresPerfil{
+        float:right; 
+        margin-top: 1%; 
+        min-height:12%; 
+        color:white; 
+        position:relative; 
+        z-index:2; 
+        text-align:center; 
+        right:5%;
+        top: 8%;
+    }
+    
+     .scrollPerfil{
+        width:200%; 
+        height:75px; 
+        float:left;
+    }
+    
+    .localPerfil{
+        color:white;
+        background-image:url(../img/perfil/local/barra.png);
+        height:12%;
+        text-align:center;
+    }
+
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:1%;
+        margin-right:-36%;
+    }
+
+    .textolocal{
+        margin-top:1.5%;
+        font-size:18px;
+    }
+
+    .sobreBalao{
+        width: 583px;
+        margin-top: 5%;
+        margin-bottom: 5%;    
+    }
+
+    .sobreTexto{
+        width: 540px;
+        margin-left: 8%;
+        position: relative;
+        top: -116px;
+        text-align: left;
+    }
+    
+    .sobreTextocima{
+        position: relative;
+        top: -16px;
+        left: -1px;
+        font-size:20px;
+    }
+
+    .sobreTextobaixo{
+        position: relative;
+        top: -2px;
+        font-size: 20px;
+        color: #d3d3d3;
+        text-align: left;
+
+    }
+
+    .divSobre{
+        height:100px;
+    }
+    
+    .rowfotosinstagram{
+        margin-top:13%;
+    }
+    
+    .instagramTexto{
+        margin-left:3%;
+        font-size:18px;
+        float:left;
+
+    }
+
+    .instagramBotao{
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        min-width: 0px;
+        min-height: 0px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .instagramBotaop{
+        position: relative;
+        right: -379px;
+        top: 9px;
+    }
+
+    .fotosInstagram{
+        min-width: 212px;
+        min-height: 212px;
+        max-height: 212px;
+        max-width: 212px;
+    }
+
+    
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -177%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 141px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 251.5px;
+        top: -74px;
+    }
+    
+        .barrabotaomain img{
+            height: 130px;
+            width: 130px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 440px;
+        top: -10px;
+    }.barrabotaotimeline img{
+        height: 45px;
+    }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 560px;
+        top:-4px;
+    }.barrabotaouserconfig img{
+        height: 30px;
+    }    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 160px;
+        top: -10px;
+    }.barrabotaochat img{
+        height:45px;
+    }
+    
+    .barrabotaopessoas{
+        position: absolute;
+        left: 50px;
+        left: 50px;
+        top: -10px;
+    }.barrabotaopessoas img{
+        height:45px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
     .iconeperfiltela{
         position:relative; 
         background:0; 
@@ -1086,6 +2072,255 @@ font-family: "Tueddin";
         padding-bottom: 8%;
         padding-top: 8%;
     }
+    
+/*---------------------------------media query perfil*/
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:71%;
+    }
+    
+    .opcoesPerfil{
+        padding-left:2%; 
+        margin-right:2%; 
+        padding-top:6%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 28%; 
+        top:-8px;
+    }
+    
+        .botaoeditar img{
+            width:140px;
+        }
+    
+    .scrollPerfil{
+        width:200%; 
+        height:75px; 
+        float:left;
+    }
+    
+    .sobreTextocima{
+        position: relative;
+        top: -6px;
+        left: -1px;
+    }
+    
+    .botaoImgperfil{
+        text-align:center;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    
+    .botaoImgperfil img{
+        height:40px;
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -199px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:127px;
+        max-height:127px;
+        min-width:127px;
+        min-height:127px;
+    }
+    
+    .overlaytext{
+        padding:0;
+        margin:11 0 0 0;
+        color:white;
+        text-align:center;
+        height:75px;
+        width:239px;
+        position:absolute;
+        z-index:1;  
+        opacity:1;
+        top:0%;
+        left:-8%;
+        font-size:23px;    
+    }
+
+        .overlaytext.activated{
+            opacity:0;
+            content:;
+            padding:0;
+            margin:0;
+            color:white;
+            text-align:center;
+            height:75px;
+            width:239px;
+            position:absolute;
+            z-index:1;  
+            top:0%;
+            left:-8%;
+            font-size:23px;        
+        }
+    
+    .overlayimg{
+        height:20px;
+        margin-top:6%;
+    }
+    
+    .iconelocal{
+        float: left;
+        margin-left: 35%;
+        margin-top: 1.5%;
+        margin-right: -38%;
+        height: 32px;
+    }
+
+    .textolocal{
+        margin-top:2.5%;
+        font-size:23px;
+    }
+    
+    .sobreBalao{
+        width: 708px;
+        margin-top: 5%;
+        margin-bottom: 5%;    
+    }
+
+    .sobreTexto{
+        width: 607px;
+        margin-left: 9%;
+        position: relative;
+        top: -153px;
+        text-align: left;
+        font-size: 30px;
+    }
+    
+    .rowfotosinstagram{
+        margin-top:13%;
+    }
+
+
+    .sobreTextobaixo{
+        position: relative;
+        top: 11px;
+        font-size: 30px;
+        color: #d3d3d3;
+        text-align: left;
+
+    }
+
+    .divSobre{
+        height:100px;
+    }
+
+    .instagramTexto{
+        margin-left:2%;
+        font-size:20px;
+        float:left;
+        margin-bottom:2%;
+    }
+
+    .instagramBotao{
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        min-width: 0px;
+        min-height: 0px;
+        padding: 0;
+        margin: 0;
+        height: 13px;
+        width: 13px;
+    }
+
+    .instagramBotaop{
+        position: relative;
+        right: -478px;
+        top: 9px;        
+    }
+
+    .fotosInstagram{
+        min-width: 254px;
+        min-height: 254px;
+        max-height: 254px;
+        max-width: 254px;
+    }
+
+    .paddingInstagram{
+        padding-left:0.5%;
+        padding-right:0.5%;
+        padding-top:0.25%;
+        padding-bottom:0.25%;
+    }
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -242%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 164px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 303px;
+        top: -99px;
+    }
+    
+        .barrabotaomain img{
+            height: 155px;
+            width: 155px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 530px;
+        top: -18px;
+    }
+    
+        .barrabotaotimeline img{
+                height:45px;
+            }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 685px;
+        top: -11px;
+    }
+    
+        .barrabotaouserconfig img{
+                height:30px;
+            }
+    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 195px;
+        top: -18px;
+    }
+    
+        .barrabotaochat img{
+            height:45px;
+        }
+    
+    .barrabotaopessoas{
+        position: absolute;
+        left: 58px;
+        top: -18px;
+    }
+    
+        .barrabotaopessoas img{
+            height:45px;
+        }
 }
 
 @media screen and (min-width:1024px){
@@ -1117,6 +2352,255 @@ font-family: "Tueddin";
         padding-top: 10%;
     }
     
+/*---------------------------------media query perfil*/
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:71%;
+    }
+    
+    .opcoesPerfil{
+        padding-left:2%; 
+        margin-right:2%; 
+        padding-top:6%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 28%; 
+        top:-8px;
+    }
+    
+        .botaoeditar img{
+            width:140px;
+        }
+    
+    .scrollPerfil{
+        width:200%; 
+        height:75px; 
+        float:left;
+    }
+    
+    .sobreTextocima{
+        position: relative;
+        top: -6px;
+        left: -1px;
+    }
+    
+    .botaoImgperfil{
+        text-align:center;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    
+    .botaoImgperfil img{
+        height:40px;
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -199px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:127px;
+        max-height:127px;
+        min-width:127px;
+        min-height:127px;
+    }
+    
+    .overlaytext{
+        padding:0;
+        margin:11 0 0 0;
+        color:white;
+        text-align:center;
+        height:75px;
+        width:239px;
+        position:absolute;
+        z-index:1;  
+        opacity:1;
+        top:0%;
+        left:-8%;
+        font-size:23px;    
+    }
+
+        .overlaytext.activated{
+            opacity:0;
+            content:;
+            padding:0;
+            margin:0;
+            color:white;
+            text-align:center;
+            height:75px;
+            width:239px;
+            position:absolute;
+            z-index:1;  
+            top:0%;
+            left:-8%;
+            font-size:23px;        
+        }
+    
+    .overlayimg{
+        height:20px;
+        margin-top:6%;
+    }
+    
+    .iconelocal{
+        float: left;
+        margin-left: 35%;
+        margin-top: 1.5%;
+        margin-right: -38%;
+        height: 32px;
+    }
+
+    .textolocal{
+        margin-top:2.5%;
+        font-size:23px;
+    }
+    
+    .sobreBalao{
+        width: 708px;
+        margin-top: 5%;
+        margin-bottom: 5%;    
+    }
+
+    .sobreTexto{
+        width: 607px;
+        margin-left: 9%;
+        position: relative;
+        top: -153px;
+        text-align: left;
+        font-size: 30px;
+    }
+    
+    .rowfotosinstagram{
+        margin-top:13%;
+    }
+
+
+    .sobreTextobaixo{
+        position: relative;
+        top: 11px;
+        font-size: 30px;
+        color: #d3d3d3;
+        text-align: left;
+
+    }
+
+    .divSobre{
+        height:100px;
+    }
+
+    .instagramTexto{
+        margin-left:2%;
+        font-size:20px;
+        float:left;
+        margin-bottom:2%;
+    }
+
+    .instagramBotao{
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        min-width: 0px;
+        min-height: 0px;
+        padding: 0;
+        margin: 0;
+        height: 13px;
+        width: 13px;
+    }
+
+    .instagramBotaop{
+        position: relative;
+        right: -478px;
+        top: 9px;        
+    }
+
+    .fotosInstagram{
+        min-width: 253px;
+        min-height: 253px;
+        max-height: 253px;
+        max-width: 253px;
+    }
+
+    .paddingInstagram{
+        padding-left:0.5%;
+        padding-right:0.5%;
+        padding-top:0.25%;
+        padding-bottom:0.25%;
+    }
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -242%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 164px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 303px;
+        top: -99px;
+    }
+    
+        .barrabotaomain img{
+            height: 155px;
+            width: 155px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 530px;
+        top: -18px;
+    }
+    
+        .barrabotaotimeline img{
+                height:45px;
+            }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 685px;
+        top: -11px;
+    }
+    
+        .barrabotaouserconfig img{
+                height:30px;
+            }
+    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 195px;
+        top: -18px;
+    }
+    
+        .barrabotaochat img{
+            height:45px;
+        }
+    
+    .barrabotaopessoas{
+        position: absolute;
+        left: 58px;
+        top: -18px;
+    }
+    
+        .barrabotaopessoas img{
+            height:45px;
+        }
+    
 }
 
 @media screen and (min-width:1366px){
@@ -1147,5 +2631,254 @@ font-family: "Tueddin";
         padding-bottom: 10%;
         padding-top: 10%;
     }
+    
+/*---------------------------------media query perfil*/
+    .voltarPerfil{
+        padding-left:5%; 
+        margin-top:5%; 
+        margin-right:71%;
+    }
+    
+    .opcoesPerfil{
+        padding-left:2%; 
+        margin-right:2%; 
+        padding-top:6%;
+    }
+    
+    .iconelocal{
+        float:left;
+        margin-left:35%;
+        margin-top:2%;
+        margin-right:-32%;
+    }
+    
+    .botaoeditar{
+        position:relative; 
+        z-index: 3; 
+        left: 28%; 
+        top:-8px;
+    }
+    
+        .botaoeditar img{
+            width:140px;
+        }
+    
+    .scrollPerfil{
+        width:200%; 
+        height:75px; 
+        float:left;
+    }
+    
+    .sobreTextocima{
+        position: relative;
+        top: -6px;
+        left: -1px;
+    }
+    
+    .botaoImgperfil{
+        text-align:center;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    
+    .botaoImgperfil img{
+        height:40px;
+    }
+    
+    .instagramBotaop{
+        position: relative;
+        right: -199px;
+        top: 9px;
+    }
+    
+    .fotosInstagram{
+        max-width:127px;
+        max-height:127px;
+        min-width:127px;
+        min-height:127px;
+    }
+    
+    .overlaytext{
+        padding:0;
+        margin:11 0 0 0;
+        color:white;
+        text-align:center;
+        height:75px;
+        width:239px;
+        position:absolute;
+        z-index:1;  
+        opacity:1;
+        top:0%;
+        left:-8%;
+        font-size:23px;    
+    }
+
+        .overlaytext.activated{
+            opacity:0;
+            content:;
+            padding:0;
+            margin:0;
+            color:white;
+            text-align:center;
+            height:75px;
+            width:239px;
+            position:absolute;
+            z-index:1;  
+            top:0%;
+            left:-8%;
+            font-size:23px;        
+        }
+    
+    .overlayimg{
+        height:20px;
+        margin-top:6%;
+    }
+    
+    .iconelocal{
+        float: left;
+        margin-left: 35%;
+        margin-top: 1.5%;
+        margin-right: -38%;
+        height: 32px;
+    }
+
+    .textolocal{
+        margin-top:2.5%;
+        font-size:23px;
+    }
+    
+    .sobreBalao{
+        width: 708px;
+        margin-top: 5%;
+        margin-bottom: 5%;    
+    }
+
+    .sobreTexto{
+        width: 607px;
+        margin-left: 9%;
+        position: relative;
+        top: -153px;
+        text-align: left;
+        font-size: 30px;
+    }
+    
+    .rowfotosinstagram{
+        margin-top:13%;
+    }
+
+
+    .sobreTextobaixo{
+        position: relative;
+        top: 11px;
+        font-size: 30px;
+        color: #d3d3d3;
+        text-align: left;
+
+    }
+
+    .divSobre{
+        height:100px;
+    }
+
+    .instagramTexto{
+        margin-left:2%;
+        font-size:20px;
+        float:left;
+        margin-bottom:2%;
+    }
+
+    .instagramBotao{
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        min-width: 0px;
+        min-height: 0px;
+        padding: 0;
+        margin: 0;
+        height: 13px;
+        width: 13px;
+    }
+
+    .instagramBotaop{
+        position: relative;
+        right: -478px;
+        top: 9px;        
+    }
+
+    .fotosInstagram{
+        min-width: 253px;
+        min-height: 253px;
+        max-height: 253px;
+        max-width: 253px;
+    }
+
+    .paddingInstagram{
+        padding-left:0.5%;
+        padding-right:0.5%;
+        padding-top:0.25%;
+        padding-bottom:0.25%;
+    }
+    
+ /*---------------------------------barra nav*/   
+    .barraimg{
+        position: relative;
+        top: -242%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 164px;
+    }
+    
+    .barrabotaomain{
+        position: absolute;
+        left: 303px;
+        top: -99px;
+    }
+    
+        .barrabotaomain img{
+            height: 155px;
+            width: 155px;
+        }
+    
+    .barrabotaotimeline{
+        position: absolute;
+        left: 530px;
+        top: -18px;
+    }
+    
+        .barrabotaotimeline img{
+                height:45px;
+            }
+    
+    .barrabotaouserconfig{
+        position: absolute;
+        left: 685px;
+        top: -11px;
+    }
+    
+        .barrabotaouserconfig img{
+                height:30px;
+            }
+    
+    
+    .barrabotaochat{
+        position: absolute;
+        left: 195px;
+        top: -18px;
+    }
+    
+        .barrabotaochat img{
+            height:45px;
+        }
+    
+    .barrabotaopessoas{
+        position: absolute;
+        left: 58px;
+        top: -18px;
+    }
+    
+        .barrabotaopessoas img{
+            height:45px;
+        }
     
 }
