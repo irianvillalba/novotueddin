@@ -267,7 +267,7 @@
     color: black;
     text-align: center;
     padding-top: 3%;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "TueddinLight";
 }
 
@@ -312,6 +312,114 @@
 
 .paddingtimeline{
     padding:0;
+}
+
+.rowpost{
+    border-top: 1px solid #D3D3D3;
+    display:block;
+    padding:0;
+}
+
+/*---------------------------------TINELINE POST TEXTO*/
+.textonome{
+    width:100%;
+    float:right;
+    font-size:12px;
+    font-weight: bold;
+    margin:0;
+}
+
+.textohora{
+    width:100%;
+    font-size:11px;
+    float:left;
+    margin:0;
+    color:#d3d3d3;
+}
+
+.textopost{
+    text-align: justify;
+    font-size: 13px;
+}
+
+.imgposts{
+    text-align:left;
+    margin-left:2%;
+}
+
+.butseguir{
+    padding: 0;
+    margin:0;
+    margin-right:5%;
+}
+
+.colseguir{
+    text-align: right;
+}
+
+.textodentrobalao{
+    position:relative;
+    margin:0;
+    padding:0;
+    
+}
+
+.colsocial{
+    display: -webkit-inline-box;
+}
+
+.butsocial{
+    padding:0;
+    margin:0;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.balaosocialmed{
+    background-image:url('../img/timeline/post/balao02.png');
+    background-repeat: no-repeat;
+    width: 17%;
+    margin-top: 4%;
+    margin-left: 2%;
+    text-align: center;
+}
+
+.balaosocialgr{
+    background-image:url('../img/timeline/post/balao03.png');
+    background-repeat: no-repeat;
+    width: 17%;
+    margin-top: 4%;
+    margin-left: 2%;
+    text-align: center;
+}
+
+.balaosocialpeq{
+    background-image:url('../img/timeline/post/balao01.png');
+    background-repeat: no-repeat;
+    width: 17%;
+    margin-top: 4%;
+    margin-left: 2%;
+    text-align: center;
+    padding-right: 4%;
+}
+
+
+
+
+/*---------------------------------TINELINE POST IMAGEM*/
+.fotopost{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+.fotopost img{
+    max-width:100%;
+    
+}
+
+.rowfotopost{
+    padding-left:0;
+    padding-right:0;
 }
 
 
