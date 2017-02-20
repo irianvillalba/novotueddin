@@ -36,8 +36,17 @@ app.controller('cadastroCtrl', function($scope, $http, $window, localStorage, ca
 
     } else {
       $ionicPopup.alert({
-        title: 'Tueddin',
-        template: 'Por favor aceite os termos de serviço'
+        title: '',
+        template: 'Por favor aceite os termos de servico',
+        buttons: [
+              {   type: 'button',
+                  text: 'Voltar',
+                  onTap: function(){
+                        $window.location="#/cadastro";
+                        carregando.hide();
+                    }
+              }
+          ]
       });
     }
 
