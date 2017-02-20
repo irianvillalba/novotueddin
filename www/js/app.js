@@ -49,10 +49,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/userconfig',
 	templateUrl: 'templates/userconfig.html'
   })
+      
+.state('listaperfil', {
+    url: '/listaperfil',
+	templateUrl: 'templates/listaperfil.html'
+  })
 
   .state('cadastro', {
     url: '/cadastro',
     templateUrl: 'templates/cadastro.html'
+  })
+    
+.state('timeline', {
+    url: '/timeline',
+    templateUrl: 'templates/timeline.html'
   })
 
 .state('match1', {
