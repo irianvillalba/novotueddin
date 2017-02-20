@@ -1,4 +1,4 @@
-<ion-view view-title="perfil">
+<ion-view view-title="perfil" ng-controller="popupPerfilCtrl">
     <ion-content class="bgperfil fontetueddin">
         
 <!--fotoperfil-->
@@ -12,9 +12,10 @@
                     <img src="img/perfil/icones/compartilhar.svg">
                 </a>
                 
-                <a class="button button-icon opcoesPerfil">
-                    <img src="img/perfil/icones/opcoes@1x.svg" style="">
-                </a>
+                <a class="button button-icon opcoesPerfil" ng-click="popupPerfil()">
+                    <img src="img/perfil/icones/opcoes@1x.svg">
+                </a>              
+               
                 
                 <a class="textoPerfil">
                     <p><span class="textoCima">Patrícia Melo, 25</span>
@@ -30,7 +31,7 @@
                     </p>
                 </a>
                 
-                <a class="button button-icon botaoeditar" ui-sref="userconfig">
+                <a class="button button-icon botaoeditar">
                     <img src="img/perfil/icones/editarPerfil.svg">             
                 </a>
                 
@@ -74,7 +75,7 @@
                 </button>
             </div>
             <div class="col col-33 paddingPerfil botaoImgperfil botaomid">
-                <button class="button button-clear">
+                <button class="button button-clear" ui-sref="listaperfil">
                     <img src="img/perfil/icones/list@1x.svg">
                 </button>
             </div>
