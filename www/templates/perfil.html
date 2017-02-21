@@ -1,5 +1,5 @@
-<ion-view view-title="perfil" ng-controller="popupPerfilCtrl">
-    <ion-content class="bgperfil fontetueddin">
+<ion-view view-title="perfil">
+    <ion-content class="bgperfil" style="font-family:'Tueddin', 'Helvetica Neue Medium'">
         
 <!--fotoperfil-->
         <div class="row paddingPerfil">
@@ -12,10 +12,9 @@
                     <img src="img/perfil/icones/compartilhar.svg">
                 </a>
                 
-                <a class="button button-icon opcoesPerfil" ng-click="popupPerfil()">
-                    <img src="img/perfil/icones/opcoes@1x.svg">
-                </a>              
-               
+                <a class="button button-icon opcoesPerfil">
+                    <img src="img/perfil/icones/opcoes@1x.svg" style="">
+                </a>
                 
                 <a class="textoPerfil">
                     <p><span class="textoCima">Patrícia Melo, 25</span>
@@ -31,7 +30,7 @@
                     </p>
                 </a>
                 
-                <a class="button button-icon botaoeditar">
+                <a class="button button-icon botaoeditar" ui-sref="userconfig">
                     <img src="img/perfil/icones/editarPerfil.svg">             
                 </a>
                 
@@ -75,7 +74,7 @@
                 </button>
             </div>
             <div class="col col-33 paddingPerfil botaoImgperfil botaomid">
-                <button class="button button-clear" ui-sref="listaperfil">
+                <button class="button button-clear">
                     <img src="img/perfil/icones/list@1x.svg">
                 </button>
             </div>
@@ -113,8 +112,8 @@
         </div>
 
 <!--Fotos instagram texto-->
-        <div class="row paddingPerfil ">
-            <div class="col col-100 paddingPerfil rowfotosinstagram">
+        <div class="row paddingPerfil">
+            <div class="col col-100 paddingPerfil">
                 <p class="instagramTexto">Fotos do Instagram</p>
                 <p class="instagramBotaop">
                     <button class="button button-dark instagramBotao"></button>
@@ -163,10 +162,10 @@
     </ion-content>
     
 <!--Footer barra-->
-    <ion-footer-bar class="barra">
+    <ion-footer-bar  class="barra">
         <img src="img/tab/barra.png" class="barraimg">
         <div class="buttons">
-            <button class="button button-clear barrabotaopessoas" ui-sref="match1">
+            <button class="button button-clear barrabotaopessoas" ui-sref="login">
                 <img src="img/tab/pessoas@1x.svg">
             </button>     
             <button class="button button-clear barrabotaochat" ui-sref="login">
@@ -175,7 +174,7 @@
             <button class="button button-clear barrabotaomain" ui-sref="mainmenu">
                 <img src="img/tab/botao_home@1x.svg">
             </button>
-            <button class="button button-clear barrabotaotimeline" ui-sref="timeline">
+            <button class="button button-clear barrabotaotimeline" ui-sref="login">
                 <img src="img/tab/timeline@1x.svg">
             </button>
             <button class="button button-clear barrabotaouserconfig" ui-sref="userconfig">
@@ -183,5 +182,4 @@
             </button>
         </div>
     </ion-footer-bar>
-    
 </ion-view>
