@@ -7,18 +7,18 @@ $scope.popupPerfil = function() {
   // An elaborate, custom popup
   var myPopup = $ionicPopup.show({
     template: '<ion-list>                           '+
-               '  <ion-item class="button button-full" style="border-radius: 5%; background-color: transparent; border: 0; border-bottom:1px white solid" ng-click=""> '+
+               '  <i class="button button-full" style="border-radius: 5%; background-color: transparent; border: 0; border-bottom:1px white solid" ng-click=""> '+
                '    Bloquear                              '+
-               '  </ion-item>                             '+
-               '  <ion-item class="button button-full" style="border-radius: 5%; background-color: transparent; border: 0; border-bottom:1px white solid" ng-click=""> '+
+               '  </i>                             '+
+               '  <i class="button button-full" style="border-radius: 5%; background-color: transparent; border: 0; border-bottom:1px white solid" ng-click=""> '+
                '    Denunciar                             '+
-               '  </ion-item>                             '+
-               '  <ion-item class="button button-full" style="border-radius: 5%; background-color: transparent; border: 0; border-bottom:1px white solid;" ng-click=""> '+
+               '  </i>                             '+
+               '  <i class="button button-full" style="border-radius: 5%; background-color: transparent; border: 0; border-bottom:1px white solid;" ng-click=""> '+
                '    Descombinar                           '+
-               '  </ion-item>                             '+
-               '  <ion-item class="button button-full" style="border-radius: 5%; background-color: transparent; border: 0; border-bottom:1px white solid" ng-click=""> '+
+               '  </i>                             '+
+               '  <i class="button button-full" style="border-radius: 5%; background-color: transparent; border: 0; border-bottom:1px white solid" ng-click=""> '+
                '    Desligar Notificacoes                 '+
-               '  </ion-item>                             '+
+               '  </i>                             '+
                '</ion-list>                               ',
     buttons: [    
       {  
@@ -34,5 +34,5 @@ $scope.popupPerfil = function() {
      myPopup.close(); //close the popup after 3 seconds for some reason
   }, 5000);*/
  };
-    
+   
 });

@@ -92,7 +92,7 @@
                       </li>
                        <li class="item item-toggle selecao1">
                          Mulheres
-                         <label class="toggle toggle-tueddin" ng-if="perfil.pref_mulher == 'n'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.pref_homem == 's'">
                            <input type="checkbox" ng-model="pref_mulher" ng-click="mudaConfig(this,'pref_mulher', 'bool')">
                            <div class="track">
                              <div class="handle"></div>
@@ -478,4 +478,5 @@
             <div class="col"></div>
         </div>          
     </ion-content>
+
 </ion-view>

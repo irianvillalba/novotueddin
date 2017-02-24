@@ -3,23 +3,164 @@
         
 <!--ROW DE CIMA-->       
         <div class="row">
-            <div class="col">
+            <div class="col col-10">
                 <button class="button button-clear button-small" ui-sref="mainmenu">
                     <img src="img/perfil/icones/voltar@1x.svg">
                 </button>
             </div>
-            <div class="col">
+            <div class="col col-75 colbotaovisual">
                 <img src="img/pessoas/visualizacao@2x.png" class="botaovisual">
                     <button class="button botaograde" ui-sref="match2"></button>
                     <button class="button botaouma" ui-sref="match1"></button>
             </div>
-            <div class="col"> 
-                <button class="button button-clear button-small" >
+            <div class="col col-20"> 
+                <!--<button class="button botopcoesmatch" >
                     <img src="img/perfil/icones/opcoes@1x.svg" class="opcoesMatch">
-                </button>           
+                </button>-->           
             </div>
         </div>
-        <br>
+        <span></span>
+        
+<!----------------------------GRADE DE USUÁRIOS-->
+      <!--1-->  
+        <div class="row rowGrade">
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button1" ng-click="button1.clicked=!button1.clicked" ng-class="button1.clicked?'button-tueddin':'button-tueddin'">                    
+                    <img style="background-image:url('../img/teste/1.jpg');"><!--IMAGEM PESSOA-->                    
+                    <div class="bordared" ng-show="button1.clicked"></div>                      
+                </button>                
+                <div class="divNomepessoa">  
+                    <div class="notificacaored" ng-show="button1.clicked">20</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Gustavo</p> <!--NOME PESSOA-->                    
+                </div>
+                
+            </div>
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button2" ng-click="button2.clicked=!button2.clicked" ng-class="button1.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url(../img/teste/2.jpg)">
+                    <div class="bordared" ng-show="button2.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button2.clicked">100</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Juliana</p> <!--NOME PESSOA-->     
+                </div>
+            </div>
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button3" ng-click="button3.clicked=!button3.clicked" ng-class="button3.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/3.jpg')">
+                    <div class="bordared" ng-show="button3.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button3.clicked">2</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Andrea</p>    <!--NOME PESSOA-->  
+                </div>
+            </div>
+        </div>
+        <span></span>
+        <!--2-->
+        <div class="row rowGrade">
+            <div class="col colGradepessoa">
+                
+                <button class="button botGradepessoa" ng-model="button4" ng-click="button4.clicked=!button4.clicked" ng-class="button4.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/4.jpg');"><!--IMAGEM A SER USADA-->
+                    <div class="bordared" ng-show="button4.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button4.clicked">41</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Pedro</p>     <!--NOME PESSOA--> 
+                </div>
+            </div>
+            <div class="col colGradepessoa">
+                
+                <button class="button botGradepessoa" ng-model="button5" ng-click="button5.clicked=!button5.clicked" ng-class="button5.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/5.jpg');"><!--IMAGEM A SER USADA-->
+                    <div class="bordared" ng-show="button5.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button5.clicked">57</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>William</p>    <!--NOME PESSOA-->  
+                </div>
+            </div>
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button6" ng-click="button6.clicked=!button6.clicked" ng-class="button6.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/6.jpg');"><!--IMAGEM A SER USADA-->
+                    <div class="bordared" ng-show="button6.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button6.clicked">64</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Maria</p>     <!--NOME PESSOA--> 
+                </div>
+            </div>
+        </div>
+        <span></span>
+        <!--3-->
+        <div class="row rowGrade">
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button7" ng-click="button7.clicked=!button7.clicked"  ng-class="button7.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/7.jpg');"><!--IMAGEM A SER USADA--> 
+                    <div class="bordared" ng-show="button7.clicked"></div>                    
+                </button>                 
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button7.clicked">77</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Samanta</p>     <!--NOME PESSOA--> 
+                </div>
+            </div>
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button8" ng-click="button8.clicked=!button8.clicked" ng-class="button8.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/gus2016.jpg');"><!--IMAGEM A SER USADA-->
+                    <div class="bordared" ng-show="button8.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button8.clicked">8</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Marcos</p>     <!--NOME PESSOA--> 
+                </div>
+            </div>
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button9" ng-click="button9.clicked=!button9.clicked" ng-class="button9.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/insta1.jpg');"><!--IMAGEM A SER USADA-->
+                    <div class="bordared" ng-show="button9.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button9.clicked">9</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Isabela</p>     <!--NOME PESSOA--> 
+                </div>
+            </div>
+        </div>
+        <span></span>
+        <!--4-->
+        <div class="row rowGrade">
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button10" ng-click="button10.clicked=!button10.clicked" ng-class="button10.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/insta2.jpg');"><!--IMAGEM A SER USADA--> 
+                    <div class="bordared" ng-show="button10.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button10.clicked">10</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>João</p>   <!--NOME PESSOA-->   
+                </div>
+            </div>
+            <div class="col colGradepessoa">                
+                <button class="button botGradepessoa" ng-model="button11" ng-click="button11.clicked=!button11.clicked" ng-class="button11.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/insta3.jpg');"><!--IMAGEM A SER USADA-->
+                    <div class="bordared" ng-show="button11.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                    <div class="notificacaored" ng-show="button11.clicked">1</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Ana</p>     <!--NOME PESSOA--> 
+                </div>
+            </div>
+            <div class="col colGradepessoa">               
+                <button class="button botGradepessoa" ng-model="button12" ng-click="button12.clicked=!button12.clicked" ng-class="button12.clicked?'button-tueddin':'button-tueddin'">
+                    <img style="background-image:url('../img/teste/insta4.jpg');"><!--IMAGEM A SER USADA-->
+                    <div class="bordared" ng-show="button12.clicked"></div>                    
+                </button>                
+                <div class="divNomepessoa">
+                     <div class="notificacaored" ng-show="button12.clicked">100</div><!--MENSAGENS NÃO LIDAS-->
+                    <p>Leonardo</p>     <!--NOME PESSOA--> 
+                </div>
+            </div>
+        </div>
+        
         
     </ion-content>
     
@@ -32,7 +173,7 @@
             <button class="button button-clear barrabotaochat" ui-sref="login">
                 <img src="img/tab/conversas@1x.svg">
             </button>
-            <button class="button button-clear barrabotaomain" ui-sref="mainmenu">
+            <button class="button barrabotaomain" ui-sref="mainmenu">
                 <img src="img/tab/botao_home@1x.svg">
             </button>
             <button class="button button-clear barrabotaotimeline" ui-sref="login">
@@ -43,4 +184,5 @@
             </button>
         </div>
     </ion-footer-bar>
+
 </ionic-view>

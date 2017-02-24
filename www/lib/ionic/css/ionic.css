@@ -8875,6 +8875,34 @@ progress {
         box-shadow: none;
         color: #fff; }
 
+.button.button-tueddin {
+    border-color: transparent;
+    background-color: transparent;
+    color: transparent; }
+    .button.button-tueddin:hover {
+      color: transparent;
+      text-decoration: none; }
+    .button.button-tueddin.active, .button.button-tueddin.activated {
+      border-color: transparent;
+      background-color: transparent}
+    .button.button-tueddin.button-clear {
+      border-color: transparent;
+      background: none;
+      box-shadow: none;
+      color: transparent; }
+    .button.button-tueddin.button-icon {
+      border-color: transparent;
+      background: none; }
+    .button.button-tueddin.button-outline {
+      border-color: transparent;
+      background: transparent;
+      color: transparent; }
+      .button.button-tueddin.button-outline.active, .button.button-tueddin.button-outline.activated {
+        background-color: transparent;
+        box-shadow: none;
+        color: transparent; }
+
+
 .button-small {
   padding: 2px 4px 1px;
   min-width: 28px;
@@ -9329,6 +9357,16 @@ a.button {
   -ms-flex: 0 0 90%;
   flex: 0 0 90%;
   max-width: 90%; }
+
+.col-100 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%; 
+  text-align:center;}
 
 /* Responsive Grid Classes */
 /* Adding a class of responsive-X to a row */
