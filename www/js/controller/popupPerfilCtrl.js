@@ -34,5 +34,5 @@ $scope.popupPerfil = function() {
      myPopup.close(); //close the popup after 3 seconds for some reason
   }, 5000);*/
  };
-    
+   
 });
