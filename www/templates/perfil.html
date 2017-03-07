@@ -1,9 +1,9 @@
-<ion-view view-title="perfil">
-    <ion-content class="bgperfil" style="font-family:'Tueddin', 'Helvetica Neue Medium'">
+<ion-view view-title="perfil" ng-controller="popupPerfilCtrl">
+    <ion-content class="bgperfil fontetueddin">
         
 <!--fotoperfil-->
         <div class="row paddingPerfil">
-            <div class="col imgPerfil" style="background-image:url('img/perfil/fotos/imagemPerfil.png');">
+            <div class="col imgPerfil" style="background-image:url('img/teste/gus2016.jpg');">
                 
                 <a class="button button-icon voltarPerfil" href="#/userconfig">
                     <img src="img/perfil/icones/voltar@1x.svg">
@@ -12,14 +12,15 @@
                     <img src="img/perfil/icones/compartilhar.svg">
                 </a>
                 
-                <a class="button button-icon opcoesPerfil">
-                    <img src="img/perfil/icones/opcoes@1x.svg" style="">
-                </a>
+                <a class="button button-icon opcoesPerfil" ng-click="popupPerfil()">
+                    <img src="img/perfil/icones/opcoes@1x.svg">
+                </a>              
+               
                 
                 <a class="textoPerfil">
-                    <p><span class="textoCima">Patrícia Melo, 25</span>
+                    <p><span class="textoCima">{{ perfil.nome }} {{ perfil.sobrenome }}, {{perfil.idade}}</span>
                         <br>
-                        <span>@patriciamelo</span>
+                        <span>@{{ perfil.nick }}</span>
                     </p>
                 </a>
                 
@@ -30,7 +31,7 @@
                     </p>
                 </a>
                 
-                <a class="button button-icon botaoeditar" ui-sref="userconfig">
+                <a class="button button-icon botaoeditar">
                     <img src="img/perfil/icones/editarPerfil.svg">             
                 </a>
                 
@@ -74,7 +75,7 @@
                 </button>
             </div>
             <div class="col col-33 paddingPerfil botaoImgperfil botaomid">
-                <button class="button button-clear">
+                <button class="button button-clear" ui-sref="listaperfil">
                     <img src="img/perfil/icones/list@1x.svg">
                 </button>
             </div>
@@ -112,8 +113,8 @@
         </div>
 
 <!--Fotos instagram texto-->
-        <div class="row paddingPerfil">
-            <div class="col col-100 paddingPerfil">
+        <div class="row paddingPerfil ">
+            <div class="col col-100 paddingPerfil rowfotosinstagram">
                 <p class="instagramTexto">Fotos do Instagram</p>
                 <p class="instagramBotaop">
                     <button class="button button-dark instagramBotao"></button>
@@ -162,19 +163,19 @@
     </ion-content>
     
 <!--Footer barra-->
-    <ion-footer-bar  class="barra">
-        <img src="img/tab/barra.png" class="barraimg">
+    <ion-footer-bar class="barra">
+        <img src="img/tab/barrafooter.png" class="barraimg">
         <div class="buttons">
-            <button class="button button-clear barrabotaopessoas" ui-sref="login">
+            <button class="button button-clear barrabotaopessoas" ui-sref="match1">
                 <img src="img/tab/pessoas@1x.svg">
             </button>     
             <button class="button button-clear barrabotaochat" ui-sref="login">
                 <img src="img/tab/conversas@1x.svg">
             </button>
-            <button class="button button-clear barrabotaomain" ui-sref="mainmenu">
-                <img src="img/tab/botao_home@1x.svg">
+            <button class="button barrabotaomain" ui-sref="mainmenu">
+                
             </button>
-            <button class="button button-clear barrabotaotimeline" ui-sref="login">
+            <button class="button button-clear barrabotaotimeline" ui-sref="timeline">
                 <img src="img/tab/timeline@1x.svg">
             </button>
             <button class="button button-clear barrabotaouserconfig" ui-sref="userconfig">
@@ -182,5 +183,5 @@
             </button>
         </div>
     </ion-footer-bar>
-
+    
 </ion-view>

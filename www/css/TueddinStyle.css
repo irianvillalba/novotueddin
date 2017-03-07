@@ -233,11 +233,10 @@
 }
 
 .iconeperfiltela{
-        position:absolute; 
-        background:0; 
-        top:10%;
-        left:50%;
-        
+    position: relative;
+    background: 0;
+    top: 35px;
+    right: 50%;        
 }
 
     .iconeperfiltela.activated{ 
@@ -255,6 +254,10 @@
         border-radius:50%;  
         border: 2px solid white;
         /*margin-bottom:-37%;*/
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
 }
 
 
@@ -317,7 +320,7 @@
     padding:0;
 }
 
-/*---------------------------------TINELINE POST TEXTO*/
+/*---------------------------------TIMELINE POST TEXTO*/
 .textonome{
     width:100%;
     float:right;
@@ -349,6 +352,12 @@
     margin:0;
     margin-right:5%;
 }
+
+.butseguir img{
+    height:32px;
+}
+
+
 
 .colseguir{
     text-align: right;
@@ -402,11 +411,13 @@
 
 
 
-/*---------------------------------TINELINE POST IMAGEM*/
+/*---------------------------------TIMELINE POST IMAGEM*/
 .fotopost{
     width:100%;
     padding:0;
     margin:0;
+    text-align: center;
+    overflow: hidden;
 }
 
 .fotopost img{
@@ -430,7 +441,6 @@
     background-image:url('../img/main/fotos/locais.png'); 
     background-size:cover;
 }
-
 .botpessoas{
     background-image:url('../img/main/fotos/pessoas.png'); 
     background-size:cover;
@@ -439,7 +449,6 @@
     background-image:url('../img/main/fotos/criarPonto.png'); 
     background-size:cover;
 }
-
 .botturistico{
     background-image:url('../img/main/fotos/pontosTuristicos.png'); background-size:cover;
 }
@@ -447,7 +456,6 @@
     background-image:url('../img/main/fotos/conversas.png'); 
     background-size:cover;
 }
-
 .botfavoritos{
     background-image:url('../img/main/fotos/favoritos.png'); 
     background-size:cover;
@@ -455,6 +463,9 @@
 .botexplorar{
     background-image:url('../img/main/fotos/explorar.png'); 
     background-size:cover;
+}
+.rowbaixo{
+    max-height:69px;
 }
 
 
@@ -473,26 +484,20 @@
     font-size: 16px;
     border-radius: 6px;
 }
-
     .inputcadastro input{
         color:#C0C0C0;
     }
-
 .inputsexoidade{
     padding-top: 6.5%; 
     padding-bottom: 6.5%; 
     padding-left:0;
 }
-
-
 .cadastrobotao{
     border-radius:6px;
 }
-
 .inputrow{
     margin-top:1%;
 }
-
 .termos{
     border-color: transparent; 
     background-color: transparent; 
@@ -509,7 +514,6 @@
     font-size: 12px;
     border: 0;
 }
-
 /*.inputidadeesexo{
     -webkit-appearance: menulist;
     box-sizing: border-box;
@@ -525,18 +529,14 @@
     background-color: transparent;
     background-color: transparent;
 }*/
-
-
 .termosbox{
     top:57%;
 }
-
 .termostexto{
     white-space:normal;
     padding-left:3%; 
     text-align:left;
 }
-
 .cadastro{
     border-color: transparent; 
     background-color: transparent; 
@@ -556,9 +556,24 @@
 
 .barra{
     padding:0;
-    z-index:2;
+    z-index:2;    
+    transition: bottom 0.25s ease;
 }
-
+.barra-no{
+    bottom:-50px;
+    .scrollfoot{
+        padding-top:50px;
+    }
+}
+ion-footer-bar.barra-slide-away{
+    .barra{
+        bottom:0;
+    }
+    .barra-no{
+        position:relative;
+        bottom:-50px;
+    }
+}
 .barraimg{
     position: relative;
     top: -67%;
@@ -567,52 +582,245 @@
     padding: 0;
     height: 73px;
 }
-
 .barrabotaopessoas{
     position: absolute;
     left: 20px;
     top: 6px;
 }
-
 .barrabotaochat{
     position: absolute;
     left: 77px;
     top: 6px;
 }
-
 .barrabotaomain{
         position: absolute;
-        left: 35%;
+        left: 40%;
         top: -35px;
-        min-height: 70px;
-        min-width: 70px;
-        line-height:70px;        
+        height: 70px;
+        width: 70px;        
         background-color:transparent;
-    }
-    
+    }  
     .barrabotaomain.activated{
         background-color:transparent;
         border:0;
-        opacity:0.3;
     }
-
-
     .barrabotaomain img{
         height: 70px;
         width: 70px;
-    }
-
+}
 .barrabotaotimeline{
     position: absolute;
     left: 207px;
     top: 6px;
 }
-
 .barrabotaouserconfig{
     position: absolute;
     left: 268px;
     top: 6px;
 }
+
+
+/*----------------------------------------EXPLORAR*/
+
+.colimgexplorar{
+    background-image:url(../img/explorar/restaurante.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarboate{
+    background-image:url(../img/explorar/boate@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarbar{
+    background-image:url(../img/explorar/barBoteco@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarpop{
+    background-image:url(../img/explorar/pop@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarjazz{
+    background-image:url(../img/explorar/jazz.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarrock{
+    background-image:url(../img/explorar/rock@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarautomotivo{
+    background-image:url(../img/explorar/automotivo@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarshows{
+    background-image:url(../img/explorar/shows@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorartempo{
+    background-image:url(../img/explorar/voltaaotempo@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarhip{
+    background-image:url(../img/explorar/hiphopFunk@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarpunk{
+    background-image:url(../img/explorar/punk@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarchurrasco{
+    background-image:url(../img/explorar/churrasco@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarsertanejo{
+    background-image:url(../img/explorar/sertanejo@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarblues{
+    background-image:url(../img/explorar/bluesSoul@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarreaggea{
+    background-image:url(../img/explorar/reggae@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorareletronica{
+    background-image:url(../img/explorar/eletronica@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorargospel{
+    background-image:url(../img/explorar/cristaGospel@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+.colimgexplorarclassica{
+    background-image:url(../img/explorar/classica@2x.png);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    margin-left: 0.7%;
+    margin-right: 0.7%;
+    margin-bottom: 1%;
+    height: 18%;
+    flex: 0 0 32%;
+}
+
 
 
 /*----------------------------------------Perfil*/
@@ -958,26 +1166,30 @@
     margin-top:-5%;
     margin-left:0;
     margin-right:0;
-    margin-bottom:0;
+    margin-bottom:200px;
 }
 
 .cartaopessoa{
-    height:450px;
+    height:400px;
     width:100%;
     background-color:snow;
-    border-radius:3%;
+    border-radius:8px;
     padding:0;
-    
+    overflow: hidden;
+    margin:0;
 }
 
 .cartaopessoaimg{
-    height:400px;
-    width:100%;
+    height:350px;
+    width:101%;
     background-color:transparent;
     border-top-left-radius: 3%;
     border-top-right-radius: 3%;
     padding:0;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin:-1px;
 }
 
     .cartaopessoa p{       
@@ -989,11 +1201,11 @@
 
 .botaolista{
     position:relative;
-    top:-97%;
+    top:-375px;
 }
 
 .botaoimg{
-    position:absolute;
+    position:relative;
     right:5px;
     float:right;
     background:0;
@@ -1012,10 +1224,11 @@
     position:relative;
     top:-253px;
     padding: 0 60;
+    text-align: center;
 }
 
 .rowlike img{
-    height:65px;
+    height:13%;
 }
 
 .botaolike{
@@ -1075,6 +1288,8 @@
         overflow:visible;
         background-size: cover;
         background-position: center center;
+        background-repeat: no-repeat;
+        margin:-1px;
     }
 
 .notificacaored{
@@ -1156,6 +1371,292 @@
         line-height: 20px;
         font-size:12px;
     }
+/*-------------------------------------PONTO DE ENCONTRO*/
+
+.rowcartaoponto{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 5%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15%;
+    text-align:center;
+}
+
+.cartaoponto{
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 3%;
+    padding: 0;
+    box-shadow: 0px 2px 6px black;
+}
+
+.divimgback{
+    overflow:hidden;
+    border-radius: 9px;
+}
+
+.cartaopontoimg{
+    overflow:hidden;
+    width:100%;
+    height:100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.colbotbarraponto{
+    height:50px;
+}
+
+.cartaopontobarra{
+    position: relative;
+    bottom: 50px;
+    height: 54px;
+    background-color: snow;
+    border-top:4px solid lightgray;
+    border-bottom-right-radius:13px;
+    border-bottom-left-radius:13px;
+}
+
+.bottop{
+    border-radius:50px;
+    background-image:url(../img/pontoencontro/bg_icones@3x.png);
+    width:30%;
+    float:right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    position:relative;
+    top:-300px
+}
+
+.botbot{
+    border-radius:50px;
+    background-image:url(../img/pontoencontro/bg_icones@3x.png);
+    width:60%;
+    float:left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 130px;
+    position: relative;
+    z-index: 5;
+    background-position: center center;
+    height: 12%;
+    right:24%;
+}
+
+.botsbarraponto{
+    position: relative;
+    top: -84px;
+}
+
+.plocalgps{
+    color: white;
+    text-align: -webkit-left;
+    margin:0;
+}
+
+    .plocalgps img{
+        height: 30px;
+        position: relative;
+        bottom: -3px;
+        left: 3px;
+        float:left;
+        margin-right:5%;
+    }
+
+    .plocalgps p{
+        padding:0;
+        margin:0;
+    }
+
+.botgosteiponto{
+    text-align: center;
+    max-height: 100%;
+}
+    .botgosteiponto p{
+        float:left;
+        margin-top:-9px;
+    }
+    .botgosteiponto img{
+        float:left;
+        margin-left:16px;
+        margin-right:5px;
+    }
+
+.textolocalcimacartao{
+    font-size:4vw;
+    line-height:20px;
+}
+
+.textolocalbaixocartao{
+    font-size:3vw;
+    line-height:10px;
+}
+
+.botcompartilharponto{
+    margin:-1 0 0 0;
+}
+
+.logotipo1{
+    border-radius:50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url(../img/pontoencontro/FundoLogotipo@3x.png);
+    overflow: hidden;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: -330px;
+    left: 38%;
+    margin: 0;
+    float: left;            
+}
+
+.logotipo2{
+    border-radius:50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url(../img/pontoencontro/FundoLogotipo2@3x.png);
+    overflow: hidden;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: -330px;
+    left: 38%;
+    margin: 0;
+    float: left;            
+}
+
+/*-------------------------------------LOCAIS*/
+
+.cartaolocais{
+    height: 150px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 13px;
+    padding: 0;
+    box-shadow: 0px 4px 3px black;
+}
+
+.rowcartaopontolocais{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 2%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0%;
+    text-align:center;
+}
+
+
+.bottoplocais{
+    border-radius: 50px;
+    background-image: url(../img/pontoencontro/bg_icones@3x.png);
+    width: 40%;
+    height:17%;
+    float: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: -150px;
+}.bottoplocais img{
+    height:50%;
+}.bottoplocais button{
+    min-height:26px;
+}
+
+.botbotlocais{
+    border-radius:50px;
+    background-image:url(../img/pontoencontro/bg_icones@3x.png);
+    width:60%;
+    float:left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 49px;
+    position: relative;
+    z-index: 5;
+    background-position: center center;
+    height: 15%;
+}.botbotlocais img{
+    height:65%;
+    float:left;
+    margin-right:3px;
+}
+
+.plocalgpslocais{
+    color: white;
+    text-align: -webkit-left;
+    margin:5px 0 0 2px;
+}
+
+.botcompartilharlocais{
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:-1px;
+    margin-bottom:0;
+}
+
+.cartaopontobarralocais{
+    position: relative;
+    bottom: 29px;
+    height: 34px;
+    width: 100%;
+    background-color: snow;
+    border-top:4px solid lightgray;
+    border-bottom-right-radius:13px;
+    border-bottom-left-radius:13px;
+}
+
+.botsbarrapontolocais{
+    position: relative;   
+    height: 30px;
+    width: 100%;
+    text-align: left;
+    padding:0;
+    top:-21px;
+}.botsbarrapontolocais img{
+    height:65%;
+}.botsbarrapontolocais p{
+    font-size:8px; 
+    margin:0;
+    float:right;
+    padding-right: 5px;
+}.botsbarrapontolocais button{
+    padding: 0;
+    width: 100%;
+    line-height: 23px;
+}
+
+.colbotbarralocais{
+    padding:0;    
+}
+
+.textolocalcimacartaolocais {
+    font-size: 5px;
+    line-height: 3px;
+    margin: 0;
+}
+
+
+.textolocalbaixocartaolocais {   
+    font-size: 1vw;
+    line-height: 14px;
+    margin: 0px;
+}
+   
+    
 
 /*-------------------------------------FONTES*/
 @font-face {
@@ -1228,12 +1729,12 @@ font-family: "TueddinMedium";
 
 
 @media screen and (min-width:321px) and (max-width:374px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:23%; 
         left:50%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:98px;
@@ -1320,11 +1821,7 @@ font-family: "TueddinMedium";
     }
     
  /*---------------------------------barra nav*/   
-    .barra{
-        padding:0;
-        z-index:2;
-    }
-    
+        
     .barraimg{
         position: relative;
         top: -84%;
@@ -1336,21 +1833,15 @@ font-family: "TueddinMedium";
     
     .barrabotaomain{
         position: absolute;
-        left: 36.5%;
+        left: 40%;
         left: 36.5%;
         top: -35px;
-        min-height: 80px;
-        min-width: 80px;
-        line-height:80px;
-        z-index:12;
+        height: 70px;
+        width: 80px;
+      
         background-color:transparent;
     }
     
-        .barrabotaomain img{
-            height: 80px;
-            width: 80px;
-            z-index:13;
-        }
     
     .barrabotaotimeline{
         position: absolute;
@@ -1375,12 +1866,12 @@ font-family: "TueddinMedium";
 }
 
 @media screen and (min-width:375px) and (max-width:383px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:10%; 
         left:52%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:98px;
@@ -1534,12 +2025,12 @@ font-family: "TueddinMedium";
 }
 
 @media screen and (min-width:384px) and (max-width:389px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:10%; 
         left:52%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:98px;
@@ -1666,12 +2157,12 @@ font-family: "TueddinMedium";
 }
 
 @media screen and (min-width:390px) and (max-width:419px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:10%; 
         left:52%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:98px;
@@ -1839,12 +2330,12 @@ font-family: "TueddinMedium";
 }
 
 @media screen and (min-width:420px) and (max-width:639px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:10%; 
         left:52%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:98px;
@@ -1994,12 +2485,12 @@ font-family: "TueddinMedium";
 }
 
 @media screen and (min-width:640px) and (max-width:768px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:41%; 
         left:50%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:98px;
@@ -2233,15 +2724,10 @@ font-family: "TueddinMedium";
     
     .barrabotaomain{
         position: absolute;
-        left: 251.5px;
-        top: -74px;
+        left:  44%;
+        top: -57px;
     }
-    
-        .barrabotaomain img{
-            height: 130px;
-            width: 130px;
-        }
-    
+        
     .barrabotaotimeline{
         position: absolute;
         left: 440px;
@@ -2277,12 +2763,12 @@ font-family: "TueddinMedium";
 }
 
 @media screen and (min-width:768px) and (max-width:1023px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:10%; 
         left:55%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:120px;
@@ -2556,12 +3042,12 @@ font-family: "TueddinMedium";
 }
 
 @media screen and (min-width:1024px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:10%; 
         left:58%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:150px;
@@ -2836,12 +3322,12 @@ font-family: "TueddinMedium";
 }
 
 @media screen and (min-width:1366px){
-    .iconeperfiltela{
+    /*.iconeperfiltela{
         position:absolute; 
         background:0; 
         top:10%; 
         left:50%;
-    }
+    }*/
     
     .fotoperfiltela{
         max-height:150px;

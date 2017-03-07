@@ -10,18 +10,16 @@
                 <h1 class="title">Configurações</h1>
             </div>  
         </div>
-        
+        <br>
 <!--imagem do usuário-->
         <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col">                            
-                    <img src="img/userconfig/fotodoperfil/fotoFavoritos.png" class="fotoperfiltela">
-                    <button class="button button-small iconeperfiltela" ui-sref="perfil"><img src="img/userconfig/icones/edicaodeperfil@1x.svg"></button>        
-            </div>
-            <div class="col"></div>
-            <div class="col"></div>
+           
+            <div class="col col-100">                            
+                    <img style="background-image:url(img/teste/gus2016.jpg)" class="fotoperfiltela">                            
+            </div>            
+            <button class="button iconeperfiltela" ui-sref="perfil"><img src="img/userconfig/icones/edicaodeperfil@1x.svg"></button>            
         </div>
+        <br>
         <div class="row rowtextoimg2">
             <a class="rowtextoimg">
                 <p><span class="rowtextoimgcima">{{ perfil.nome }} {{ perfil.sobrenome }}, {{perfil.idade}}</span>
@@ -46,9 +44,10 @@
             <div class="col col-90 colconfig">
                 <a class="textodentroconfig">Vendo Locais e pessoas em:</a>
                     <br>
-                <a class="button icon-left button-clear button-dark col-offset-10">
+                <button class="button icon-left button-clear button-dark col-offset-10">
                     <img src="img/userconfig/icones/localizacao@1x.svg" class="marginlocalizacao1">Localização atual 
-                    <img src="img/userconfig/icones/Check.svg" class="marginlocalizacao2"></a>
+                    <img src="img/userconfig/icones/Check.svg">
+                </button>
                     <br>
                <!--<button class="button button-clear button-dark col-offset-20" style="font-size:15px">Adicionar um novo local</button>-->
                 
@@ -92,7 +91,7 @@
                       </li>
                        <li class="item item-toggle selecao1">
                          Mulheres
-                         <label class="toggle toggle-tueddin" ng-if="perfil.pref_homem == 's'">
+                         <label class="toggle toggle-tueddin" ng-if="perfil.pref_mulher == 'n'">
                            <input type="checkbox" ng-model="pref_mulher" ng-click="mudaConfig(this,'pref_mulher', 'bool')">
                            <div class="track">
                              <div class="handle"></div>
@@ -478,5 +477,4 @@
             <div class="col"></div>
         </div>          
     </ion-content>
-
 </ion-view>

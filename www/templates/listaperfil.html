@@ -1,0 +1,222 @@
+<ion-view view-title="listaperfil" ng-controller="userCtrl">
+    <ion-content class="fontetueddin">
+
+<!--voltar pesquisar-->
+        <row class="row bgconfig">
+            <div class="col col-15">
+                <button class="button button-icon button-small" ui-sref="mainmenu"><img src="img/timeline/icones/voltar.svg"></button>
+            </div>
+            <div class="col col-70 textocabecalhotimeline">
+                <p>@{{ perfil.nick }}</p>
+            </div>
+            <div class="col col-15">
+                
+            </div>  
+        </row>
+        <br>
+<!--ESCREVER-->
+    <div class="row rowescrever paddingtimeline">
+        <div class="col col-15 paddingtimeline colimagemescrever">
+            <img src="img/teste/insta8.jpg" class="rowescreverimgperfil">
+        </div>    
+        <div class="col col-70 paddingtimeline colclipe">
+            <div class="list">
+               <label class="item item-input caixaescrever">
+                <input class="textoescrever" type="text" placeholder="Escrever ou postar alguma coisa..." >
+              </label>
+            </div>
+        </div>
+        <div class="col col-10 paddingtimeline">
+            <button class="button button-icon button-small button-clear">   <img src="img/timeline/icones/clipe.png" class="imagemclipe"></button>
+        </div>        
+    </div>
+       <br> 
+<!--POSTS texto-->
+        
+        <div class="row rowpost">
+            <div class="row">
+                <div class="col col-15 paddingtimeline colimagemescrever imgposts">
+                    <img src="img/teste/insta8.jpg" class="rowescreverimgperfil">
+                </div>
+                <div class="col col-60">
+                    <p class="textonome">Gustavo Andrade</p>
+                    <p class="textohora">12min atrás</p>
+                </div>
+                <div class="col col-25 colseguir">
+                    <button class="button button-clear butseguir">
+                        <img src="img/timeline/post/seguir@1x.png">
+                    </button>
+                </div>
+            </div>
+                
+            <div class="row">
+                <div class="col col-100">
+                    <p class="textopost">Adorei conhecer esse lugar, me identifiquei muito com as pessoas que franquentam o mesmo. Espero sempre voltar e conhecer gente nova.</p>
+                </div>                
+            </div>
+                
+            <div class="row">
+                <div class="col col-30">
+                </div>
+                <div class="col col-70 colsocial">
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/comentarios@1x.svg">
+                    </button>                    
+                        <div class="balaosocialmed">
+                            <p class="textodentrobalao">12</p>
+                        </div>
+                    
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/gostei@1x.svg">
+                    </button>
+                        <div class="balaosocialgr">
+                            <p class="textodentrobalao">29</p>
+                        </div>
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/compartilhar@1x.svg">
+                    </button>
+                        <div class="balaosocialpeq">
+                            <p class="textodentrobalao">2</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        
+<!--POSTS foto + local-->        
+        <div class="row rowpost">
+            <div class="row"> 
+                <div class="col col-15 paddingtimeline colimagemescrever imgposts">
+                    <img src="img/teste/insta8.jpg" class="rowescreverimgperfil">
+                </div>
+                <div class="col col-60">
+                    <p class="textonome">Gustavo Andrade</p>
+                     <p class="textohora icon-left"><img src="img/timeline/post/pin@1x.svg"> Bamboa, DF</p>
+                </div>
+                <div class="col col-25 colseguir">
+                    <button class="button button-clear butseguir">
+                        <img src="img/timeline/post/seguir@1x.png">
+                    </button>
+                </div>                
+            </div>
+            
+            <div class="row rowfotopost">
+                <div class="fotopost">
+                    <img src="img/teste/3.jpg">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col col-100">
+                    <p class="textopost">Com toda certeza é a melhor casa de show de Brasília, quero ir todos os fins de semana em minhas férias.</p>
+                </div>                
+            </div>
+            
+            <div class="row">
+                <div class="col col-30">
+                </div>
+                <div class="col col-70 colsocial">
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/comentarios@1x.svg">
+                    </button>                    
+                        <div class="balaosocialmed">
+                            <p class="textodentrobalao">12</p>
+                        </div>
+                    
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/gostei@1x.svg">
+                    </button>
+                        <div class="balaosocialgr">
+                            <p class="textodentrobalao">29</p>
+                        </div>
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/compartilhar@1x.svg">
+                    </button>
+                        <div class="balaosocialpeq">
+                            <p class="textodentrobalao">2</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <br>
+<!--POSTS foto-->
+        
+        <div class="row rowpost">
+            <div class="row"> 
+                <div class="col col-15 paddingtimeline colimagemescrever imgposts">
+                    <img src="img/teste/insta8.jpg" class="rowescreverimgperfil">
+                </div>
+                <div class="col col-60">
+                    <p class="textonome">Gustavo Andrade</p>
+                    <p class="textohora icon-left"><img src="img/timeline/post/pin@1x.svg"> Bamboa, DF</p>
+                </div>
+                <div class="col col-25 colseguir">
+                    <button class="button button-clear butseguir">
+                        <img src="img/timeline/post/seguindo.png">
+                    </button>
+                </div>
+            </div>
+            
+                <div class="row rowfotopost">
+                    <div class="fotopost">
+                        <img src="img/timeline/post/videopostagem.png">
+                    </div>
+                </div>
+            
+            <div class="row">
+                <div class="col col-100">
+                    <p class="textopost">Com toda certeza é a melhor casa de show de Brasília, quero ir todos os fins de semana em minhas férias.</p>
+                </div>                
+            </div>
+           
+            <div class="row">
+                <div class="col col-30">
+                </div>
+                <div class="col col-70 colsocial">
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/comentarios@1x.svg">
+                    </button>                    
+                        <div class="balaosocialmed">
+                            <p class="textodentrobalao">12</p>
+                        </div>
+                    
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/gostei@1x.svg">
+                    </button>
+                        <div class="balaosocialgr">
+                            <p class="textodentrobalao">29</p>
+                        </div>
+                    <button class="button button-clear button-small butsocial">
+                        <img src="img/timeline/post/compartilhar@1x.svg">
+                    </button>
+                        <div class="balaosocialpeq">
+                            <p class="textodentrobalao">2</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </ion-content>
+    
+<!--Footer barra-->
+    <ion-footer-bar  class="barra">
+        <img src="img/tab/barrafooter.png" class="barraimg">
+        <div class="buttons">
+            <button class="button button-clear barrabotaopessoas" ui-sref="match1">
+                <img src="img/tab/pessoas@1x.svg">
+            </button>     
+            <button class="button button-clear barrabotaochat" ui-sref="login">
+                <img src="img/tab/conversas@1x.svg">
+            </button>
+            <button class="button button-clear barrabotaomain" ui-sref="mainmenu">
+                
+            </button>
+            <button class="button button-clear barrabotaotimeline" ui-sref="timeline">
+                <img src="img/tab/timeline@1x.svg">
+            </button>
+            <button class="button button-clear barrabotaouserconfig" ui-sref="userconfig">
+                <img src="img/tab/configuracoes@1x.svg">
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

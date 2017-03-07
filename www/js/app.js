@@ -1,7 +1,8 @@
 
-var app = angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
+var app = angular.module('starter', ['ionic', 'firebase', 'ngCordova', 'ionic.contrib.ui.tinderCards'])
 
-app.run(function($ionicPlatform) {
+app.run(function($ionicPlatform){
+   
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -16,6 +17,8 @@ app.run(function($ionicPlatform) {
     }
   });
 })
+
+
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -59,6 +62,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/cadastro',
     templateUrl: 'templates/cadastro.html'
   })
+      
+  .state('locais', {
+    url: '/locais',
+    templateUrl: 'templates/locais.html'
+  })
+      
+  .state('pontoenc', {
+    url: '/pontoenc',
+    templateUrl: 'templates/pontoenc.html'
+  })
+
+  .state('explorar', {
+    url: '/explorar',
+    templateUrl: 'templates/explorar.html'
+  })
     
 .state('timeline', {
     url: '/timeline',
@@ -77,5 +95,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
+
+    
+
 
 });
