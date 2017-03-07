@@ -1,5 +1,5 @@
  <ion-view view-title="login" ng-controller="loginCtrl">
-        <ion-content  class="bckground fontetueddin">
+        <ion-content  class="bckground fontetueddin" scroll="false">
             
 <!--logo--> 
             <div class="row">               
@@ -19,22 +19,25 @@
           
           <div class="row">
               <div class="col"></div>
-<!--twitter-->               
+<!--twitter-->
+
             <div class="col col-75">
-                <button class="button button-full icon-left ion-social-twitter login botaotw" >Entrar com Twitter</button>
+                <button class="button button-full icon-left ion-social-twitter login botaotw"  ui-sref="cadastro">Entrar com Twitter</button>
             </div>
               <div class="col"></div>
           </div> 
-          
+         <!--
           <div class="row">
               <div class="col"></div>
               
 <!--googleplus--> 
+            <!--
             <div class="col col-75">
-                <button class="button button-full icon-left ion-social-googleplus login botaogplus">Entrar com Google+</button>
+                <button class="button button-full icon-left ion-social-googleplus login botaogplus" ui-sref="cadastro">Entrar com Google+</button>
             </div>
               <div class="col"></div>
           </div> 
+     -->
             
             <br>
         

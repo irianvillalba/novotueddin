@@ -1,13 +1,12 @@
 <ion-view view-title="mainmenu" ng-controller="menuCtrl">
-  <ion-content class="bgmain">
+  <ion-content class="bgmain" scroll="false">
       
 <!--botão userconfig-->
       <div class="row">
             <div class="col col-20"><a class="button button-icon button-small" href="#/userconfig"><img src="img/main/icones/configuracao.svg"></a></div>
-            <div class="col col-75" style="color: white">{{ perfil.nome }} {{ perfil.sobrenome }}</div>
-            <div class="col col-10"></div>            
+                        
         </div>    
-      <br>
+     <span></span>
       
       
 <div class="row">
@@ -15,7 +14,7 @@
     
 <!--ponto de encontro-->
             <div class="col col-50 buttonmain botpontodeencontro" >
-                <a class="button button-large button-full button-icon" href="">
+                <a class="button button-large button-full button-icon" href="#/pontoenc">
                     <br>
                 </a>
             </div>
@@ -24,7 +23,7 @@
     
 <!--locais-->    
             <div class="col col-50 buttonmain botlocais">
-                <a class="button button-large button-full button-icon" href="">
+                <a class="button button-large button-full button-icon" href="#/locais">
                     <br>
                 </a>
             </div>
@@ -98,7 +97,7 @@
             
 <!--explorar-->
             <div class="col col-50 buttonmain botexplorar">
-                <a class="button button-large button-full button-icon" href="">        
+                <a class="button button-large button-full button-icon" href="#/explorar">        
                     <br>
                 </a>
             </div> 
@@ -113,10 +112,10 @@
     </div>
       </div>
 
-        <div class="row">
+        <div class="row rowbaixo">
             <div class="col"></div>
             <div class="col col-center">
-                <a class="button button-large button-full button-icon" href="#/login">
+                <a class="button button-full button-icon" href="#/timeline">
                     <img src="img/main/icones/iconeSair.svg" >
                 </a>
             </div>
