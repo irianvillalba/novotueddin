@@ -870,18 +870,11 @@ ion-footer-bar.barra-slide-away{
 }
 
 .textocimaSeguindo{
-    font-size:16;
+    font-size:5vw;
 }
 
 .textobaixoSeguindo{
-    font-size:10;
-}
-
-.botaoeditar{
-    position:relative; 
-    z-index: 3; 
-    left: 11%; 
-    top:-8px;
+    font-size:3vw;
 }
 
 .seguidoresPerfil{
@@ -896,13 +889,17 @@ ion-footer-bar.barra-slide-away{
     top:-2%;
 }
 
-.shade{
-    position:absolute; 
-    bottom:44%; 
-    right:0; 
-    left:0; 
-    z-index:1;
-    width:100%;   
+.rowshade{
+    background: -webkit-linear-gradient( rgba(0, 0, 0, 0), black 100%);  
+    background-size: cover;
+    position: relative;
+    top: 5px;
+    margin: 0;
+    border: 0;
+    width: 102%;
+    height:75px;
+    padding: 0;
+    left: -3px;
 }
 
 .paddingPerfil{
@@ -911,18 +908,26 @@ ion-footer-bar.barra-slide-away{
 
 .imgPerfil{
     width:100%; 
-    height:56%; 
+    height:320px; 
     margin:0; 
     padding:0; 
-    background-size:cover; 
-    float:left;
-    min-height:56%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow: hidden;
+    max-height:320px;
 }
 
 .scrollPerfil{
     width:100%; 
     height:75px; 
     float:left;
+}
+
+.botscroll{
+    margin:0;
+    padding:0;
+    border:0;
 }
 
 .imgscroll{
@@ -934,7 +939,7 @@ ion-footer-bar.barra-slide-away{
 }
 
 .div1Scroll{
-    width:200%; 
+    width:500%; 
     height:auto; 
     float:left;
     padding:0;
@@ -952,7 +957,7 @@ ion-footer-bar.barra-slide-away{
 }
 
 .overlay{
-    position: absolute;
+    position: relative;
     opacity: 0.3;
     height: 75px;
     width: 200%;
@@ -960,29 +965,27 @@ ion-footer-bar.barra-slide-away{
     padding-left: 31%;
     z-index: 2;
     left: 0;
+    top:-77px;
     background: -webkit-radial-gradient(circle, black 47%, rgba(255, 0, 0, 0) 99%);
     line-height: 53px;
-    text-align: left;   
+    text-align: left;
+    transition: all 10s ease;
 }
 
     .overlay.activated{
         opacity:0;
-        content:;
-        position: absolute;
+        content:none;
         background-color: black;
-        height: 75px;
-        width: 265px; 
-        margin:0;
-        padding:0;   
-        z-index:2;
-        top:0;
-        left:20%;
+        width: 1px;
+        padding:0;
         color:transparent;
-        text-decoration: none;        
+        text-decoration: none;
+        transition: all 0.5s ease;
     }
 
 .overlaytext{    
-    color:white;       
+    color:white; 
+    margin:0;       
 }
 
 .overlayimg{
@@ -1009,17 +1012,19 @@ ion-footer-bar.barra-slide-away{
     background-image:url(../img/perfil/local/barra.png);
     height:6%;
     text-align:center;
+    vertical-align: middle;
+    padding:5 0;
 }
 
 .iconelocal{
     float:left;
     margin-left:35%;
-    margin-top:1.5%;
     margin-right:-32%;
 }
 
 .textolocal{
-    margin-top:2.5%;
+    margin-top:1%;
+    font-size:4vw;
 }
 
 .sobreBalao{
@@ -1069,8 +1074,9 @@ ion-footer-bar.barra-slide-away{
 
 .instagramBotaop{
     position: relative;
-    right: -166px;
+    left: 55%;
     top: 9px;
+    float: left;
 }
 
 .fotosInstagram{
@@ -1085,6 +1091,25 @@ ion-footer-bar.barra-slide-away{
     padding-right:0.5%;
     padding-top:0.25%;
     padding-bottom:0.25%;
+}
+
+.colinstagram{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 20%;
+}
+
+.popupperfilbot{
+    border-radius: 5px; 
+    background-color: transparent; 
+    border: 0; 
+    border-bottom:1px darkgray solid; 
+    color:white;
+}.popupperfilbot.activated{
+    background-color: darkgray;
+    opacity:0.3;
 }
 
 /*-------------------------------------MATCH*/
@@ -1772,12 +1797,7 @@ font-family: "TueddinMedium";
         margin-right:58%;
     }
     
-    .iconelocal{
-        float:left;
-        margin-left:35%;
-        margin-top:2%;
-        margin-right:-32%;
-    }
+    
     
     .botaoeditar{
         position:relative; 

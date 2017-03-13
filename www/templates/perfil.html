@@ -3,8 +3,7 @@
         
 <!--fotoperfil-->
         <div class="row paddingPerfil">
-            <div class="col imgPerfil" style="background-image:url('img/teste/gus2016.jpg');">
-                
+            <div class="col imgPerfil" ng-style="{'background-image':'url('+imgback+')'}">               
                 <a class="button button-icon voltarPerfil" href="#/userconfig">
                     <img src="img/perfil/icones/voltar@1x.svg">
                 </a>
@@ -24,24 +23,30 @@
                     </p>
                 </a>
                 
-                <a class="seguindoPerfil">
-                    <p><span class="textocimaSeguindo">228</span>
-                        <br>
-                        <span class="textobaixoSeguindo">Seguindo</span>
-                    </p>
-                </a>
-                
-                <a class="button button-icon botaoeditar">
-                    <img src="img/perfil/icones/editarPerfil.svg">             
-                </a>
-                
-                 <a class="seguidoresPerfil">
-                    <p><span class="textocimaSeguindo">10.1k</span>
-                        <br>
-                        <span class="textobaixoSeguindo">Seguidores</span>
-                    </p>
-                </a>
-                <img src="img/perfil/icones/overlay@1x.svg" class="shade">      
+                <div class="row rowshade">
+                    <div class="col">
+                        <a class="seguindoPerfil">
+                            <p><span class="textocimaSeguindo">228</span>
+                                <br>
+                                <span class="textobaixoSeguindo">Seguindo</span>
+                            </p>
+                        </a>
+                    </div>
+                    
+                    <div class="col">
+                        <a class="button button-icon">
+                            <img src="img/perfil/icones/editarPerfil.svg">             
+                        </a>
+                    </div>
+                    <div class="col">
+                         <a class="seguidoresPerfil">
+                            <p><span class="textocimaSeguindo">10.1k</span>
+                                <br>
+                                <span class="textobaixoSeguindo">Seguidores</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -50,19 +55,32 @@
         <ion-scroll zooming="true" direction="x" class="scrollPerfil">
             <div class="div1Scroll">
                 <div class="row div2Scroll">
-                    <div class="col div3Scroll">
-                        <img src="img/perfil/fotos/fotoscroll01.png" class="imgscroll">
-                        <img src="img/perfil/fotos/fotoscroll02.png" class="imgscroll">
-                        <img src="img/perfil/fotos/fotoscroll03.png" class="imgscroll">
-                        <img src="img/perfil/fotos/fotoscroll04.png" class="imgscroll">
-                        <img src="img/perfil/fotos/fotoscroll01.png" class="imgscroll">
-                        <img src="img/perfil/fotos/fotoscroll02.png" class="imgscroll">
-                        <img src="img/perfil/fotos/fotoscroll03.png" class="imgscroll">
-                    </div>        
+                    <div class="col div3Scroll">                        
+                            <img src="img/teste/1.jpg" class="imgscroll"  ng-click="changeImg1()">   
+                            <img src="img/teste/2.jpg" class="imgscroll"  ng-click="changeImg2()">
+                            <img src="img/teste/3.jpg" class="imgscroll" ng-click="changeImg3()">
+                            <img src="img/teste/4.jpg" class="imgscroll"  ng-click="changeImg4()">
+                            <img src="img/teste/5.jpg" class="imgscroll"  ng-click="changeImg5()">
+                            <img src="img/teste/6.jpg" class="imgscroll"  ng-click="changeImg6()">
+                            <img src="img/teste/7.jpg" class="imgscroll"  ng-click="changeImg7()">
+                            <img src="img/teste/1.jpg" class="imgscroll"  ng-click="changeImg8()">
+                            <img src="img/teste/2.jpg" class="imgscroll"  ng-click="changeImg9()">
+                            <img src="img/teste/3.jpg" class="imgscroll"  ng-click="changeImg10()">
+                            <img src="img/teste/4.jpg" class="imgscroll"  ng-click="changeImg11()">
+                            <img src="img/teste/5.jpg" class="imgscroll"  ng-click="changeImg12()">
+                            <img src="img/teste/6.jpg" class="imgscroll"  ng-click="changeImg13()">
+                            <img src="img/teste/7.jpg" class="imgscroll"  ng-click="changeImg14()">
+                            <img src="img/teste/1.jpg" class="imgscroll"  ng-click="changeImg15()">
+                    </div> 
                 </div>
             </div>
             <div>
-                <button class="button overlay"><p class="overlaytext">Deslize para ver mais <img src="img/perfil/icones/avancar.png" class="overlayimg"></p></button>
+                <button class="button overlay">
+                    <p class="overlaytext">
+                        Deslize para ver mais 
+                        <img src="img/perfil/icones/avancar.png" class="overlayimg" >
+                    </p>
+                </button>
             </div>
         </ion-scroll>
         
@@ -128,38 +146,38 @@
         
 <!--Fotos instagram-->
         <div class="row paddingInstagram">
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image01.png" class="fotosInstagram">    
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta1.jpg')">             
+                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
             </div>
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image02.png" class="fotosInstagram">
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta2.jpg')">             
+                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
             </div>
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image03.png" class="fotosInstagram">
-            </div>
-        </div>
-        <div class="row paddingInstagram">
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image04.png" class="fotosInstagram">
-            </div>
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image05.png" class="fotosInstagram">
-            </div>
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image06.png" class="fotosInstagram">
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta3.jpg')">             
+                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
             </div>
         </div>
         <div class="row paddingInstagram">
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image07.png" class="fotosInstagram">
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta4.jpg')">             
+                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
             </div>
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image08.png" class="fotosInstagram">
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta5.jpg')">             
+                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
             </div>
-            <div class="col col-33 paddingPerfil">
-                <img src="img/perfil/fotos/image09.png" class="fotosInstagram">
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta6.jpg')">             
+                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
             </div>
-        </div>    
+        </div>
+        <div class="row paddingInstagram">
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta7.jpg')">    
+               <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+            </div>
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta8.jpg')">                <button class="button button-clear button-full" ng- click="imginstaFull()"></button>       
+            </div>
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta9.jpg')">             
+                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+            </div>
+        </div> 
+        
     </ion-content>
     
 <!--Footer barra-->
