@@ -10,7 +10,6 @@
     color:#161820;    
 }
 
-
 .bgconfig{
     background-color:#F6F6F6;
     color:#F6F6F6;
@@ -54,7 +53,6 @@
     text-decoration-color: White;
 }
 
-
 .svg{
     height:10%;
 }
@@ -67,7 +65,6 @@
     line-height: 1.2;
     word-spacing: 2px;
 }
-
 
 .botaofb{
     opacity:1.0; 
@@ -87,7 +84,6 @@
     background-color: #DD4B39; 
     color:white;
 }
-
 
 .textolink{
     text-decoration:underline; 
@@ -356,8 +352,6 @@
 .butseguir img{
     height:32px;
 }
-
-
 
 .colseguir{
     text-align: right;
@@ -1041,7 +1035,6 @@ ion-footer-bar.barra-slide-away{
     text-align: left;
 }
 
-
 .sobreTextobaixo{
     position: relative;
     top: -2px;
@@ -1106,11 +1099,48 @@ ion-footer-bar.barra-slide-away{
     background-color: transparent; 
     border: 0; 
     border-bottom:1px darkgray solid; 
-    color:white;
-}.popupperfilbot.activated{
+    color:black;
+}
+
+    .popupperfilbot.activated{
     background-color: darkgray;
     opacity:0.3;
 }
+
+.botmodalfechar{
+    height:100%;
+    padding:0;
+    margin:0;
+    width:100%;
+    
+}
+
+.bgmodalperfil{
+    background-color:black;
+    border:none;
+    border-color: transparent;
+    text-align: center;
+} .bgmodalperfil h1{
+    color:white;
+    text-align: center;
+}
+
+  .modalperfilimg{
+        background-size: cover; 
+        background-position: center center;
+        background-repeat: no-repeat; 
+        overflow: hidden; 
+        background-color: black;
+        height:100%;
+        width:100%;
+        margin:0;
+        padding:0;
+    }
+    
+    .bgmodalperfil{
+        background-color: black;
+        color:black;
+    }
 
 /*-------------------------------------MATCH*/
 
@@ -1175,13 +1205,11 @@ ion-footer-bar.barra-slide-away{
         border:0;
     }
         
-
 .opcoesMatch{
     padding-left: 0%;
     margin-right: 2%;
     margin-top: 15%
 }
-
 
 .rowcartao{
     padding-left:5%;
@@ -1333,6 +1361,7 @@ ion-footer-bar.barra-slide-away{
     float: left;
     opacity: 0.9;
 }
+
 /*.notificacaored2{
     position:absolute;
     top:34%;
@@ -1376,8 +1405,6 @@ ion-footer-bar.barra-slide-away{
     z-index:2;
 }*/
 
-
-
 .divNomepessoa{
     max-width:100%;
     min-width:25%;
@@ -1390,12 +1417,56 @@ ion-footer-bar.barra-slide-away{
     text-align:center;
     height:23px;
 }
+
     .divNomepessoa p{        
         padding:2%;
         margin:0;
         line-height: 20px;
         font-size:12px;
     }
+
+/*-------------------------------------COMINAÇÃO*/
+.bgcombina{
+    background-color:#161820;
+    background-image: url('../img/combinacao/back.png');
+    background-size: contain;
+    background-position:top center;
+    background-repeat: no-repeat;
+}
+
+.colimgcomb{
+    border-radius: 50%;
+    background-position: center center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:3px white solid;
+    height:38vw;
+    margin: 0 5;
+}
+
+.coltextocomb{
+    color:white;
+    text-align: center;
+    font-size:4vw;
+}
+
+.botcomb{
+    border-radius:22px;
+    text-align: center;
+    vertical-align: middle;
+    font-size:5vw;
+}
+
+.botcomb img{
+    position: relative;
+    top: 4px;
+}
+
+.colbotcomb{
+    padding:0;
+}
+
 /*-------------------------------------PONTO DE ENCONTRO*/
 
 .rowcartaoponto{
@@ -1503,10 +1574,12 @@ ion-footer-bar.barra-slide-away{
     text-align: center;
     max-height: 100%;
 }
+
     .botgosteiponto p{
         float:left;
         margin-top:-9px;
     }
+
     .botgosteiponto img{
         float:left;
         margin-left:16px;
@@ -1584,7 +1657,6 @@ ion-footer-bar.barra-slide-away{
     text-align:center;
 }
 
-
 .bottoplocais{
     border-radius: 50px;
     background-image: url(../img/pontoencontro/bg_icones@3x.png);
@@ -1596,9 +1668,13 @@ ion-footer-bar.barra-slide-away{
     background-position: center center;
     position: relative;
     top: -150px;
-}.bottoplocais img{
+}
+
+.bottoplocais img{
     height:50%;
-}.bottoplocais button{
+}
+
+.bottoplocais button{
     min-height:26px;
 }
 
@@ -1614,7 +1690,9 @@ ion-footer-bar.barra-slide-away{
     z-index: 5;
     background-position: center center;
     height: 15%;
-}.botbotlocais img{
+}
+
+.botbotlocais img{
     height:65%;
     float:left;
     margin-right:3px;
@@ -1651,14 +1729,20 @@ ion-footer-bar.barra-slide-away{
     text-align: left;
     padding:0;
     top:-21px;
-}.botsbarrapontolocais img{
+}
+
+.botsbarrapontolocais img{
     height:65%;
-}.botsbarrapontolocais p{
+}
+
+.botsbarrapontolocais p{
     font-size:8px; 
     margin:0;
     float:right;
     padding-right: 5px;
-}.botsbarrapontolocais button{
+}
+
+.botsbarrapontolocais button{
     padding: 0;
     width: 100%;
     line-height: 23px;
@@ -1674,14 +1758,122 @@ ion-footer-bar.barra-slide-away{
     margin: 0;
 }
 
-
 .textolocalbaixocartaolocais {   
     font-size: 1vw;
     line-height: 14px;
     margin: 0px;
 }
    
-    
+/*---------------------------------------CONVERSAS*/
+
+.iconepessoachat{
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:50%;
+    height:14vw;
+    width:14vw;
+    margin:5 0 0 0;
+    padding:0;
+}
+
+.iconepessoachatmini{
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:50%;
+    height:20px;
+    width:20px;
+    margin:0 5 0 0;
+    padding:0;
+    float:left;    
+}
+
+.coldata{
+    padding:0;
+}
+
+.iconeonline{
+    float: right;
+    position: relative;
+    top: 35px;
+}
+
+.textochatpreview{
+    width: 100%;
+    font-size: 3vw;
+    margin:0;
+    padding:0;
+    color: #d3d3d3;
+}
+
+.textochatpreviewaviso{
+    width: 100%;
+    font-size: 3vw;
+    margin:0;
+    padding:0;
+    color: red;
+}
+
+.rowchat{
+    display: block;
+    padding: 0;
+}
+
+.naolidas{
+    background-color: #161820;
+    border-radius:50px;
+    height: 20px;
+    width:auto;
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    display: inline-block;
+    padding:0 5;
+    margin:0 0 0 10;
+}
+
+.chathora{
+    color: #d3d3d3;
+    font-size: 4vw;
+}
+
+.botarquivarchat{
+    margin:0;
+    padding:0;
+    background-image:url(../img/conversas/arquivar@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;  
+    width:48%;
+    border: none;
+    border-radius: 0;
+}
+
+.botdeletarchat{
+    margin:0  0 0 -5;
+    padding:0;
+    background-image:url(../img/conversas/delete@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;   
+    width:48%;
+    border: none;
+    border-radius: 0;
+}
+
+.colbotchat{
+    padding:0 0 0 5;
+    margin:0;
+}
+
+.colborder{
+    border-bottom: 1px solid lightgray;
+}
+
+.scrollchat{
+    max-height:70;
+}
 
 /*-------------------------------------FONTES*/
 @font-face {
@@ -1788,8 +1980,9 @@ font-family: "TueddinMedium";
     
     }
     
+/*--------------------------------------------MODAL VIEW PERFIL*/
     
-    
+  
 /*---------------------------------media query perfil*/
     .voltarPerfil{
         padding-left:5%; 
