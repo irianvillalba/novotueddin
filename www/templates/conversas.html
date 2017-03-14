@@ -1,0 +1,167 @@
+<ion-view view-title="conversas">
+    <ion-content class="fontetueddin">
+
+<!--voltar pesquisar-->
+        <div class="row bgconfig">
+            <div class="col">
+                <button class="button button-icon button-small" ui-sref="mainmenu"><img src="img/timeline/icones/voltar.svg"></button>
+            </div>
+            <div class="col col-75 textocabecalhotimeline">
+                <p>Pessoas</p>
+            </div>
+            <div class="col">
+                <button class="button button-icon button-small"><img src="img/timeline/icones/buscar.svg"></button>
+            </div>            
+        </div>
+        
+<!----------------------------CARDS DE CONVERSAS-->
+    <ul class="list">
+        <li class="list-item">
+            <ion-scroll direction="x" class="available-scroller scrollchat">
+                <div class="row rowchat">
+                    <div class="row"> 
+                        <div class="col col-15 iconepessoachat" style="background-image:url('img/teste/1.jpg')">
+                            <img src="img/conversas/ativo@1x.svg" class="iconeonline"><!--ICONE DE ONLINE-->
+                        </div>
+                        
+                        <div class="col col-70 colborder">
+                            <p class="textonome">Paula Souza</p><!--ICONE DE ONLINE-->
+                             <div>
+                                <div class="col col-15 colborder iconepessoachatmini" style="background-image:url('img/teste/insta8.jpg')"><!--ICONE DA PESSOA QUE ESTÁ USANDO O APP-->
+                                </div> 
+                                <p class="textochatpreview" ng-show="true">Oi gatinho, anda sumido.</p><!--ÚLTIMA MENSAGEM-->
+                                <p class="textochatpreviewaviso" ng-show="false">Mensagem não enviada</p><!--AVISO DE MENSAGEM NÃO ENVIADA-->
+                            </div>
+                        </div>
+                        <div class="col col-20 colborder coldata">
+                            <p class="chathora">13:45</p><!--DATA OU HORA-->
+                            <div class="naolidas"><!--MENSAGENS NÃO LIDAS-->
+                                <p>100</p>
+                            </div>
+                        </div>
+                        <div class="col col-50 colbotchat colborder">
+                            <button class="button button-large botarquivarchat"></button>
+                            <button class="button button-large botdeletarchat"></button>        
+                        </div>                
+                    </div>
+                </div>      
+            </ion-scroll>
+        </li>
+        
+        <li class="list-item">
+            <ion-scroll direction="x" class="available-scroller scrollchat">
+                <div class="row rowchat">
+                    <div class="row"> 
+                        <div class="col col-15 iconepessoachat" style="background-image:url('img/teste/2.jpg')">
+                            <img src="img/conversas/ativo@1x.svg" class="iconeonline">
+                        </div>
+                        <div class="col col-70 colborder">
+                            <p class="textonome">Amanda Pereira</p>
+                             <div>
+                                <div class="col col-15 colborder iconepessoachatmini" style="background-image:url('img/teste/insta8.jpg')">
+                                </div> 
+                                <p class="textochatpreview">Bom dia Amanda</p>         <p class="textochatpreviewaviso" ng-show="false">Mensagem não enviada</p>               
+                            </div>
+                        </div>
+                        <div class="col col-20 colborder coldata">
+                            <p class="chathora">13:45</p>
+                            <div class="naolidas" ng-show="false">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="col col-50 colbotchat colborder">
+                            <button class="button button-large botarquivarchat"></button>
+                            <button class="button button-large botdeletarchat"></button>        
+                        </div>                
+                    </div>
+                </div>      
+            </ion-scroll>        
+        </li>
+        
+        <li class="list-item">
+            <ion-scroll direction="x" class="available-scroller scrollchat">
+                <div class="row rowchat">
+                    <div class="row"> 
+                        <div class="col col-15 iconepessoachat" style="background-image:url('img/teste/3.jpg')">
+                            <img src="img/conversas/ativo@1x.svg" class="iconeonline" ng-show="false">
+                        </div>
+                        <div class="col col-70 colborder">
+                            <p class="textonome">Vanessa Martins</p>
+                             <div>
+                                <div class="col col-15 colborder iconepessoachatmini" style="background-image:url('img/teste/insta8.jpg')">
+                                </div>
+                                 <p class="textochatpreview" ng-show="false">Oi gatinho, anda sumido.</p>
+                                    <p class="textochatpreviewaviso" ng-show="true">Mensagem não enviada</p>
+                            </div>
+                        </div>
+                        <div class="col col-20 colborder coldata">
+                            <p class="chathora">13:45</p>
+                            <div class="naolidas" ng-show="false">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="col col-50 colbotchat colborder">
+                            <button class="button button-large botarquivarchat"></button>
+                            <button class="button button-large botdeletarchat"></button>        
+                        </div>                
+                    </div>
+                </div>      
+            </ion-scroll>
+        </li>
+        
+        <li class="list-item">
+            <ion-scroll direction="x" class="available-scroller scrollchat">
+                <div class="row rowchat">
+                    <div class="row"> 
+                        <div class="col col-15 iconepessoachat" style="background-image:url('img/teste/4.jpg')">
+                            <img src="img/conversas/ativo@1x.svg" class="iconeonline" ng-show="false">
+                        </div>
+                        <div class="col col-70 colborder">
+                            <p class="textonome">Monique Rodrigues</p>
+                             <div>
+                                <div class="col col-15 colborder iconepessoachatmini" style="background-image:url('img/teste/insta8.jpg')">
+                                </div> 
+                                <p class="textochatpreview">Veja essa foto que legal</p>
+                                 <p class="textochatpreviewaviso" ng-show="false">Mensagem não enviada</p>
+                            </div>
+                        </div>
+                        <div class="col col-20 colborder coldata">
+                            <p class="chathora">13/03/17</p>
+                            <div class="naolidas">
+                                <p>56</p>
+                            </div>
+                        </div>
+                        <div class="col col-50 colbotchat colborder">
+                            <button class="button button-large botarquivarchat"></button>
+                            <button class="button button-large botdeletarchat"></button>        
+                        </div>                
+                    </div>
+                </div>    
+            </ion-scroll>
+        </li>
+    </ul>         
+        <br>
+        <br>
+    </ion-content>
+    
+<!--Footer barra-->
+    <ion-footer-bar class="barra">
+        <img src="img/tab/barrafooter.png" class="barraimg">
+        <div class="buttons">
+            <button class="button button-clear barrabotaopessoas" ui-sref="match1">
+                <img src="img/tab/pessoas@1x.svg">
+            </button>     
+            <button class="button button-clear barrabotaochat" ui-sref="login">
+                <img src="img/tab/conversas@1x.svg">
+            </button>
+            <button class="button barrabotaomain" ui-sref="mainmenu">               
+            </button>
+            <button class="button button-clear barrabotaotimeline" ui-sref="timeline">
+                <img src="img/tab/timeline@1x.svg">
+            </button>
+            <button class="button button-clear barrabotaouserconfig" ui-sref="userconfig">
+                <img src="img/tab/configuracoes@1x.svg">
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

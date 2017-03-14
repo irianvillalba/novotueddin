@@ -1,0 +1,12 @@
+<ion-modal-view view-title="modalPerfil" ng-controller="popupPerfil" class="bgmodalperfil">
+            <ion-header-bar class="bar bar-header bgmodalperfil">
+              <h1 class="title" style="text-align:center">{{ perfil.nome }} {{ perfil.sobrenome }}, {{perfil.idade}}</h1>
+            </ion-header-bar>
+            <ion-content class="bgmodalperfil">
+              <div  class="modalperfilimg" ng-style="{'background-image':'url('+imgFull+')'}">                  
+              </div>               
+            </ion-content>
+            <ion-footer-bar class="bar bar-footer bgmodalperfil">
+                <button class="button button-dark botmodalfechar" ng-click="modal.hide()">Close</button>
+            </ion-footer-bar>
+</ion-modal-view>
