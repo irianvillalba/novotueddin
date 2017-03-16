@@ -1,0 +1,10 @@
+td-cards {
+  display: block;
+}
+td-card {
+  display: block;
+}
+td-card img {
+  max-width: 102%;
+  max-height: 100%;
+}
