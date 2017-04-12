@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="32px" viewBox="0 0 26 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="13.3839281%" y1="15.3869403%" x2="256.372641%" y2="250.930538%" id="linearGradient-1">
+            <stop stop-color="#10F8C5" offset="0%"></stop>
+            <stop stop-color="#00D4FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M19,32 L32,32 L32,19 C32,11.8202983 26.1797017,6 19,6 C11.8202983,6 6,11.8202983 6,19 C6,26.1797017 11.8202983,32 19,32 Z" id="path-2"></path>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="26" height="26" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <linearGradient x1="50%" y1="-83.2763672%" x2="50%" y2="854.868164%" id="linearGradient-4">
+            <stop stop-color="#10F8C5" offset="0%"></stop>
+            <stop stop-color="#00D4FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Tueddin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7-locais" transform="translate(-29.000000, -291.000000)">
+            <g id="casa-show" transform="translate(16.000000, 76.000000)">
+                <g id="pin" transform="translate(7.000000, 209.000000)">
+                    <use id="Oval-7" stroke="url(#linearGradient-1)" mask="url(#mask-3)" stroke-width="4" transform="translate(19.000000, 19.000000) rotate(46.000000) translate(-19.000000, -19.000000) " xlink:href="#path-2"></use>
+                    <circle id="Oval-9" stroke="url(#linearGradient-4)" stroke-width="2" cx="19" cy="19" r="5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

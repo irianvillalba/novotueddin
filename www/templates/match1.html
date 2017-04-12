@@ -8,10 +8,12 @@
                     <img src="img/perfil/icones/voltar@1x.svg">
                 </button>
             </div>
-            <div class="col col-75 colbotaovisual">
-                <img src="img/pessoas/visualizacao@2x.png" class="botaovisual">
-                    <button class="button botaograde" ui-sref="match2"></button>
-                    <button class="button botaouma" ui-sref="match1"></button>
+            <div class="col col-70 colbotaovisual">
+<!----
+<img src="img/pessoas/visualizacao@2x.png" class="botaovisual">
+    <button class="button botaograde" ui-sref="match2"></button>
+    <button class="button botaouma" ui-sref="match1"></button>
+---->
             </div>
             <div class="col col-20"> 
                 <button class="button botopcoesmatch" >
@@ -28,8 +30,9 @@
               on-partial-swipe="cardPartialSwipe(amt)">
                 <div class="row rowcartao">
                         <div class="col cartaopessoa">            
-                            <img style="background-image:url({{card.image}})" class="cartaopessoaimg">
+                            <img style="background-image:url({{card.image}})" class="cartaopessoaimg" ui-sref="perfil">
                             <p>{{card.title}}</p>
+                            <!----
                             <div class="list botaolista">
                                 <button class="botaoimg"><img src="img/pessoas/cinza@1x.png"></button>
                                 <br>
@@ -44,7 +47,7 @@
                                 <button  class="botaoimg"><img src="img/pessoas/cinza@1x.png"></button>
                                 <br>
                                 <button  class="botaoimg"><img src="img/pessoas/cinza@1x.png"></button>
-                            </div>
+                            </div>--->
                             <div class="rowlike">
                                 <button class="botaolike" ><img src="img/pessoas/dislike@2x.png"></button>
                                 <button class="botaolike" ><img src="img/pessoas/mais@2x.png"></button>

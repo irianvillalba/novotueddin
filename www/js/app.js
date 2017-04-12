@@ -62,6 +62,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/cadastro',
     templateUrl: 'templates/cadastro.html'
   })
+    
+.state('chat', {
+    url: '/chat',
+    templateUrl: 'templates/chat.html'
+  })
       
   .state('locais', {
     url: '/locais',
@@ -76,6 +81,26 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('explorar', {
     url: '/explorar',
     templateUrl: 'templates/explorar.html'
+  })
+  
+ .state('conversas', {
+    url: '/conversas',
+    templateUrl: 'templates/conversas.html'
+  })
+  
+  .state('modalPerfil', {
+    url: '/modalPerfil',
+    templateUrl: 'templates/modalPerfil.html'
+  })
+  
+  .state('modalcombinaca', {
+      url:'/modalcombinacao',
+      templateUrl: 'templates/modalcombinacao.html'
+  })
+    
+  .state('pesquisar', {
+      url:'/pesquisar',
+      templateUrl: 'templates/pesquisar.html'
   })
     
 .state('timeline', {

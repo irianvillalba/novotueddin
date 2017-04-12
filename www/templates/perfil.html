@@ -11,7 +11,7 @@
                     <img src="img/perfil/icones/compartilhar.svg">
                 </a>
                 
-                <a class="button button-icon opcoesPerfil" ng-click="popupPerfil()">
+                <a class="button button-icon opcoesPerfil" ng-click="popupOpcoes()">
                     <img src="img/perfil/icones/opcoes@1x.svg">
                 </a>              
                
@@ -34,9 +34,9 @@
                     </div>
                     
                     <div class="col">
-                        <a class="button button-icon">
-                            <img src="img/perfil/icones/editarPerfil.svg">             
-                        </a>
+                        <button class="button button-icon" ng-model="buttonedita" ng-click="buttonedita.clicked=!buttonedita.clicked" ng-class="buttonedita.clicked?'button-tueddin':'button-tueddin'"> <!--BOTAO PARA EDITAR O TEXTO-->
+                            <img src="img/perfil/icones/editarPerfil.svg">   
+                        </button>
                     </div>
                     <div class="col">
                          <a class="seguidoresPerfil">
@@ -56,7 +56,7 @@
             <div class="div1Scroll">
                 <div class="row div2Scroll">
                     <div class="col div3Scroll">                        
-                            <img src="img/teste/1.jpg" class="imgscroll"  ng-click="changeImg1()">   
+                            <img src="img/teste/1.jpg" class="imgscroll"  ng-click="changeImg1()"> 
                             <img src="img/teste/2.jpg" class="imgscroll"  ng-click="changeImg2()">
                             <img src="img/teste/3.jpg" class="imgscroll" ng-click="changeImg3()">
                             <img src="img/teste/4.jpg" class="imgscroll"  ng-click="changeImg4()">
@@ -74,7 +74,7 @@
                     </div> 
                 </div>
             </div>
-            <div>
+            <div ng-show="!buttonedita.clicked">
                 <button class="button overlay">
                     <p class="overlaytext">
                         Deslize para ver mais 
@@ -114,18 +114,21 @@
                 </p>
             </div>
         </div>
-        
+        <span></span>
 <!--Sobre-->
-        <div class="row divSobre">
-            <div class="col col-100">
-                <img src="img/perfil/sobre/sobre@2x.png" class="sobreBalao">
-                <p class="sobretexto"><span class="sobreTextocima">
-                    Sobre
-                </span>
+        <div class="row">
+            <div class="col col-100 sobreBalao">                
+                <p class="sobretexto">
+                    <span class="sobreTextocima">
+                        Sobre
+                    </span>
                     <br>
-                <span class="sobreTextobaixo">
-                    Quero namorar um homem sério, não quero nada de sexo casual.
-                </span>
+                    <label class="item item-input sobreTextobaixoedita" ng-show="buttonedita.clicked">
+                        <input ng-model="newTexto.novoTexto" type="text" ng-readonly="false" placeholder="{{textos}}"> <!--EDIÇÃO DO TEXTO-->
+                    </label>                    
+                    <span ng-show="!buttonedita.clicked" class="sobreTextobaixo">
+                        {{textos}}
+                    </span>
                 </p>
             </div>
         </div>
@@ -147,47 +150,51 @@
 <!--Fotos instagram-->
         <div class="row paddingInstagram">
             <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta1.jpg')">             
-                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
             </div>
             <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta2.jpg')">             
-                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
             </div>
             <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta3.jpg')">             
-                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
             </div>
         </div>
+        
         <div class="row paddingInstagram">
             <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta4.jpg')">             
-                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
             </div>
             <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta5.jpg')">             
-                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>      
             </div>
             <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta6.jpg')">             
-                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
             </div>
         </div>
+        
         <div class="row paddingInstagram">
             <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta7.jpg')">    
-               <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+               <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
             </div>
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta8.jpg')">                <button class="button button-clear button-full" ng- click="imginstaFull()"></button>       
+            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta8.jpg')">                
+                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
             </div>
             <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta9.jpg')">             
-                <button class="button button-clear button-full" ng-click="imginstaFull()"></button>       
+                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
             </div>
-        </div> 
-        
-    </ion-content>
+        </div>
+        <br>
+        <br>        
+    </ion-content>  
     
 <!--Footer barra-->
-    <ion-footer-bar class="barra">
+    <ion-footer-bar class="barra hide-on-keyboard-open">
         <img src="img/tab/barrafooter.png" class="barraimg">
         <div class="buttons">
             <button class="button button-clear barrabotaopessoas" ui-sref="match1">
                 <img src="img/tab/pessoas@1x.svg">
             </button>     
-            <button class="button button-clear barrabotaochat" ui-sref="login">
+            <button class="button button-clear barrabotaochat" ui-sref="conversas">
                 <img src="img/tab/conversas@1x.svg">
             </button>
             <button class="button barrabotaomain" ui-sref="mainmenu">

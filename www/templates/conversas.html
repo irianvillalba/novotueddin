@@ -10,13 +10,13 @@
                 <p>Pessoas</p>
             </div>
             <div class="col">
-                <button class="button button-icon button-small"><img src="img/timeline/icones/buscar.svg"></button>
+                <button class="button button-icon button-small" ui-sref="pesquisar"><img src="img/timeline/icones/buscar.svg"></button>
             </div>            
         </div>
         
 <!----------------------------CARDS DE CONVERSAS-->
     <ul class="list">
-        <li class="list-item">
+        <li class="list-item" ui-sref="chat">
             <ion-scroll direction="x" class="available-scroller scrollchat">
                 <div class="row rowchat">
                     <div class="row"> 
@@ -48,7 +48,7 @@
             </ion-scroll>
         </li>
         
-        <li class="list-item">
+        <li class="list-item" ui-sref="chat">
             <ion-scroll direction="x" class="available-scroller scrollchat">
                 <div class="row rowchat">
                     <div class="row"> 
@@ -78,7 +78,7 @@
             </ion-scroll>        
         </li>
         
-        <li class="list-item">
+        <li class="list-item" ui-sref="chat">
             <ion-scroll direction="x" class="available-scroller scrollchat">
                 <div class="row rowchat">
                     <div class="row"> 
@@ -109,7 +109,7 @@
             </ion-scroll>
         </li>
         
-        <li class="list-item">
+        <li class="list-item"  ui-sref="chat">
             <ion-scroll direction="x" class="available-scroller scrollchat">
                 <div class="row rowchat">
                     <div class="row"> 
@@ -145,7 +145,7 @@
     </ion-content>
     
 <!--Footer barra-->
-    <ion-footer-bar class="barra">
+    <ion-footer-bar class="barra hide-on-keyboard-open">
         <img src="img/tab/barrafooter.png" class="barraimg">
         <div class="buttons">
             <button class="button button-clear barrabotaopessoas" ui-sref="match1">
