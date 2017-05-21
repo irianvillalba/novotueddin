@@ -267,6 +267,37 @@
     font-family: "TueddinLight";
 }
 
+/*-----------------------------------input de texto*/
+.textarea-container {
+  position: relative;
+  width: 50%;
+}
+
+textarea, .textarea-size {
+  min-height: 25px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-top: 4vw;
+  overflow: hidden;
+  width: 100%;
+}
+
+textarea {
+  height: 100%;
+  position: absolute;
+  resize:none;
+  white-space: normal;
+}
+
+.textarea-size {
+  visibility: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/*-------------------------------------------------------*/
+
 .rowescrever{
     border-top: 1px solid #D3D3D3;
     border-bottom: 1px solid #D3D3D3;
@@ -276,9 +307,9 @@
 
 .rowescreverimgperfil{
     border-radius:50%;
-    width:40px;
-    height:40px;
-    margin-top: 6%;
+    width: 12vw;
+    height: 12vw;
+    margin-top: 1vw;
 }
 
 .colimagemescrever{
@@ -293,6 +324,7 @@
     border:0;
     width:99%;
     padding-left:5px;
+    height:100%
 }
 
     .caixaescrever input{
@@ -444,7 +476,8 @@
     background-size:cover;
 }
 .botturistico{
-    background-image:url('../img/main/fotos/pontosTuristicos.png'); background-size:cover;
+    background-image:url('../img/main/fotos/pontosTuristicos.png'); 
+    background-size:cover;
 }
 .botconversas{
     background-image:url('../img/main/fotos/conversas.png'); 
@@ -481,11 +514,25 @@
     .inputcadastro input{
         color:#C0C0C0;
     }
+
+.inputnome{
+    height: 15vw;
+}
+
 .inputsexoidade{
     padding-top: 6.5%; 
     padding-bottom: 6.5%; 
     padding-left:0;
 }
+
+.sobetexto{
+    width:100%;
+    text-align: left;
+    font-size: 3vw;
+}.sobetexto.input-label.has-input{
+    top:8px;
+}
+
 .cadastrobotao{
     border-radius:6px;
 }
@@ -540,7 +587,7 @@
     font-size: 14px;
     line-height: 1;
     border:0px;
-    background: url(../img/cadastro/arrow.png) no-repeat right #161820;
+    background: url('../img/cadastro/arrow.png') no-repeat right #161820;
     -webkit-appearance: none;
     height:3%;
     color: #C0C0C0;
@@ -617,201 +664,201 @@ ion-footer-bar.barra-slide-away{
 /*----------------------------------------EXPLORAR*/
 
 .colimgexplorar{
-    background-image:url(../img/explorar/restaurante.png);
+    background-image:url('../img/explorar/restaurante.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarboate{
-    background-image:url(../img/explorar/boate@2x.png);
+    background-image:url('../img/explorar/boate@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height:30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarbar{
-    background-image:url(../img/explorar/barBoteco@2x.png);
+    background-image:url('../img/explorar/barBoteco@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarpop{
-    background-image:url(../img/explorar/pop@2x.png);
+    background-image:url('../img/explorar/pop@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarjazz{
-    background-image:url(../img/explorar/jazz.png);
+    background-image:url('../img/explorar/jazz.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarrock{
-    background-image:url(../img/explorar/rock@2x.png);
+    background-image:url('../img/explorar/rock@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarautomotivo{
-    background-image:url(../img/explorar/automotivo@2x.png);
+    background-image:url('../img/explorar/automotivo@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarshows{
-    background-image:url(../img/explorar/shows@2x.png);
+    background-image:url('../img/explorar/shows@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorartempo{
-    background-image:url(../img/explorar/voltaaotempo@2x.png);
+    background-image:url('../img/explorar/voltaaotempo@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarhip{
-    background-image:url(../img/explorar/hiphopFunk@2x.png);
+    background-image:url('../img/explorar/hiphopFunk@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarpunk{
-    background-image:url(../img/explorar/punk@2x.png);
+    background-image:url('../img/explorar/punk@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarchurrasco{
-    background-image:url(../img/explorar/churrasco@2x.png);
+    background-image:url('../img/explorar/churrasco@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarsertanejo{
-    background-image:url(../img/explorar/sertanejo@2x.png);
+    background-image:url('../img/explorar/sertanejo@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarblues{
-    background-image:url(../img/explorar/bluesSoul@2x.png);
+    background-image:url('../img/explorar/bluesSoul@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height:30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarreaggea{
-    background-image:url(../img/explorar/reggae@2x.png);
+    background-image:url('../img/explorar/reggae@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorareletronica{
-    background-image:url(../img/explorar/eletronica@2x.png);
+    background-image:url('../img/explorar/eletronica@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorargospel{
-    background-image:url(../img/explorar/cristaGospel@2x.png);
+    background-image:url('../img/explorar/cristaGospel@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 .colimgexplorarclassica{
-    background-image:url(../img/explorar/classica@2x.png);
+    background-image:url('../img/explorar/classica@2x.png');
     background-size:cover;
     background-position:center center;
     background-repeat: no-repeat;
     margin-left: 0.7%;
     margin-right: 0.7%;
     margin-bottom: 1%;
-    height: 18%;
+    height: 30vw;
     flex: 0 0 32%;
 }
 
@@ -887,7 +934,7 @@ ion-footer-bar.barra-slide-away{
     background: -webkit-linear-gradient( rgba(0, 0, 0, 0), black 100%);  
     background-size: cover;
     position: relative;
-    top: 5px;
+    top: 1vw;
     margin: 0;
     border: 0;
     width: 102%;
@@ -1003,8 +1050,8 @@ ion-footer-bar.barra-slide-away{
 
 .localPerfil{
     color:white;
-    background-image:url(../img/perfil/local/barra.png);
-    height:6%;
+    background-image:url('../img/perfil/local/barra.png');
+    height:11vw;
     text-align:center;
     vertical-align: middle;
     padding:5 0;
@@ -1022,26 +1069,46 @@ ion-footer-bar.barra-slide-away{
 }
 
 .sobreBalao{
-    width: 300px;
-    margin-top: 5%;
-    margin-bottom: 5%;    
+    background-image: url('../img/perfil/sobre/sobre@2x.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:25vw;
+    margin-top:10px;
 }
 
 .sobreTexto{
-    width: 270px;
-    margin-left: 7%;
+    width: 86vw;
+    margin-left: 5%;
     position: relative;
-    top: -75px;
     text-align: left;
+    font-size: 4vw;
+    line-height: 5vw;
+}
+
+.sobreTextocima{
+    position: relative;
+    top: 2vw;
+    z-index:10;
 }
 
 .sobreTextobaixo{
-    position: relative;
-    top: -2px;
-    font-size: 12px;
-    color: #d3d3d3;
-    text-align: left;
-    
+    position:relative;
+    border: none;
+    top: 2vw;
+    left:2vw;
+    padding: 0;
+    height: 13vw;
+    color:lightgray;
+}
+
+.sobreTextobaixoedita{
+    position:relative;
+    border: none;
+    left:2vw;
+    padding: 0;
+    height: 13vw;
+    color:lightgray;
 }
 
 .divSobre{
@@ -1223,7 +1290,7 @@ ion-footer-bar.barra-slide-away{
 }
 
 .cartaopessoa{
-    height:400px;
+    height:120vw;
     width:100%;
     background-color:snow;
     border-radius:8px;
@@ -1233,7 +1300,7 @@ ion-footer-bar.barra-slide-away{
 }
 
 .cartaopessoaimg{
-    height:350px;
+    height:105vw;
     width:101%;
     background-color:transparent;
     border-top-left-radius: 3%;
@@ -1275,13 +1342,13 @@ ion-footer-bar.barra-slide-away{
 
 .rowlike{
     position:relative;
-    top:-253px;
-    padding: 0 60;
+    bottom:32vw;
+    padding: 0 40;
     text-align: center;
 }
 
 .rowlike img{
-    height:13%;
+    height:18vw;
 }
 
 .botaolike{
@@ -1346,9 +1413,6 @@ ion-footer-bar.barra-slide-away{
     }
 
 .notificacaored{
-    position: ;
-    top:0px;
-    left: 0%;
     height:23px;
     width: 25px;
     border-top-left-radius: 50px;
@@ -1520,7 +1584,7 @@ ion-footer-bar.barra-slide-away{
 
 .bottop{
     border-radius:50px;
-    background-image:url(../img/pontoencontro/bg_icones@3x.png);
+    background-image:url('../img/pontoencontro/bg_icones@3x.png');
     width:30%;
     float:right;
     background-repeat: no-repeat;
@@ -1532,7 +1596,7 @@ ion-footer-bar.barra-slide-away{
 
 .botbot{
     border-radius:50px;
-    background-image:url(../img/pontoencontro/bg_icones@3x.png);
+    background-image:url('../img/pontoencontro/bg_icones@3x.png');
     width:60%;
     float:left;
     background-repeat: no-repeat;
@@ -1605,7 +1669,7 @@ ion-footer-bar.barra-slide-away{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image:url(../img/pontoencontro/FundoLogotipo@3x.png);
+    background-image:url('../img/pontoencontro/fundoLogotipo@3x.png');
     overflow: hidden;
     text-align: center;
     height: 80px;
@@ -1622,7 +1686,7 @@ ion-footer-bar.barra-slide-away{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image:url(../img/pontoencontro/FundoLogotipo2@3x.png);
+    background-image:url('../img/pontoencontro/fundoLogotipo2@3x.png');
     overflow: hidden;
     text-align: center;
     height: 80px;
@@ -1659,7 +1723,7 @@ ion-footer-bar.barra-slide-away{
 
 .bottoplocais{
     border-radius: 50px;
-    background-image: url(../img/pontoencontro/bg_icones@3x.png);
+    background-image: url('../img/pontoencontro/bg_icones@3x.png');
     width: 40%;
     height:17%;
     float: right;
@@ -1680,7 +1744,7 @@ ion-footer-bar.barra-slide-away{
 
 .botbotlocais{
     border-radius:50px;
-    background-image:url(../img/pontoencontro/bg_icones@3x.png);
+    background-image:url('../img/pontoencontro/bg_icones@3x.png');
     width:60%;
     float:left;
     background-repeat: no-repeat;
@@ -1841,7 +1905,7 @@ ion-footer-bar.barra-slide-away{
 .botarquivarchat{
     margin:0;
     padding:0;
-    background-image:url(../img/conversas/arquivar@3x.png);
+    background-image:url('../img/conversas/arquivar@3x.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;  
@@ -1853,7 +1917,7 @@ ion-footer-bar.barra-slide-away{
 .botdeletarchat{
     margin:0  0 0 -5;
     padding:0;
-    background-image:url(../img/conversas/delete@3x.png);
+    background-image:url('../img/conversas/delete@3x.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;   
@@ -1873,6 +1937,140 @@ ion-footer-bar.barra-slide-away{
 
 .scrollchat{
     max-height:70;
+}
+
+/*---------------------------------------CHAT*/
+
+.iconepessoachatheader{
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:50%;
+    height:10vw;
+    width:10vw;
+    margin:0 -35 0 50;
+    padding:0;
+    float:left;
+}
+
+.colheaderchat{
+    color: black;
+    text-align: center;
+    font-family: "TueddinLight";
+}
+
+.textochatheader{
+    font-size:4vw;
+    line-height: 5vw;
+    margin-top: 1vw;
+    margin: 0;
+}
+
+.textochatheaderbaixo{
+    color: lightgray;
+    font-size: 3vw;
+    letter-spacing: 1vw;
+    margin: 0;
+}
+
+.iconepessoachatmsg{
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:50%;
+    height:10vw;
+    width:10vw;
+    margin:5 5 0 5;
+    padding:0;
+    float:left;
+    position: relative;
+}
+
+.coltextooutrapessoa{
+    border-radius:5px;
+    background-color:#e9e9e9;
+    height:auto;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -4vw;
+    margin-right: 3vw;
+}
+
+.rowchatconversa{
+    display: inline-block;
+    padding: 5;
+}
+/*-------------------------------------PESQUISA*/
+
+.colpesquisatop{
+    background-image: url('../img/pesquisar/barraMenu@3x.png');
+    background-size: cover;
+    background-position:  center center;
+    background-repeat: no-repeat;
+    width:100%;
+    height:12vw;
+    padding:0;
+    display: inline-flex;
+    box-shadow: 0px 2px 2px lightgray;
+}
+
+.searchmargin{
+    margin-top:2vw;
+}
+
+.inputpesquisar{
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+}.inputpesquisar input{
+    font-size:5vw;
+}
+
+.colborderpesquisa{
+    border-bottom: 1px solid lightgray;
+    line-height: 5vw;
+    padding-top: 3vw;
+}
+
+.rowpesquisa{
+    padding:0;
+}
+
+.textonomepesquisa{
+    margin:0;
+    font-size: 4vw;
+}
+
+.iconepessoapesquisa{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    height: 14vw;
+    width: 14vw;
+    margin: 2vw;
+    padding: 0;
+}
+
+.textoidpessoapesquisa{
+    color:lightgray;
+    font-size: 4vw;
+}
+
+.rowpesquisa{
+    padding-right:0;
+}
+
+.buttonsearch{
+    min-height:0;
+    width:100%;
+    height:80%;
+}.buttonsearch img{
+    max-height:7vw;
+}
+
+.pesquisatrans{
+    
 }
 
 /*-------------------------------------FONTES*/
@@ -1999,27 +2197,6 @@ font-family: "TueddinMedium";
         top:-8px;
     }
     
-    .sobreBalao{
-        width: 327px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-left: 2%;
-    }
-    
-    .sobreTexto{
-        width: 285px;
-        margin-left: 10%;
-        position: relative;
-        top: -79px;
-        text-align: left;
-    }
-    
-    .sobreTextocima{
-        position:relative;
-        top: -1px;
-        left: -1px;
-    }
-    
     .instagramBotaop{
         position: relative;
         right: -199px;
@@ -2132,27 +2309,6 @@ font-family: "TueddinMedium";
         z-index: 3; 
         left: 13%; 
         top:-8px;
-    }
-    
-    .sobreBalao{
-        width: 327px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-left: 2%;
-    }
-    
-    .sobreTexto{
-        width: 285px;
-        margin-left: 10%;
-        position: relative;
-        top: -79px;
-        text-align: left;
-    }
-    
-    .sobreTextocima{
-        position:relative;
-        top: -1px;
-        left: -1px;
     }
     
     .instagramBotaop{
@@ -2273,60 +2429,7 @@ font-family: "TueddinMedium";
     }
     
 /*---------------------------------media query perfil*/
-    .voltarPerfil{
-        padding-left:5%; 
-        margin-top:5%; 
-        margin-right:58%;
-    }
-    
-    .iconelocal{
-        float:left;
-        margin-left:35%;
-        margin-top:2%;
-        margin-right:-32%;
-    }
-    
-    .botaoeditar{
-        position:relative; 
-        z-index: 3; 
-        left: 16%; 
-        top:-8px;
-    }
-    
-    .sobreBalao{
-        width: 327px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-left: 2%;
-    }
-    
-    .sobreTexto{
-        width: 285px;
-        margin-left: 10%;
-        position: relative;
-        top: -79px;
-        text-align: left;
-    }
-    
-    .sobreTextocima{
-        position:relative;
-        top: -1px;
-        left: -1px;
-    }
-    
-    .instagramBotaop{
-        position: relative;
-        right: -199px;
-        top: 9px;
-    }
-    
-    .fotosInstagram{
-        max-width:127px;
-        max-height:127px;
-        min-width:127px;
-        min-height:127px;
-    }
-    
+   
  /*---------------------------------barra nav*/   
     .barraimg{
         position: relative;
@@ -2404,47 +2507,56 @@ font-family: "TueddinMedium";
         margin-right:58%;
     }
     
-    .iconelocal{
-        float:left;
-        margin-left:35%;
-        margin-top:2%;
-        margin-right:-32%;
+    .rowshade{
+        background: -webkit-linear-gradient( rgba(0, 0, 0, 0), black 100%);  
+        background-size: cover;
+        position: relative;
+        top: -6vw;
+        margin: 0;
+        border: 0;
+        width: 102%;
+        height:75px;
+        padding: 0;
+        left: -3px;
     }
     
-    .botaoeditar{
-        position:relative; 
-        z-index: 3; 
-        left: 16%; 
-        top:-8px;
+    .localPerfil {
+        color: white;
+        background-image: url(../img/perfil/local/barra.png);
+        height: 9vw;
+        text-align: center;
+        vertical-align: middle;
+        padding: 5 0;
     }
     
-    .sobreBalao{
-        width: 370px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-left: 2%;
+    .sobreTextobaixoedita {
+        position: relative;
+        border: none;
+        left: 2vw;
+        padding: 0;
+        height: 13vw;
+        color: lightgray;
+        bottom: 3vw;
     }
     
     .sobreTexto{
-        width: 310px;
-        margin-left: 10%;
-        position: relative;
-        top: -87px;
-        text-align: left;
+        top: 3vw;
+        
     }
     
     .sobreTextocima{
         position:relative;
-        top: -1px;
-        left: -1px;
+        top: -1vw;
     }
     
     .sobreTextobaixo{
         position: relative;
-        top: -2px;
-        font-size: 14px;
-        color: #d3d3d3;
-        text-align: left;
+        border: none;
+        top: 0vw;
+        left: 2vw;
+        padding: 0;
+        height: 13vw;
+        color: lightgray;
 
     }
     
@@ -2542,718 +2654,6 @@ font-family: "TueddinMedium";
     }
 }
 
-@media screen and (min-width:420px) and (max-width:639px){
-    /*.iconeperfiltela{
-        position:absolute; 
-        background:0; 
-        top:10%; 
-        left:52%;
-    }*/
-    
-    .fotoperfiltela{
-        max-height:98px;
-        max-width:98px;
-        min-height:98px;
-        min-width:98px;
-        /*margin-top: 25%;*/ 
-        border-radius:50%;  
-        border: 2px solid white;
-        /*margin-bottom:-37%;*/
-        /*margin-left:6%;*/
-    }
-    
-    .buttonmain{  
-        border-radius:4px;
-        border-style: none;
-        flex: 0 0 42%;
-        max-width: 38%;
-        padding-bottom: 8%;
-        padding-top: 8%;
-    }
-    
-/*---------------------------------media query perfil*/
-    .voltarPerfil{
-        padding-left:5%; 
-        margin-top:5%; 
-        margin-right:58%;
-    }
-    
-    .iconelocal{
-        float:left;
-        margin-left:35%;
-        margin-top:2%;
-        margin-right:-32%;
-    }
-    
-    .botaoeditar{
-        position:relative; 
-        z-index: 3; 
-        left: 16%; 
-        top:-8px;
-    }
-    
-    .sobreBalao{
-        width: 327px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-left: 2%;
-    }
-    
-    .sobreTexto{
-        width: 285px;
-        margin-left: 10%;
-        position: relative;
-        top: -79px;
-        text-align: left;
-    }
-    
-    .sobreTextocima{
-        position:relative;
-        top: -1px;
-        left: -1px;
-    }
-    
-    .instagramBotaop{
-        position: relative;
-        right: -199px;
-        top: 9px;
-    }
-    
-    .fotosInstagram{
-        max-width:136px;
-        max-height:136px;
-        min-width:136px;
-        min-height:136px;
-    }
-    
-    .seguindoPerfil{
-        float:left; 
-        margin-top: 1%; 
-        min-height:12%; 
-        color:white; 
-        position:relative; 
-        z-index:2; 
-        text-align:center; 
-        padding-left:7%;
-        top: 8%;
-    }
-
-    .seguidoresPerfil{
-        float:right; 
-        margin-top: 1%; 
-        min-height:12%; 
-        color:white; 
-        position:relative; 
-        z-index:2; 
-        text-align:center; 
-        right:5%;
-        top: 8%;
-    }
-    
- /*---------------------------------barra nav*/   
-    .barraimg{
-        position: relative;
-        top: -94%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 84px;
-    }
-    
-    .barrabotaomain{
-        position: absolute;
-        left: 159.5;
-        top: -38px;
-    }
-    
-        .barrabotaomain img{
-            height: 87px;
-            width: 87px;
-        }
-    
-    .barrabotaotimeline{
-        position: absolute;
-        left: 280px;
-        top: 4px;
-    }
-    
-    .barrabotaouserconfig{
-        position: absolute;
-        left: 350px;
-        top: 4px;
-    }
-    
-    
-    .barrabotaochat{
-        position: absolute;
-        left: 90px;
-        top: 4px;
-    }
-    
-    .barrabotaopessoas{
-        position: absolute;
-        left: 20px;
-        top: 4px;
-    }
-}
-
-@media screen and (min-width:640px) and (max-width:768px){
-    /*.iconeperfiltela{
-        position:absolute; 
-        background:0; 
-        top:41%; 
-        left:50%;
-    }*/
-    
-    .fotoperfiltela{
-        max-height:98px;
-        max-width:98px;
-        min-height:98px;
-        min-width:98px;
-        /*margin-top: 25%;*/ 
-        border-radius:50%;  
-        border: 2px solid white;
-        /*margin-bottom:-37%;*/
-        /*margin-left:6%;*/
-    }
-    
-    .buttonmain{  
-        border-radius:4px;
-        border-style: none;
-        flex: 0 0 42%;
-        max-width: 38%;
-        padding-bottom: 8%;
-        padding-top: 8%;
-    }
-    
-/*---------------------------------media query perfil*/
-    .imgPerfil{
-        width:100%; 
-        height:56%; 
-        margin:0; 
-        padding:0; 
-        background-size:cover; 
-        float:left;
-        min-height:167%;
-    }
-    
-    .shade{
-        position:absolute; 
-        bottom:-67%; 
-        right:0; 
-        left:0; 
-        z-index:1;
-        width:100%;   
-    }
-
-    .voltarPerfil{
-        padding-left:5%; 
-        margin-top:5%; 
-        margin-right:68%;
-    }
-    
-    .opcoesPerfil{
-        padding-left:2%; 
-        margin-right:2%; 
-        padding-top:6%;
-    }
-    
-    .iconelocal{
-        float:left;
-        margin-left:35%;
-        margin-top:2%;
-        margin-right:-32%;
-    }
-    
-    .botaoeditar{
-        position:relative; 
-        z-index: 3; 
-        left: 27%; 
-        top:2px;
-    }
-    
-    .sobreBalao{
-        width: 327px;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        margin-left: 2%;
-    }
-    
-    .sobreTexto{
-        width: 285px;
-        margin-left: 10%;
-        position: relative;
-        top: -79px;
-        text-align: left;
-    }
-    
-    .sobreTextocima{
-        position:relative;
-        top: -1px;
-        left: -1px;
-    }
-    
-    .instagramBotaop{
-        position: relative;
-        right: -199px;
-        top: 9px;
-    }
-    
-    .fotosInstagram{
-        max-width:136px;
-        max-height:136px;
-        min-width:136px;
-        min-height:136px;
-    }
-    
-    .seguindoPerfil{
-        float:left; 
-        margin-top: 1%; 
-        min-height:12%; 
-        color:white; 
-        position:relative; 
-        z-index:2; 
-        text-align:center; 
-        padding-left:7%;
-        top: 8%;
-    }
-
-    .seguidoresPerfil{
-        float:right; 
-        margin-top: 1%; 
-        min-height:12%; 
-        color:white; 
-        position:relative; 
-        z-index:2; 
-        text-align:center; 
-        right:5%;
-        top: 8%;
-    }
-    
-     .scrollPerfil{
-        width:200%; 
-        height:75px; 
-        float:left;
-    }
-    
-    .localPerfil{
-        color:white;
-        background-image:url(../img/perfil/local/barra.png);
-        height:12%;
-        text-align:center;
-    }
-
-    .iconelocal{
-        float:left;
-        margin-left:35%;
-        margin-top:1%;
-        margin-right:-36%;
-    }
-
-    .textolocal{
-        margin-top:1.5%;
-        font-size:18px;
-    }
-
-    .sobreBalao{
-        width: 583px;
-        margin-top: 5%;
-        margin-bottom: 5%;    
-    }
-
-    .sobreTexto{
-        width: 540px;
-        margin-left: 8%;
-        position: relative;
-        top: -116px;
-        text-align: left;
-    }
-    
-    .sobreTextocima{
-        position: relative;
-        top: -16px;
-        left: -1px;
-        font-size:20px;
-    }
-
-    .sobreTextobaixo{
-        position: relative;
-        top: -2px;
-        font-size: 20px;
-        color: #d3d3d3;
-        text-align: left;
-
-    }
-
-    .divSobre{
-        height:100px;
-    }
-    
-    .rowfotosinstagram{
-        margin-top:13%;
-    }
-    
-    .instagramTexto{
-        margin-left:3%;
-        font-size:18px;
-        float:left;
-
-    }
-
-    .instagramBotao{
-        border-radius: 50%;
-        height: 6px;
-        width: 6px;
-        min-width: 0px;
-        min-height: 0px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .instagramBotaop{
-        position: relative;
-        right: -379px;
-        top: 9px;
-    }
-
-    .fotosInstagram{
-        min-width: 212px;
-        min-height: 212px;
-        max-height: 212px;
-        max-width: 212px;
-    }
-
-    
-    
- /*---------------------------------barra nav*/   
-    .barraimg{
-        position: relative;
-        top: -177%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 141px;
-    }
-    
-    .barrabotaomain{
-        position: absolute;
-        left:  44%;
-        top: -57px;
-    }
-        
-    .barrabotaotimeline{
-        position: absolute;
-        left: 440px;
-        top: -10px;
-    }.barrabotaotimeline img{
-        height: 45px;
-    }
-    
-    .barrabotaouserconfig{
-        position: absolute;
-        left: 560px;
-        top:-4px;
-    }.barrabotaouserconfig img{
-        height: 30px;
-    }    
-    
-    .barrabotaochat{
-        position: absolute;
-        left: 160px;
-        top: -10px;
-    }.barrabotaochat img{
-        height:45px;
-    }
-    
-    .barrabotaopessoas{
-        position: absolute;
-        left: 50px;
-        left: 50px;
-        top: -10px;
-    }.barrabotaopessoas img{
-        height:45px;
-    }
-}
-
-@media screen and (min-width:768px) and (max-width:1023px){
-    /*.iconeperfiltela{
-        position:absolute; 
-        background:0; 
-        top:10%; 
-        left:55%;
-    }*/
-    
-    .fotoperfiltela{
-        max-height:120px;
-        max-width:120px;
-        min-height:120px;
-        min-width:120px;
-        /*margin-top: 25%;*/ 
-        border-radius:50%;  
-        border: 2px solid white;
-        /*margin-bottom:-37%;
-        margin-left:3%;*/
-    }
-    
-    .buttonmain{  
-        border-radius:4px;
-        border-style: none;
-        flex: 0 0 42%;
-        max-width: 38%;
-        padding-bottom: 8%;
-        padding-top: 8%;
-    }
-    
-/*---------------------------------media query perfil*/
-    .voltarPerfil{
-        padding-left:5%; 
-        margin-top:5%; 
-        margin-right:71%;
-    }
-    
-    .opcoesPerfil{
-        padding-left:2%; 
-        margin-right:2%; 
-        padding-top:6%;
-    }
-    
-    .iconelocal{
-        float:left;
-        margin-left:35%;
-        margin-top:2%;
-        margin-right:-32%;
-    }
-    
-    .botaoeditar{
-        position:relative; 
-        z-index: 3; 
-        left: 28%; 
-        top:-8px;
-    }
-    
-        .botaoeditar img{
-            width:140px;
-        }
-    
-    .scrollPerfil{
-        width:200%; 
-        height:75px; 
-        float:left;
-    }
-    
-    .sobreTextocima{
-        position: relative;
-        top: -6px;
-        left: -1px;
-    }
-    
-    .botaoImgperfil{
-        text-align:center;
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-    
-    .botaoImgperfil img{
-        height:40px;
-    }
-    
-    .instagramBotaop{
-        position: relative;
-        right: -199px;
-        top: 9px;
-    }
-    
-    .fotosInstagram{
-        max-width:127px;
-        max-height:127px;
-        min-width:127px;
-        min-height:127px;
-    }
-    
-    .overlaytext{
-        padding:0;
-        margin:11 0 0 0;
-        color:white;
-        text-align:center;
-        height:75px;
-        width:239px;
-        position:absolute;
-        z-index:1;  
-        opacity:1;
-        top:0%;
-        left:-8%;
-        font-size:23px;    
-    }
-
-        .overlaytext.activated{
-            opacity:0;
-            content:;
-            padding:0;
-            margin:0;
-            color:white;
-            text-align:center;
-            height:75px;
-            width:239px;
-            position:absolute;
-            z-index:1;  
-            top:0%;
-            left:-8%;
-            font-size:23px;        
-        }
-    
-    .overlayimg{
-        height:20px;
-        margin-top:6%;
-    }
-    
-    .iconelocal{
-        float: left;
-        margin-left: 35%;
-        margin-top: 1.5%;
-        margin-right: -38%;
-        height: 32px;
-    }
-
-    .textolocal{
-        margin-top:2.5%;
-        font-size:23px;
-    }
-    
-    .sobreBalao{
-        width: 708px;
-        margin-top: 5%;
-        margin-bottom: 5%;    
-    }
-
-    .sobreTexto{
-        width: 607px;
-        margin-left: 9%;
-        position: relative;
-        top: -153px;
-        text-align: left;
-        font-size: 30px;
-    }
-    
-    .rowfotosinstagram{
-        margin-top:13%;
-    }
-
-
-    .sobreTextobaixo{
-        position: relative;
-        top: 11px;
-        font-size: 30px;
-        color: #d3d3d3;
-        text-align: left;
-
-    }
-
-    .divSobre{
-        height:100px;
-    }
-
-    .instagramTexto{
-        margin-left:2%;
-        font-size:20px;
-        float:left;
-        margin-bottom:2%;
-    }
-
-    .instagramBotao{
-        border-radius: 50%;
-        height: 6px;
-        width: 6px;
-        min-width: 0px;
-        min-height: 0px;
-        padding: 0;
-        margin: 0;
-        height: 13px;
-        width: 13px;
-    }
-
-    .instagramBotaop{
-        position: relative;
-        right: -478px;
-        top: 9px;        
-    }
-
-    .fotosInstagram{
-        min-width: 254px;
-        min-height: 254px;
-        max-height: 254px;
-        max-width: 254px;
-    }
-
-    .paddingInstagram{
-        padding-left:0.5%;
-        padding-right:0.5%;
-        padding-top:0.25%;
-        padding-bottom:0.25%;
-    }
-    
- /*---------------------------------barra nav*/   
-    .barraimg{
-        position: relative;
-        top: -242%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 164px;
-    }
-    
-    .barrabotaomain{
-        position: absolute;
-        left: 303px;
-        top: -99px;
-    }
-    
-        .barrabotaomain img{
-            height: 155px;
-            width: 155px;
-        }
-    
-    .barrabotaotimeline{
-        position: absolute;
-        left: 530px;
-        top: -18px;
-    }
-    
-        .barrabotaotimeline img{
-                height:45px;
-            }
-    
-    .barrabotaouserconfig{
-        position: absolute;
-        left: 685px;
-        top: -11px;
-    }
-    
-        .barrabotaouserconfig img{
-                height:30px;
-            }
-    
-    
-    .barrabotaochat{
-        position: absolute;
-        left: 195px;
-        top: -18px;
-    }
-    
-        .barrabotaochat img{
-            height:45px;
-        }
-    
-    .barrabotaopessoas{
-        position: absolute;
-        left: 58px;
-        top: -18px;
-    }
-    
-        .barrabotaopessoas img{
-            height:45px;
-        }
-}
-
 @media screen and (min-width:1024px){
     /*.iconeperfiltela{
         position:absolute; 
@@ -3299,8 +2699,16 @@ font-family: "TueddinMedium";
     .iconelocal{
         float:left;
         margin-left:35%;
-        margin-top:2%;
         margin-right:-32%;
+    }
+    
+    .localPerfil {
+        color: white;
+        background-image: url(../img/perfil/local/barra.png);
+        height: 9vw;
+        text-align: center;
+        vertical-align: middle;
+        padding: 5 0;
     }
     
     .botaoeditar{
@@ -3425,10 +2833,6 @@ font-family: "TueddinMedium";
         color: #d3d3d3;
         text-align: left;
 
-    }
-
-    .divSobre{
-        height:100px;
     }
 
     .instagramTexto{

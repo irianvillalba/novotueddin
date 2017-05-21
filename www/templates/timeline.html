@@ -1,4 +1,4 @@
-<ion-view view-title="timeline">
+<ion-view view-title="timeline" ng-controller="timelineCtrl">
     <ion-content class="fontetueddin">
 
 <!--voltar pesquisar-->
@@ -10,7 +10,7 @@
                 <p>Linha do Tempo</p>
             </div>
             <div class="col">
-                <button class="button button-icon button-small"><img src="img/timeline/icones/buscar.svg"></button>
+                <button class="button button-icon button-small" ui-sref="pesquisar"><img src="img/timeline/icones/buscar.svg"></button>
             </div>            
         </row>
         <br>
@@ -21,8 +21,9 @@
         </div>    
         <div class="col col-70 paddingtimeline colclipe">
             <div class="list">
-               <label class="item item-input caixaescrever">
-                <input class="textoescrever" type="text" placeholder="Escrever ou postar alguma coisa..." >
+               <label class="item item-input caixaescrever textarea-container">
+                <textarea placeholder="Postar alguma coisa..." ></textarea>
+                   <div class="textarea-size"></div>
               </label>
             </div>
         </div>
@@ -34,7 +35,8 @@
     </div>
        <br> 
 <!--POSTS texto-->
-        
+    <ul class="list">
+        <li class="item-list">        
         <div class="row rowpost">
             <div class="row">
                 <div class="col col-15 paddingtimeline colimagemescrever imgposts">
@@ -50,14 +52,12 @@
                         <img src="img/timeline/post/seguindo@2x.png" ng-show="buttonseg1.clicked">
                     </button>
                 </div>
-            </div>
-                
+            </div>                
             <div class="row">
                 <div class="col col-100">
                     <p class="textopost">Adorei conhecer esse lugar, me identifiquei muito com as pessoas que franquentam o mesmo. Espero sempre voltar e conhecer gente nova.</p>
                 </div>                
-            </div>
-                
+            </div>                
             <div class="row">
                 <div class="col col-30">
                 </div>
@@ -84,9 +84,11 @@
                 </div>
             </div>
         </div>
+        </li>
         
+<!--POSTS foto + local-->
         
-<!--POSTS foto + local-->        
+        <li class="item-list">  
         <div class="row rowpost">
             <div class="row"> 
                 <div class="col col-15 paddingtimeline colimagemescrever imgposts">
@@ -142,9 +144,9 @@
                 </div>
             </div>
         </div>
-        
+        </li>
 <!--POSTS foto-->
-        
+        <li class="item-list">  
         <div class="row rowpost">
             <div class="row"> 
                 <div class="col col-15 paddingtimeline colimagemescrever imgposts">
@@ -200,19 +202,22 @@
                 </div>
             </div>
         </div>
+        </li>
+        
+        </ul>
         <br>
         <br>
         <br>
     </ion-content>
     
 <!--Footer barra-->
-    <ion-footer-bar class="barra">
+    <ion-footer-bar class="barra hide-on-keyboard-open">
         <img src="img/tab/barrafooter.png" class="barraimg">
         <div class="buttons">
             <button class="button button-clear barrabotaopessoas" ui-sref="match1">
                 <img src="img/tab/pessoas@1x.svg">
             </button>     
-            <button class="button button-clear barrabotaochat" ui-sref="login">
+            <button class="button button-clear barrabotaochat" ui-sref="conversas">
                 <img src="img/tab/conversas@1x.svg">
             </button>
             <button class="button barrabotaomain" ui-sref="mainmenu">               

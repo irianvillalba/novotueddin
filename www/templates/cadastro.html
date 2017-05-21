@@ -12,7 +12,8 @@
         <div class="row">
             <div class="col"></div>
             <div class="col col-90">
-                <label class="inputcadastro item-input">
+                <label class="inputcadastro item-input item-floating-label inputnome">
+                    <span class="input-label  sobetexto">Nome de Usuário</span>
                     <input type="text" placeholder="Nome de usuário" ng-model="$parent.nick" ng-value="perfil.nick">
                 </label>                
             </div>
@@ -28,8 +29,8 @@
                       <option ng-repeat="i in id" value="{{i}}">{{i}}</option>
                     </select>
                 </label>                
-            </div>                          
-
+            </div>
+            
             <div class="col col-45">
                 <label class="inputcadastro item-input inputsexoidade">
                     <select class="cadastro" ng-model="$parent.sexo">
@@ -39,7 +40,7 @@
                     </select>
                 </label>                
             </div>
-        <div class="col"></div>
+            <div class="col"></div>
         </div>
         
 <!--Termos-->
@@ -64,5 +65,4 @@
         
         
     </ion-content>
-
 </ion-view>

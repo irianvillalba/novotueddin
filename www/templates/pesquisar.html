@@ -1,0 +1,415 @@
+<ion-view view-title="pesquisar" class="fontetueddin2">
+    <ion-content>
+        <div class="row bgconfig">
+            <div class="col">
+                <button class="button button-icon button-small" ui-sref="mainmenu"><img src="img/timeline/icones/voltar.svg"></button>
+            </div>
+            <div class="col col-80">
+                <label class="item item-input inputpesquisar">    
+                    <input type="text" placeholder="Pesquisar">  
+                </label>               
+            </div>
+            <div class="col col-10"></div>                      
+        </div>
+        <span></span>
+<!-----------------------SELEÇAO DE PESQUISA-->        
+        
+        <div class="row rowpesquisa">
+            <div class="col col-100 colpesquisatop">
+            <div class="col col-25">
+                <button class="button button-icon buttonsearch" ng-model="butpontoenc" ng-click="butpontoenc.clicked = true; butpessoas.clicked = false; butpontotur.clicked = false; butlocais.clicked = false;" ng-class="!butpontoenc.clicked?'button-tueddin':'button-tueddin'">
+                    <img src="img/pesquisar/iconePontoDeEncontro@1x.svg" ng-show="!butpontoenc.clicked">
+                    <img src="img/pesquisar/iconePontoDeEncontroverde.svg" ng-show="butpontoenc.clicked">
+                </button>
+            </div>
+            <div class="col col-25">
+                <button class="button button-icon buttonsearch" ng-model="butpessoas" ng-click="butpontoenc.clicked = false; butpessoas.clicked = true; butpontotur.clicked = false; butlocais.clicked = false;" ng-class="!butpessoas.clicked?'button-tueddin':'button-tueddin'">
+                    <img src="img/pesquisar/iconePessoas@1x.svg" ng-show="!butpessoas.clicked">
+                    <img src="img/pesquisar/iconePessoasverde.svg" ng-show="butpessoas.clicked">
+                </button>
+            </div>
+            <div class="col col-25">
+                <button class="button button-icon buttonsearch" ng-model="butpontotur" ng-click="butpontoenc.clicked = false; butpessoas.clicked = false; butpontotur.clicked = true; butlocais.clicked = false;" ng-class="!butpontotur.clicked?'button-tueddin':'button-tueddin'">
+                    <img src="img/pesquisar/iconePontosTuristicos@1x.svg" ng-show="!butpontotur.clicked">
+                    <img src="img/pesquisar/iconePontosTuristicosverde.svg" ng-show="butpontotur.clicked">
+                </button>
+            </div>
+            <div class="col col-25">
+                <button class="button button-icon buttonsearch" ng-model="butlocais" ng-click="butpontoenc.clicked = false; butpessoas.clicked = false; butpontotur.clicked = false; butlocais.clicked = true;" ng-class="!butlocais.clicked?'button-tueddin':'button-tueddin'">
+                    <img src="img/pesquisar/iconeLocais@1x.svg" ng-show="!butlocais.clicked">
+                    <img src="img/pesquisar/iconeLocaisverde.svg" ng-show="butlocais.clicked">
+                </button>
+            </div>
+            </div>
+        </div>
+        
+<!-------------------------LISTA DE PESQUISA PONTO DE ENCONTRO-->
+        <ion-scroll class="available-scroller searchmargin" ng-show="butpontoenc.clicked">
+        <ul class="list">
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta1.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Bamboa</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">bamboa</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta2.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Outback</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">outback</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta3.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Pontão</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">pontão</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta4.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Cinema</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">cinema</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta5.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Bar</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">bar</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta6.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Pub</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">pub</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        </ul>        
+        </ion-scroll>
+    
+<!-------------------------LISTA DE PESQUISA PESSOAS-->
+        <ion-scroll class="available-scroller searchmargin" ng-show="butpessoas.clicked">
+        <ul class="list">
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/1.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Paula Souza</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">Paula_sousa</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/2.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Paula Souza</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">Paula_sousa</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/3.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Paula Souza</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">Paula_sousa</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/4.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Paula Souza</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">Paula_sousa</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/5.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Paula Souza</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">Paula_sousa</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/6.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Paula Souza</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">Paula_sousa</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        </ul>        
+        </ion-scroll>
+        
+
+        
+<!-------------------------LISTA DE PESQUISA PONTOS TURISTICOS-->
+        <ion-scroll class="available-scroller searchmargin" ng-show="butpontotur.clicked" class="pesquisatrans">
+        <ul class="list">
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta4.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Torre de Tv</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">torredetv</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta5.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Ponto JK</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">pontejk</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta6.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Catetinho</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">catetinho</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta7.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Torre Digital</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">torredigital</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta8.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Praça do Cruzeiro</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">pracadocruzeiro</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta9.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Lago</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">lago</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        </ul>        
+        </ion-scroll>
+
+<!-------------------------LISTA DE PESQUISA LOCAIS-->
+        <ion-scroll class="available-scroller searchmargin" ng-show="butlocais.clicked" class="pesquisatrans">
+        <ul class="list">
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta7.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Restaurante</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">restaurante</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta8.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Shopping</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">shopping</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta9.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Festa</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">festa</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta1.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Festa 2</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">festa2</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta2.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Park</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">park</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        <li class="list-item">            
+                <div class="row rowchat">
+                    <div class="row rowpesquisa"> 
+                        <div class="col col-15 iconepessoapesquisa" style="background-image:url('img/teste/insta3.jpg')">
+                        </div>                        
+                        <div class="col col-85 colborderpesquisa fontetueddin2">
+                            <p class="textonomepesquisa">Kart</p>
+                             <div>                                
+                                <p class="textoidpessoapesquisa">kart</p>
+                            </div>
+                        </div>                                     
+                    </div>
+                </div>    
+        </li>
+        </ul>        
+        </ion-scroll>
+        
+
+        
+        
+        
+        
+        
+    </ion-content> 
+</ion-view>

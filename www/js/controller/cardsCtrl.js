@@ -1,10 +1,18 @@
-app.controller('cardsCtrl', function($scope, TDCardDelegate) {
+app.controller('cardsCtrl', function($scope, TDCardDelegate, $ionicModal) {
   console.log('CARDS CTRL');
   var cardTypes = [
-    {image: '../img/teste/gus2016.jpg', title: 'Gustavo, 29'},{image: '../img/teste/gus2016.jpg', title: 'Gustavo, 29'},{image: '../img/teste/gus2016.jpg', title: 'Gustavo, 29'},
+    {image: 'img/teste/1.jpg', title: 'Gustavo, 29'},
+    {image: 'img/teste/2.jpg', title: 'Gustavo, 29'},
+    {image: 'img/teste/3.jpg', title: 'Gustavo, 29'},
   ];
 
   $scope.cards = [];
+    
+    $ionicModal.fromTemplateUrl('templates/modalcombinacao.html', {
+        scope: $scope
+      }).then(function(modal) {
+        $scope.modal = modal;
+      });
 
   console.log('Cards', $scope.cards);
 
@@ -20,12 +28,18 @@ app.controller('cardsCtrl', function($scope, TDCardDelegate) {
         console.log('Left swipe');
     }
  
-    $scope.cardSwipedRight = function(index) {
-        console.log('Right swipe');
+    $scope.cardSwipedRight = function(modal) {
+        console.log('Right swipe');  
+        $scope.modal = modal.show;
     }
  
     $scope.cardDestroyed = function(index) {
         $scope.cards.splice(index, 1);
         console.log('Card removed');
     }
+    
+    
+     
+    
+    
 });
