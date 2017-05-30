@@ -93,4 +93,25 @@ class Perfil extends AbstractModel {
       return $res;
   }
 
+  public function seguirPerfil($dados) {
+      $dt = date('Y-m-d H:i:s');
+      $where = "(id_perfil = {$dados->id_perfil} and id_perfil_seguindo = {$dados->id_perfil_seguindo}) or
+                    (id_perfil = {$dados->id_perfil_seguindo} and id_perfil_seguindo = {$dados->id_perfil})";
+      $conexao = $this->countRows('conexao', $where);
+
+      if ($conexao == 0) {
+          $cmp = array('id_perfil', 'id_perfil_seguindo', 'situacao', 'dt_conexao');
+          $vlr = array($dados->id_perfil, $dados->id_perfil_seguindo, 'seguindo', $dt);
+          $this->insertRow('conexao', $cmp, $vlr);
+          echo "conexão criada";
+      } else {
+          $this->deleteRow('conexao', $where);
+          echo "conexão cancelada";
+      }
+  }
+
+  public function match() {
+
+  }
+
 }
