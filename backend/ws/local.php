@@ -10,7 +10,7 @@
     $dt = date('Y-m-d H:i:s');
 
     switch ($request->situacao) {
-        case 'novo':
+        case 'novo': 
             $local->criaLocal($request);
             break;
         case 'avaliacao':
