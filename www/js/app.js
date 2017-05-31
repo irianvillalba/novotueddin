@@ -1,5 +1,5 @@
 
-var app = angular.module('starter', ['ionic', 'firebase', 'ngCordova', 'ionic.contrib.ui.tinderCards'])
+var app = angular.module('starter', ['ionic', 'firebase', 'ngCordova', 'ionic.contrib.ui.tinderCards', 'ionic-datepicker', 'ionic-timepicker', 'ui.utils.masks', 'ionic-ratings'])
 
 app.run(function($ionicPlatform){
    
@@ -72,11 +72,28 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/locais',
     templateUrl: 'templates/locais.html'
   })
+    
+  .state('turistico', {
+    url: '/turistico',
+    templateUrl: 'templates/turistico.html'
+  })
+    
+  .state('criar', {
+    url: '/criar',
+    templateUrl: 'templates/criar.html'
+  })
       
   .state('pontoenc', {
     url: '/pontoenc',
     templateUrl: 'templates/pontoenc.html'
   })
+      
+  .state('perfilpag', {
+    url: '/perfilpag',
+    templateUrl: 'templates/perfilpag.html',
+      controller: 'perfilPagCtrl'
+  })
+
 
   .state('explorar', {
     url: '/explorar',

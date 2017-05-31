@@ -1,0 +1,49 @@
+<div class="row rowcartaoponto">
+    <div class="col cartaoponto" >
+        <div class="divimgback" ng-click="go('/perfilpag')">
+            <div ng-style="{'background-image':'url('+imagem+')'}" class="cartaopontoimg">
+            </div>
+        </div>
+        <div class="logotipo1">
+            <img ng-src="{{logo}}">
+        </div>
+        <div class="bottop">
+            <button class="button button-icon">
+                            <img src="img/pontoencontro/notificacoes.svg">
+                        </button>
+            <button class="button button-icon">
+                            <img src="img/pontoencontro/favoritos.svg">
+                        </button>
+        </div>
+        <div class="botbot">
+            <a class="plocalgps">
+                <img src="img/pontoencontro/pin.svg">
+                <p class="textolocalcimacartao">{{titulo}}</p>
+                <p class="textolocalbaixocartao">{{local}}</p>
+            </a>
+        </div>
+        <div class="cartaopontobarra">
+            <div class="row botsbarraponto padding">
+                <div class="col col-33 colbotbarraponto">
+                    <button class="button button-icon botgosteiponto">
+                                    <img src="img/pontoencontro/gostei.svg">
+                                    <p>1234</p>
+                                </button>
+                </div>
+                <span></span>
+                <div class="col col-33 colbotbarraponto">
+                    <button class="button button-icon botcompartilharponto">
+                                    <img src="img/pontoencontro/compartilhar.svg">
+                                </button>
+                </div>
+                <span></span>
+                <div class="col col-33 colbotbarraponto">
+                    <button class="button button-icon botgosteiponto">
+                                    <img src="img/pontoencontro/comentarios.svg">
+                                    <p>45</p>
+                                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

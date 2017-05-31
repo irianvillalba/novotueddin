@@ -1,0 +1,222 @@
+<ion-view view-title="perfilpag" class="perfilPag">
+    <ion-content class="bgperfil fontetueddin">
+        
+<!--fotoperfil-->
+        <div class="row paddingPerfil">
+           
+            <div class="col imgPerfil" ng-style="{'background-image':'url('+imgBack+')'}">           
+                <a class="button button-icon voltarPerfil" ui-sref="pontoenc">
+                    <img src="img/perfil/icones/voltar@1x.svg">
+                </a>              
+                <a class="button button-icon opcoesPerfil" ng-click="popupOpcoes()">
+                    <img src="img/perfil/icones/opcoes@1x.svg">
+                </a>              
+                <div class="col nomePerfil">
+                    <a class="textoPerfilPag">
+                        <span style="font-size:1.5em;">@{{ perfil.nick }}</span>
+                            <br>
+                            <p style="margin: 10 0 0 0 "><span style="font-size:2em;">{{ perfil.nome }}</span>
+                            <i class="icon ion-checkmark-circled" style="font-size:1.5em;color:cornflowerblue;margin-left:5px"></i></p>
+                            <span style="font-size:1.2em;">Em novembro de 2017</span>
+                    </a>
+                </div>                    
+                </div>
+            </div>
+        
+
+<!--scroll de fotos-->
+        
+        <ion-scroll zooming="true" direction="x" class="scrollPerfil">
+            <div class="div1Scroll">
+                <div class="row div2Scroll">
+                    <div class="col div3Scroll" ng-repeat="foto in fotos">     
+                        <img src="{{foto.url}}" class="imgscroll"  ng-click="{{foto.funcao}}">       
+                    </div> 
+                </div>
+            </div>
+            <div ng-show="!buttonedita.clicked" style="height:100%">
+                <button class="button overlay">
+                    <p class="overlaytext">
+                        Deslize para ver mais 
+                        <img src="img/perfil/icones/avancar.png" class="overlayimg" >
+                    </p>
+                </button>
+            </div>
+        </ion-scroll>
+        
+<!--Botões-->
+        
+        <div class="row paddingPerfil" style="background-color:#F6F6F6">
+            <div class="col col-25 paddingPerfil botaoImgperfil">
+                <button class="button button-icon button-small ion-android-share-alt">           
+                </button>
+            </div>
+            <div class="col col-25 paddingPerfil botaoImgperfil botaomid">
+                <button class="button button-icon button-small ion-heart">
+                </button>
+            </div>
+            <div class="col col-25 paddingPerfil botaoImgperfil ">
+                <button class="button button-icon button-small ion-chatbubble">
+                </button>
+            </div>
+            <div class="col col-25 paddingPerfil botaoImgperfil  botaofim">
+                <button class="button button-icon button-small ion-android-person-add">
+                </button>
+            </div>
+        </div>
+<!--Sobre-->
+        <div class="row" style="border-bottom: 1px solid #939393;">
+            <div class="col col-100 no-padding">                
+                <div class="padding">
+                    <h4 style="font-weight:600;">
+                        Descrição
+                    </h4>                    
+                    <div class="text-justify text-container" style="color:#939393" ng-class="!mostraTexto.clicked? 'text-container':'show'">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sequi, asperiores, beatae iusto ipsum dignissimos porro temporibus expedita voluptates officiis deleniti facilis aliquid id quod officia minima, molestias reprehenderit architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ea adipisci, unde molestiae provident odio deserunt vitae eaque temporibus expedita saepe, vero beatae quam, impedit quasi optio. Ex, voluptates? Mollitia?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis minima commodi sapiente quidem facere maxime tempore error ea? Earum neque repudiandae, explicabo quisquam culpa voluptatibus id illo nemo laborum deserunt!</div>
+                    <button class="button button-clear button-assertive" ng-model="mostraTexto" ng-click="mostraTexto.clicked = !mostraTexto.clicked">Ler Mais</button>                                                            
+                </div>
+            </div>
+        </div>
+<!--REVIEWS-->
+
+       <div class="row" >
+           <div class="col col-100 text-left">
+               <div class="row">
+                <h5>Reviews</h5> 
+                </div>          
+                 
+                  <div class="row">
+                      
+                        <div class="col no-padding col-20 text-left font-small">
+                            <i>Excelente</i>
+                        </div>
+                        <div class="col">
+                            <div class="w3">
+                                <div id="myBar" class="w3-green" style="width:100%"></div>
+                              </div>
+                        </div>
+                        <div class="col no-padding col-15 text-right font-small">
+                            <i>197</i>
+                        </div>
+                      
+                  </div>
+                  
+                  <div class="row">
+                    
+                        <div class="col no-padding col-20 text-left font-small">
+                            <i>Bom</i>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="w3">
+                                <div id="myBar" class="w3-green" style="width:70%"></div>
+                              </div>
+                        </div>
+                        
+                        <div class="col no-padding col-15 text-right font-small">
+                             <i>150</i>
+                        </div>
+                   
+                   </div>
+                  
+                   <div class="row">
+                     
+                        <div class="col no-padding col-20 text-left font-small">
+                            <i>Médio</i>
+                        </div>
+                        <div class="col">
+                            <div class="w3">
+                                <div id="myBar" class="w3-green" style="width:50%"></div>
+                              </div>
+                        </div>
+                        <div class="col no-padding col-15 text-right font-small">
+                            <i >100</i>
+                        </div>
+                     
+                   </div>
+                  
+                   <div class="row">
+                      
+                        <div class="col no-padding col-20 text-left">
+                            <i class="font-small">Terrível</i>
+                        </div>
+                        <div class="col">
+                            <div class="w3">
+                                <div id="myBar" class="w3-green" style="width:25%"></div>
+                              </div>
+                        </div>
+                        <div class="col no-padding col-15 text-right">
+                            <i class="font-small">50</i>
+                        </div>
+                  </div>
+                   
+              </div>                               
+           </div>
+       
+       <div style="background-color:#F6F6F6" ng-controller="reviewCtrl">
+               <div class="col col-100">
+                     <div ng-repeat="i in [1]">
+                      <ionic-ratings style="font-size:10vw;" ratingsobj='ratingsObject' index='$index'></ionic-ratings>
+                    </div> 
+           </div>
+                <div class="col col-100">
+                    <h5 class="no-margin">500 Avaliações</h5>
+                </div>
+            </div>
+      <div>
+          <div class="row">
+              <div class="col col-50">
+                  <i class="icon ion-ios-heart" style="color:red; margin-right:3vw;"></i> <span>400 Gostaram</span>
+              </div>
+              <div class="col col-50">
+                  <i class="icon ion-ios-chatbubble" style="margin-right:3vw;"></i>
+                  <span>200 Comentarios</span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col col-50">
+                  <i class="icon ion-eye" style="margin-right:3vw;"></i>
+                  <span>5.000 Visualizaram</span>
+              </div>
+              <div class="col col-50">
+                  <i class="icon ion-forward" style="margin-right:3vw;"></i>
+                  <span>500 Compartilhado</span>
+              </div>
+          </div>          
+      </div>          
+        
+    <div id="map" data-tap-disabled="true"></div>
+    
+    <div class="row">
+        <p class="col icon icon-left ion-ios-location font-smaller text-center">  SHIP Trecho 3 21 - Asa Sul, Brasília - DF, 70297-400</p>
+    </div>
+               
+    <div class="containerSocial padding-top">
+       <div class="col text-center">
+               <button class="button button-small" ng-model="butComment" ng-click="butComment.clicked = true; butPubli.clicked = false; butSobre.clicked = false;" ng-class="!butComment.clicked?'button-outline':'button-clicked'">Comentários</button>
+               <button class="button button-small" ng-model="butPubli" ng-click="butComment.clicked = false; butPubli.clicked = true; butSobre.clicked = false;" ng-class="!butPubli.clicked?'button-outline-mid':'button-clicked'">Publicações</button>
+               <button class="button button-small" ng-model="butSobre" ng-click="butComment.clicked = false; butPubli.clicked = false; butSobre.clicked = true;" ng-class="!butSobre.clicked?'button-outline-right':'button-clicked'">Sobre</button>
+       </div>
+       <br>
+       <span></span>
+       <div ng-controller="comentCrl">
+           <coment-pag avatar="{{coment.avatar}}" nome="{{coment.nome}}" comentario="{{coment.comentario}}" data="{{coment.data}}" ng-repeat="coment in coments"></coment-pag>
+       </div>    
+    </div>
+     <span></span>
+    <div class="row rowMsg">
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <button class="button button-icon ion-happy-outline"></button>
+              <input type="text" placeholder="Digite uma mensagem..">
+              <button class="button button-icon ion-camera"></button>
+            </label>
+            <button class="button button-icon ion-arrow-right-c button-enviar"></button>
+          </div>
+    </div>      
+                     
+    </ion-content>  
+    
+<!--Footer barra-->
+    
+    
+</ion-view>
