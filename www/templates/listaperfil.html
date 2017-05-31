@@ -43,8 +43,9 @@
                     <p class="textohora">12min atrás</p>
                 </div>
                 <div class="col col-25 colseguir">
-                    <button class="button button-clear butseguir">
-                        <img src="img/timeline/post/seguir@1x.png">
+                    <button class="button button-clear butseguir" ng-model="buttonseg2" ng-click="buttonseg2.clicked=!buttonseg2.clicked" ng-class="buttonseg2.clicked?'button-tueddin':'button-tueddin'">
+                        <img src="img/timeline/post/seguir@2x.png" ng-show="!buttonseg2.clicked">
+                        <img src="img/timeline/post/seguindo@2x.png" ng-show="buttonseg2.clicked">
                     </button>
                 </div>
             </div>
@@ -94,8 +95,9 @@
                      <p class="textohora icon-left"><img src="img/timeline/post/pin@1x.svg"> Bamboa, DF</p>
                 </div>
                 <div class="col col-25 colseguir">
-                    <button class="button button-clear butseguir">
-                        <img src="img/timeline/post/seguir@1x.png">
+                    <button class="button button-clear butseguir" ng-model="buttonseg2" ng-click="buttonseg2.clicked=!buttonseg2.clicked" ng-class="buttonseg2.clicked?'button-tueddin':'button-tueddin'">
+                        <img src="img/timeline/post/seguir@2x.png" ng-show="!buttonseg2.clicked">
+                        <img src="img/timeline/post/seguindo@2x.png" ng-show="buttonseg2.clicked">
                     </button>
                 </div>                
             </div>
@@ -151,8 +153,9 @@
                     <p class="textohora icon-left"><img src="img/timeline/post/pin@1x.svg"> Bamboa, DF</p>
                 </div>
                 <div class="col col-25 colseguir">
-                    <button class="button button-clear butseguir">
-                        <img src="img/timeline/post/seguindo.png">
+                    <button class="button button-clear butseguir" ng-model="buttonseg2" ng-click="buttonseg2.clicked=!buttonseg2.clicked" ng-class="buttonseg2.clicked?'button-tueddin':'button-tueddin'">
+                        <img src="img/timeline/post/seguir@2x.png" ng-show="!buttonseg2.clicked">
+                        <img src="img/timeline/post/seguindo@2x.png" ng-show="buttonseg2.clicked">
                     </button>
                 </div>
             </div>

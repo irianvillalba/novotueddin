@@ -3,7 +3,8 @@
               <h1 class="title" style="text-align:center">{{ perfil.nome }} {{ perfil.sobrenome }}, {{perfil.idade}}</h1>
             </ion-header-bar>
             <ion-content class="bgmodalperfil">
-              <div  class="modalperfilimg" ng-style="{'background-image':'url('+imgFull+')'}">                  
+              <div  class="modalperfilimg">
+                  <img src="{{imgFull}}" style="width:100%;height:100%">                
               </div>               
             </ion-content>
             <ion-footer-bar class="bar bar-footer bgmodalperfil">

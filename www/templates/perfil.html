@@ -3,7 +3,7 @@
         
 <!--fotoperfil-->
         <div class="row paddingPerfil">
-            <div class="col imgPerfil" ng-style="{'background-image':'url('+imgback+')'}">               
+            <div class="col imgPerfil" ng-style="{'background-image':'url('+imgBack+')'}">               
                 <a class="button button-icon voltarPerfil" href="#/userconfig">
                     <img src="img/perfil/icones/voltar@1x.svg">
                 </a>
@@ -55,26 +55,12 @@
         <ion-scroll zooming="true" direction="x" class="scrollPerfil">
             <div class="div1Scroll">
                 <div class="row div2Scroll">
-                    <div class="col div3Scroll">                        
-                            <img src="img/teste/1.jpg" class="imgscroll"  ng-click="changeImg1()"> 
-                            <img src="img/teste/2.jpg" class="imgscroll"  ng-click="changeImg2()">
-                            <img src="img/teste/3.jpg" class="imgscroll" ng-click="changeImg3()">
-                            <img src="img/teste/4.jpg" class="imgscroll"  ng-click="changeImg4()">
-                            <img src="img/teste/5.jpg" class="imgscroll"  ng-click="changeImg5()">
-                            <img src="img/teste/6.jpg" class="imgscroll"  ng-click="changeImg6()">
-                            <img src="img/teste/7.jpg" class="imgscroll"  ng-click="changeImg7()">
-                            <img src="img/teste/1.jpg" class="imgscroll"  ng-click="changeImg8()">
-                            <img src="img/teste/2.jpg" class="imgscroll"  ng-click="changeImg9()">
-                            <img src="img/teste/3.jpg" class="imgscroll"  ng-click="changeImg10()">
-                            <img src="img/teste/4.jpg" class="imgscroll"  ng-click="changeImg11()">
-                            <img src="img/teste/5.jpg" class="imgscroll"  ng-click="changeImg12()">
-                            <img src="img/teste/6.jpg" class="imgscroll"  ng-click="changeImg13()">
-                            <img src="img/teste/7.jpg" class="imgscroll"  ng-click="changeImg14()">
-                            <img src="img/teste/1.jpg" class="imgscroll"  ng-click="changeImg15()">
+                    <div class="col div3Scroll" ng-repeat="foto in fotos">     
+                        <img src="{{foto.url}}" class="imgscroll"  ng-click="{{foto.funcao}}">       
                     </div> 
                 </div>
             </div>
-            <div ng-show="!buttonedita.clicked">
+            <div ng-show="!buttonedita.clicked" style="height:100%">
                 <button class="button overlay">
                     <p class="overlaytext">
                         Deslize para ver mais 
@@ -105,7 +91,7 @@
         </div>
         
 <!--Local-->
-        
+        <span></span>
         <div class="row paddingPerfil">
             <div class="col col-100 paddingPerfil localPerfil">
                 <img src="img/perfil/local/local.png" class="iconelocal">
@@ -148,41 +134,11 @@
         </div>
         
 <!--Fotos instagram-->
-        <div class="row paddingInstagram">
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta1.jpg')">             
-                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
+            <div class="row" ng-repeat="insta in instagram" ng-if="$index % 3 == 0">                      
+                <div class="col paddingPerfil colinstagram" ng-click="modal.show()" value="{{insta.valor}}" ng-repeat="insta in instagram.slice($index, ($index+3 > instagram.length ? instagram.length : $index+3))">
+                    <img src="{{insta.url}}" class="fotosInstagram">                    
+                </div>                          
             </div>
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta2.jpg')">             
-                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
-            </div>
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta3.jpg')">             
-                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
-            </div>
-        </div>
-        
-        <div class="row paddingInstagram">
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta4.jpg')">             
-                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
-            </div>
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta5.jpg')">             
-                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>      
-            </div>
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta6.jpg')">             
-                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
-            </div>
-        </div>
-        
-        <div class="row paddingInstagram">
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta7.jpg')">    
-               <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
-            </div>
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta8.jpg')">                
-                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
-            </div>
-            <div class="col col-33 paddingPerfil colinstagram" style="background-image:url('img/teste/insta9.jpg')">             
-                <button class="button button-clear button-full button-large" ng-click="modal.show()"></button>       
-            </div>
-        </div>
         <br>
         <br>        
     </ion-content>  

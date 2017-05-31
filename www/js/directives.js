@@ -33,3 +33,32 @@ app.directive('myTouchend', [function() {
     });
   };
 }]);
+
+
+app.directive('tueddinCard', [function(){
+    var ddo={};
+    ddo.restrict = "AE";
+    ddo.transclude = true;
+    ddo.scope={
+        titulo: '@titulo',
+        logo: '@logo',
+        imagem: '@imagem',
+        local: '@local' 
+    }
+    ddo.templateUrl = '/templates/card/cardPontoEnc.html';
+    return ddo;
+}]);
+
+app.directive('comentPag',[function(){
+    var ddo={};
+    ddo.restrict = "AE";
+    ddo.transclude = true;
+    ddo.scope={
+        avatar: '@avatar',
+        nome:'@nome',
+        comentario: '@comentario',
+        data:'@data'
+    }
+    ddo.templateUrl = '/templates/card/cardComentPag.html';
+    return ddo;
+}]);
