@@ -22,10 +22,10 @@ class Database
         $db_driver = "mysql";
 
 
-        /*$db_host = "108.167.188.179";
-        $db_nome = "desenvmo_tueddin";
-        $db_usuario = "desenvmo_tueddin";
-        $db_senha = "semacesso@123";
+        /*$db_host = "31.220.57.207";
+        $db_nome = "tueddin";
+        $db_usuario = "root";
+        $db_senha = "qwe123";
         $db_driver = "mysql";*/
 
         # Informações sobre o sistema:
