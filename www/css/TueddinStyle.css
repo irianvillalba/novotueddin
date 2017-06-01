@@ -23,6 +23,54 @@
     font-family:"Tueddin", "HelveticaNeue";
 }
 
+.text-center{
+    text-align:center!important;
+}
+
+.text-justify{
+    text-align:justify!important;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.no-padding{
+    padding:0!important;
+}
+
+.no-margin{
+    margin:0!important;
+}
+
+.font-small{
+    font-size: 0.9em !important;
+}
+.font-smaller{
+    font-size: 0.8em !important;
+}.font-smallerx2{
+    font-size: 0.6em !important;
+}.font-smallerx3{
+    font-size: 0.5em !important;
+}
+
+/*------------------------------------GOOGLE MAPS*/
+.googlemaps .scroll {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 170px;
+  box-shadow: 0px 3px 10px grey;
+}
+
+
+
 /*-----------------------------------Login*/
 .logo{
     height:28%;
@@ -60,7 +108,7 @@
 .textLogin{
     padding:10%;
     color:darkgray;
-    font-size:8px;
+    font-size:2.5vw;
     text-align: center;
     line-height: 1.2;
     word-spacing: 2px;
@@ -263,7 +311,7 @@
     color: black;
     text-align: center;
     padding-top: 3%;
-    font-size: 18px;
+    font-size: 1.2em;
     font-family: "TueddinLight";
 }
 
@@ -295,6 +343,60 @@ textarea {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+/*-------------------------------------------------CRIAR PONTO*/
+
+.divPadding{
+    padding:10px 30px;
+}
+.divPadding .input-label{
+    font-size:3.5vw;
+    color: #545454;
+}.divPadding .input{
+    color: #545454;
+}.divPadding .item-select:after{
+    color:#00f6f6;
+}.divPadding .item-input{
+    border:none;
+    border-bottom:2px solid #ddd;
+    color: #545454;
+}.divPadding p{
+    font-size: 0.7em;
+    text-align: center;
+    color:#a8a8a8;
+    margin:0;
+}.divPadding h6{
+    width:100%; 
+    text-align:center; 
+    border-bottom: 2px solid #f1f1f1; 
+    line-height:0em; 
+    margin:40px 1px 25px; 
+}.divPadding .linha{
+    background:#fff; 
+    padding: 0px 10px; 
+}.divPadding a{
+    font-size: 3.5em;
+    margin-top:0.3em;
+    float: left;
+    margin-right: 10px;
+    color:#387ef5;
+}.divPadding h5{
+    padding-top: 1.2em;
+    font-size: 3.9vw;
+    color:#387ef5;
+}.divPadding .botImg{
+    font-size:0.8em;
+    margin-bottom:0;
+}.divPadding .botCria{
+    color:#000;
+    font-weight: 600;
+    background-color:#00f6f6;
+}.divPadding select{
+    font-size:3.5vw;
+}.divPadding i{
+    color:#00f6f6;
+}
+
+
 
 /*-------------------------------------------------------*/
 
@@ -516,7 +618,7 @@ textarea {
     }
 
 .inputnome{
-    height: 15vw;
+    height: 12vw;
 }
 
 .inputsexoidade{
@@ -933,14 +1035,11 @@ ion-footer-bar.barra-slide-away{
 .rowshade{
     background: -webkit-linear-gradient( rgba(0, 0, 0, 0), black 100%);  
     background-size: cover;
-    position: relative;
-    top: 1vw;
     margin: 0;
     border: 0;
-    width: 102%;
-    height:75px;
+    width: 100%;
+    height:80px;
     padding: 0;
-    left: -3px;
 }
 
 .paddingPerfil{
@@ -974,13 +1073,14 @@ ion-footer-bar.barra-slide-away{
 .imgscroll{
     margin:0; 
     padding:0; 
-    float:left;
+    float:left;    
+    height: 75px;
     max-height: 75px;
     max-width: 132px;
 }
 
 .div1Scroll{
-    width:500%; 
+    width:auto; 
     height:auto; 
     float:left;
     padding:0;
@@ -1006,7 +1106,8 @@ ion-footer-bar.barra-slide-away{
     padding-left: 31%;
     z-index: 2;
     left: 0;
-    top:-77px;
+    border:none;
+    top:-75px;
     background: -webkit-radial-gradient(circle, black 47%, rgba(255, 0, 0, 0) 99%);
     line-height: 53px;
     text-align: left;
@@ -1140,39 +1241,14 @@ ion-footer-bar.barra-slide-away{
 }
 
 .fotosInstagram{
-    min-width: 106px;
-    min-height: 106px;
-    max-height: 106px;
-    max-width: 106px;
-}
-
-.paddingInstagram{
-    padding-left:0.5%;
-    padding-right:0.5%;
-    padding-top:0.25%;
-    padding-bottom:0.25%;
+    width:100%;
+    height:100%;
 }
 
 .colinstagram{
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    height: 20%;
+    height: 33vw;
 }
 
-.popupperfilbot{
-    border-radius: 5px; 
-    background-color: transparent; 
-    border: 0; 
-    border-bottom:1px darkgray solid; 
-    color:black;
-}
-
-    .popupperfilbot.activated{
-    background-color: darkgray;
-    opacity:0.3;
-}
 
 .botmodalfechar{
     height:100%;
@@ -1489,7 +1565,7 @@ ion-footer-bar.barra-slide-away{
         font-size:12px;
     }
 
-/*-------------------------------------COMINAÇÃO*/
+/*-------------------------------------COMBINAÇÃO*/
 .bgcombina{
     background-color:#161820;
     background-image: url('../img/combinacao/back.png');
@@ -1606,12 +1682,12 @@ ion-footer-bar.barra-slide-away{
     z-index: 5;
     background-position: center center;
     height: 12%;
-    right:24%;
+    right:5.7em;
 }
 
 .botsbarraponto{
     position: relative;
-    top: -84px;
+    top: -86px;
 }
 
 .plocalgps{
@@ -1621,22 +1697,23 @@ ion-footer-bar.barra-slide-away{
 }
 
     .plocalgps img{
-        height: 30px;
+        height: 6vw;;
         position: relative;
-        bottom: -3px;
-        left: 3px;
+        bottom: -8px;
+        left: 8px;
         float:left;
         margin-right:5%;
     }
 
     .plocalgps p{
         padding:0;
-        margin:0;
+        margin:0 30px;
     }
 
 .botgosteiponto{
     text-align: center;
     max-height: 100%;
+    padding-top: 1vw;
 }
 
     .botgosteiponto p{
@@ -1646,22 +1723,21 @@ ion-footer-bar.barra-slide-away{
 
     .botgosteiponto img{
         float:left;
-        margin-left:16px;
         margin-right:5px;
     }
 
 .textolocalcimacartao{
-    font-size:4vw;
+    font-size:2.5vw;
     line-height:20px;
 }
 
 .textolocalbaixocartao{
-    font-size:3vw;
+    font-size:2.5vw;
     line-height:10px;
 }
 
-.botcompartilharponto{
-    margin:-1 0 0 0;
+.botcompartilharponto img{
+   margin-bottom:12px;
 }
 
 .logotipo1{
@@ -1678,7 +1754,11 @@ ion-footer-bar.barra-slide-away{
     top: -330px;
     left: 38%;
     margin: 0;
-    float: left;            
+    float: left;
+    padding:30px 0px;
+}.logotipo1 img{
+    width:90%;
+    border-radius:3px;
 }
 
 .logotipo2{
@@ -1695,8 +1775,38 @@ ion-footer-bar.barra-slide-away{
     top: -330px;
     left: 38%;
     margin: 0;
-    float: left;            
+    float: left;
+    padding:30px 0px;
+}.logotipo2 img{
+    width:90%;
+    border-radius:3px;
 }
+
+
+/*------------------------------------PONTOS TURÍSTICOS*/
+
+.botbotTur{
+    border-radius: 50px;
+    background-image: url(../img/pontoencontro/bg_icones@3x.png);
+    width: auto;
+    min-width: 171px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 83px;
+    position: relative;
+    z-index: 5;
+    left: 1px;
+    background-position: center center;
+    height: 12%;
+    right: 24%;
+}
+
+.botsbarrapontoTur{
+    position: relative;
+    top: -52px;
+}
+
 
 /*-------------------------------------LOCAIS*/
 
@@ -2073,6 +2183,118 @@ ion-footer-bar.barra-slide-away{
     
 }
 
+/*--------------------------------------PERFIL DE PAGINAS--------*/
+
+.perfilPag .item{
+    border:none;
+    max-height:25px;
+    background:none;
+    padding-top:0;
+}.perfilPag .item p{
+    white-space: normal;
+    margin:0;
+    line-height: 15px;
+}
+.perfilPag .item h4{
+    margin:0;
+}
+
+.perfilPag .voltarPerfil{
+    margin-right:72%;
+}
+
+.perfilPag .opcoesPerfil{
+    padding-left:0;
+}
+
+.perfilPag .nomePerfil{
+    margin: 9em 0 0 3em;
+    color:#fff;
+}
+.perfilPag a{
+    color:#fff;
+}
+
+.perfilPag .botaofim{
+    border-left: 2px #d3d3d3 solid;
+}
+
+.perfilPag .w3{
+    border-radius:12px;
+    background-color:#ededed;
+}.perfilPag .w3-green{
+    height:0.5em;
+    background-color:#00cd00;
+    border-radius:12px;
+}
+
+.perfilPag .text-container{
+    height: 100px;
+    overflow: hidden;
+}
+.perfilPag .show {
+    overflow: visible;
+    height: auto;
+}
+
+.perfilPag .containerSocial{
+    background-color:#F6F6F6;
+    border-top:1px solid lightgray;
+}.perfilPag .containerSocial .col{
+    padding-right:20px;
+}
+
+.perfilPag .button-outline{
+    color:#330033;
+    border-color: #330033;
+    min-width:105px;
+    border-radius:9px;
+    margin-right:-14px;
+    z-index:1;
+}.perfilPag .button-clicked{
+    color:#fff;
+    border-color: #330033;
+    background-color:#330033;
+    min-width:105px;
+    border-radius:9px!important;
+    margin-right:-14px;
+    z-index:3;
+}.perfilPag .button-outline-mid{
+    color:#330033;
+    border-color: #330033;
+    min-width:105px;
+    border-radius:9px;
+    margin-right:-14px;
+    z-index:2;
+}.perfilPag .button-outline-right{
+    color:#330033;
+    border-color: #330033;
+    min-width:100px;
+    border-radius:9px;
+    margin-right:-14px;
+    border-bottom-left-radius:0;
+    border-top-left-radius:0;
+    border-left: none;
+    z-index:1;
+}
+.perfilPag .rowSocial{
+    border-bottom: 1px solid lightgray;
+}
+.perfilPag .rowMsg{
+   background: transparent;
+   padding-left:0;
+}.perfilPag .rowMsg .item{
+   max-height: 60px;
+   width:100%;
+   z-index:5;
+}
+.perfilPag .button-enviar{
+    border-radius:50%;
+    background: gray;
+    color:#fff;
+    min-width:50px !important;
+    margin-left:3px!important;
+}
 /*-------------------------------------FONTES*/
 @font-face {
   font-family: "Tueddin";

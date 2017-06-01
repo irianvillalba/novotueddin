@@ -1,5 +1,6 @@
 app.controller('cardsCtrl', function($scope, TDCardDelegate, $ionicModal) {
   console.log('CARDS CTRL');
+    
   var cardTypes = [
     {image: 'img/teste/1.jpg', title: 'Gustavo, 29'},
     {image: 'img/teste/2.jpg', title: 'Gustavo, 29'},

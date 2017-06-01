@@ -1,3 +1,71 @@
+
+<ion-view view-title="cadastro" ng-controller="cadastroCtrl">
+    <ion-content class="bckground fontetueddin">
+
+<!--logo-->
+       <div class="row">               
+                <div class="col col-center col-100 logo">
+                    <img src="img/tueddinlogo.png" class="logocadastro">
+                </div>                
+            </div>
+        
+<!--input nome-->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col col-90">
+                <label class="inputcadastro item-input inputnome">
+                    <input type="text" placeholder="Nome de usuário" ng-model="$parent.nick" ng-value="perfil.nick">
+                </label>                
+            </div>
+            <div class="col"></div>
+        </div>
+<!--input idade e sexo-->
+        <div class="row inputrow">
+            <div class="col"></div>
+            <div class="col col-45">
+                <label class="inputcadastro item-input inputsexoidade">
+                    <select class="cadastro" ng-model="$parent.idade">
+                      <option ng-selected="true">Idade</option>
+                      <option ng-repeat="i in id" value="{{i}}">{{i}}</option>
+                    </select>
+                </label>                
+            </div>
+            
+            <div class="col col-45">
+                <label class="inputcadastro item-input inputsexoidade">
+                    <select class="cadastro" ng-model="$parent.sexo">
+                      <option ng-selected="true">Sexo</option>
+                      <option value="m">Masculino</option>
+                      <option value="f">Feminino</option>
+                    </select>
+                </label>                
+            </div>
+            <div class="col"></div>
+        </div>
+        
+<!--Termos-->
+        <div class="row">
+          <label class="termos item item-checkbox">
+              <div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-square termobox" >
+                  <input type="checkbox" ng-model="$parent.aceito"><i class="checkbox-icon"></i></div>
+              <div class="item-content disable-pointer-events termostexto" ><span>Eu concordo com os termos de serviços e política de privacidade.</span></div>
+          </label>
+        </div>
+        
+
+<!--botao entrar-->
+        
+        <div class="row">
+            <div class="col"></div>
+            <div class="col col-80">
+                <button class="button button-full cadastrobotao" ng-click="cadastro()" ui-sref="mainmenu">Começar</button>
+            </div>
+            <div class="col"></div>
+        </div>
+        
+        
+    </ion-content>
+
 <ion-view view-title="cadastro" ng-controller="cadastroCtrl">
     <ion-content class="bckground fontetueddin">
 
@@ -65,4 +133,5 @@
         
         
     </ion-content>
+
 </ion-view>

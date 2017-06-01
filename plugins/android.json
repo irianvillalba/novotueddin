@@ -21,6 +21,7 @@
             "APP_NAME": "tueddin",
             "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
         },
+
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
         },
@@ -30,6 +31,7 @@
         "cordova-plugin-filepath": {
             "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
         },
+
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
         },
@@ -38,6 +40,20 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
+
+        },
+        "cordova-plugin-image-picker": {
+            "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.tueddin2969629"
+
         }
     },
     "dependent_plugins": {

@@ -1,0 +1,16 @@
+<ion-modal-view view-title="modalgoogle" class="googlemaps">
+   <ion-content ng-controller="mapCtrl">
+    <ion-header-bar class="bar-dark" >
+      <h1 class="title">Map</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div id="map" style="width:100%;height:100%;" data-tap-disabled="true"></div>
+    </ion-content>
+    <ion-footer-bar class="bar-dark">
+        <a ng-click="centerOnMe()" class="button button-icon button-small icon ion-navigate">Me Encontre</a>
+        <br>
+        <button class="button button-small" ng-click="maps_modal.hide()">
+            Fechar
+        </button>
+    </ion-footer-bar>
+</ion-content>
