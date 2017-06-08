@@ -38,20 +38,7 @@ app.controller('perfilPagCtrl', function($scope, $ionicPopup, $timeout, localSto
 $scope.popupOpcoes = function() {
   $scope.data = {}; 
   var myPopup = $ionicPopup.show({
-    template: '<ion-list>                           '+
-               '  <i class="button button-full popupperfilbot" ng-click=""> '+
-               '    Editar Página                             '+
-               '  </i>                             '+
-               '  <i class="button button-full popupperfilbot" ng-click=""> '+
-               '    Denunciar                             '+
-               '  </i>                             '+
-               '  <i class="button button-full  popupperfilbot" ng-click=""> '+
-               '    Enviar Mensagem                          '+
-               '  </i>                             '+
-               '  <i class="button button-full  popupperfilbot" ng-click=""> '+
-               '    Desligar Notificacoes                 '+
-               '  </i>                             '+
-               '</ion-list>                               ',
+    templateUrl: 'templates/popup/popupPagPerfil.html',
     buttons: [    
       {  
         text: '<i class="icon button-icon ion-ios-close-outline"></i>',

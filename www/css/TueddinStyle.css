@@ -1111,7 +1111,7 @@ ion-footer-bar.barra-slide-away{
 
 .div1Scroll{
     width:auto; 
-    height:auto; 
+    height:75px; 
     float:left;
     padding:0;
 }
@@ -1119,6 +1119,7 @@ ion-footer-bar.barra-slide-away{
 .div2Scroll{
     margin:0; 
     padding:0;
+    height:75px
 }
 
 .div3Scroll{
@@ -2310,6 +2311,46 @@ ion-footer-bar.barra-slide-away{
     
 }
 
+/*------------------------------------------SOBRE PERFIL PAG-----*/
+
+.texto-sobre{
+    color:#330033!important;
+    line-height:20px;
+}
+
+.titulo-sobre{
+    width:80%
+}
+.container-sobre{
+    padding: 10% 20% 100px;
+}
+
+.row-evento{
+    border:1px solid #330033;
+    border-radius:25px;
+    margin: 0px 10px;
+    width:95% !important;
+    padding: 3% 20% !important;
+}.row-evento .icon{
+    margin-right:10%;
+}.row-sobre p{
+    margin-left:10%;
+    line-height:15px;
+}
+
+.icon-grande::before{
+    font-size:1.5em;
+}
+
+.icon-medio::before{
+    font-size:1.3em;
+    min-width:16px;
+}
+.row-sobre{
+    margin:5px 0;
+}
+
+
 /*--------------------------------------PERFIL DE PAGINAS--------*/
 
 .perfilPag .item{
@@ -2327,12 +2368,28 @@ ion-footer-bar.barra-slide-away{
     margin:0 0 3 0;
 }
 
+.row-checkin{
+    padding:5% 18% 0!important;
+}.row-checkin .button{
+    padding: 2% 5%;
+    font-size:1.5em;
+    font-weight: 400;
+    color:#FFF;
+    background:linear-gradient(to right, #551A8B, #ff748c);
+    border-radius:10px;
+    line-height: 10px;
+}
+
 .perfilPag .voltarPerfil{
     margin-right:72%;
 }
 
 .perfilPag .opcoesPerfil{
     padding-left:0;
+}
+
+.row-coments{
+    padding-bottom:50px;
 }
 
 .perfilPag .nomePerfil{
