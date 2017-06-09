@@ -2351,7 +2351,7 @@ ion-footer-bar.barra-slide-away{
 }
 
 
-/*--------------------------------------PERFIL DE PAGINAS--------*/
+/*--------------------------------------PERFIL DE PAGINAS----*/
 
 .perfilPag .item{
     border:none;
@@ -2481,6 +2481,74 @@ ion-footer-bar.barra-slide-away{
     min-width:50px !important;
     margin-left:3px!important;
 }
+
+
+/*------------------------------PERFIL PAGINA EDITAR*/
+
+.fotoedita-grande{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 30%;
+    border-radius:5px;
+}.fotoedita-grande-vazia{
+    background-image:none !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 30%;
+    border-radius:5px;
+}.botao-edita .icon-grande-apaga{
+    float: right;
+    position: relative;
+    bottom: 4px;
+    height: 0px;
+    z-index: 5;
+    left: 3px;
+    font-size: 1.3em;
+    color:red;
+}.botao-edita .icon-grande-inclui{
+    float: right;
+    position: relative;
+    bottom: 4px;
+    height: 0px;
+    z-index: 5;
+    left: 3px;
+    font-size: 1.3em;
+    color:limegreen;
+}.botao-edita .icon-pequeno-apaga{
+    float: right;
+    position: relative;
+    bottom:1px;
+    height: 0px;
+    z-index: 5;
+    font-size: 1em;
+    color:red;
+}.botao-edita .icon-pequeno-inclui{
+    float: right;
+    position: relative;
+    bottom:1px;
+    height: 0px;
+    z-index: 5;
+    font-size: 1em;
+    color:limegreen;
+}
+
+.fotoedita-pequena{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 10%;
+    border-radius:5px;
+}.fotoedita-pequena-vazia{
+    background-image:none !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 10%;
+    border-radius:5px;
+}
+
 /*-------------------------------------FONTES*/
 @font-face {
   font-family: "Tueddin";

@@ -94,6 +94,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: 'perfilPagCtrl'
   })
 
+  .state('perfilPagEdita', {
+      url:'/perfilPagEdita',
+      templateUrl: 'templates/perfilPagEdita.html',
+  })
 
   .state('explorar', {
     url: '/explorar',

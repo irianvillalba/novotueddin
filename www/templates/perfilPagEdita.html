@@ -1,0 +1,148 @@
+<ion-view view-title="criar" ng-controller="gerarPagina">
+    <ion-content class="fontetueddin">
+
+<!--voltar pesquisar-->
+        <row class="row bgconfig">
+            <div class="col col-10">
+                <button class="button icon button-small" ui-sref="mainmenu"><img src="img/timeline/icones/voltar.svg"></button>
+            </div>
+            <div class="col col-80 textocabecalhotimeline">
+                <p>Editar Página</p>
+            </div>
+                       
+        </row>
+        <span></span>
+        
+        <div class="col divPadding">
+            <div class="row">
+                <div class="col botao-edita" ng-controller="editaPagCtrl">
+                    <i class="icon" ng-class="classG"></i>            
+                    <button class="button button-block no-margin no-padding" style="background-image:url('img/teste/1.jpg')" ng-class="backgroundG" ng-model="botEdita1" ng-click="changeClassG()"></button>
+                </div>  
+            </div>
+            <span></span>
+            <div class="row">
+                <div class="col botao-edita" ng-controller="editaPagCtrl">
+                    <i class="icon" ng-class="class"></i>            
+                    <button class="button button-block no-margin no-padding" style="background-image:url('img/teste/2.jpg')" ng-class="background" ng-model="botEdita2" ng-click="changeClass()"></button>
+                </div>
+                <div class="col botao-edita" ng-controller="editaPagCtrl">
+                    <i class="icon" ng-class="class"></i>            
+                    <button class="button button-block no-margin no-padding" style="background-image:url('img/teste/3.jpg')" ng-class="background" ng-model="botEdita3" ng-click="changeClass()"></button>
+                </div>
+                <div class="col botao-edita" ng-controller="editaPagCtrl">
+                    <i class="icon" ng-class="class"></i>            
+                    <button class="button button-block no-margin no-padding" style="background-image:url('img/teste/4.jpg')" ng-class="background" ng-model="botEdita4" ng-click="changeClass()"></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col botao-edita" ng-controller="editaPagCtrl">
+                    <i class="icon" ng-class="class"></i>            
+                    <button class="button button-block no-margin no-padding" style="background-image:url('img/teste/5.jpg')" ng-class="background" ng-model="botEdita5" ng-click="changeClass()"></button>
+                </div>
+                <div class="col botao-edita" ng-controller="editaPagCtrl">
+                    <i class="icon" ng-class="class"></i>            
+                    <button class="button button-block no-margin no-padding" style="background-image:url('img/teste/6.jpg')" ng-class="background" ng-model="botEdita6" ng-click="changeClass()"></button>
+                </div>
+                <div class="col botao-edita" ng-controller="editaPagCtrl">
+                    <i class="icon" ng-class="class"></i>
+                    <button class="button button-block no-margin no-padding" style="background-image:url('img/teste/7.jpg')" ng-class="background" ng-model="botEdita7" ng-click="changeClass()"></button>
+                </div>
+            </div>
+            
+            
+            
+            
+    <!--Edições-->        
+            <div class="list">
+              <label class="item item-input">
+                <input type="text" ng-model="paginas.nome" placeholder="Dê um nome para sua página.">
+              </label>
+              <label class="item item-input">
+                <input type="text" ng-model="paginas.usuario" placeholder="@Nome de usuário">
+              </label>
+              
+      <!--CATEGORIA-->        
+              <label class="item item-input item-select">
+                   <div class="input-label" style="color: #b3b3b3;font-size:4vw;">
+                      Categoria:
+                    </div>
+                    <select ng-selected="false"  ng-model="paginas.categoria" style="color: #b3b3b3;font-size:4vw;">
+                      <option>Locais</option>
+                      <option>Ponto de Encontro</option>
+                      <option>Ponto Turístico</option>
+                    </select>                
+              </label> 
+                 
+       <!--ESTILO-->           
+              <label class="item item-input item-select">
+                   <div class="input-label" style="color: #b3b3b3;font-size:4vw;">
+                   Estilo:
+                    </div>
+                    <select ng-selected="false"  ng-model="paginas.categoria" style="color: #b3b3b3;font-size:4vw;">
+                      <option>Restaurante</option>
+                      <option>Boate/Balada</option>
+                      <option>Bar/Boteco</option>
+                      <option>Pop</option>
+                      <option>Jazz</option>
+                      <option>Rock</option>
+                      <option>Automotivo</option>
+                      <option>Shows</option>
+                      <option>Volta ao Tempo</option>
+                      <option>Hip Hop</option>
+                      <option>Punk</option>
+                      <option>Churrasco</option>
+                      <option>Sertanejo</option>
+                      <option>Blues</option>
+                      <option>Reggae</option>
+                      <option>Eletrônico</option>
+                      <option>Gospel</option>
+                      <option>Clássica</option>
+                    </select>                
+              </label>
+              <label class="item item-input">
+                <input type="text" ng-model="paginas.site" placeholder="http://www.seusite.com.br">
+              </label>
+                <p>Você pode pular essa etapa caso não tenha uma site.</p>
+              <label class="item item-input">
+                <textarea name="" ng-model="paginas.descricao" placeholder="Descrição da pagina." id="" cols="30" rows="15"></textarea>
+                <input type="text" placeholder="Descrição da página.">
+              </label>
+              <label class="item item-input" ng-controller="modalMapa" ng-click="showMaps()">
+                <input type="text" ng-model="paginas.local" placeholder="Localização">
+                <i class="icon ion-location"></i>
+              </label>
+              <label class="item item-input">
+                <input type="text" ng-model="paginas.endereco" placeholder="Endereço">
+              </label>
+              <label class="item item-input">
+                <input type="email" ng-model="paginas.email" placeholder="Email">
+              </label>
+               <label class="item item-input">
+                <input type="text" ng-model="paginas.telefone" placeholder="Telefone" name="field" ng-model="phoneNumber" ui-br-phone-number>
+              </label>
+              <label class="item item-input">
+                   <textarea name="" ng-model="paginas.horafunciona" placeholder="Horário de funcionamento." cols="30" rows="15"></textarea>
+                <input type="text" placeholder="Horário de funcionamento.">              
+              </label>
+              <label class="item item-input">
+                   <textarea name="" ng-model="paginas.diafunciona" placeholder="Dias de funcionamento." cols="30" rows="15"></textarea>
+                <input type="text" placeholder="Dias de funcionamento.">              
+              </label>
+              <label class="item item-input" ng-click="datePickerTermina()" ng-controller="dataCtrl">
+                   <div class="input-label" style="color: #b3b3b3;font-size:4vw;">
+                      Data de término:
+                    </div>
+                    <span style="padding-left:15vw;" ng-model="paginas.datatermina">{{datePickerDias |date:'dd/MM/yyyy'}}</span>
+                                   
+              </label><label class="item item-input" ng-controller="horaCtrl" ng-click="openTimePicker1()">
+                   <div class="input-label" style="color: #b3b3b3;font-size:4vw;">
+                      Horário de término:
+                    </div>                    
+                    <span style="padding-left:15vw;" ng-model="paginas.horatermina">{{finalTime}}</span>   
+              </label>
+            </div>            
+        </div>  
+</ion-content>
+<footer-tueddin></footer-tueddin>
+</ion-view>

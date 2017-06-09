@@ -82,3 +82,33 @@ $scope.coments = [
     {avatar:'img/teste/7.jpg', nome:'Juliana', comentario:'iusto! Quisquam facere aspernatur.', data:'hoje, 19h'}
 ]
 });
+
+app.controller('editaPagCtrl', function($scope){
+    
+    
+  $scope.class = "icon-pequeno-apaga ion-close-circled";
+  $scope.background = "fotoedita-pequena";
+  $scope.classG = "icon-grande-apaga ion-close-circled";
+  $scope.backgroundG = "fotoedita-grande";
+    
+  $scope.changeClass = function(){
+    if ($scope.class === "icon-pequeno-apaga ion-close-circled"){
+      $scope.class = "icon-pequeno-inclui ion-plus-circled";
+      $scope.background = "fotoedita-pequena-vazia";
+    }else{
+      $scope.class = "icon-pequeno-apaga ion-close-circled";
+      $scope.background = "fotoedita-pequena";
+    }
+  };
+    
+  $scope.changeClassG = function(){
+    if ($scope.classG === "icon-grande-apaga ion-close-circled"){
+      $scope.classG = "icon-pequeno-inclui ion-plus-circled";
+      $scope.backgroundG = "fotoedita-grande-vazia";
+    }else{
+      $scope.classG = "icon-grande-apaga ion-close-circled";
+      $scope.backgroundG = "fotoedita-grande";
+    }
+  };
+    
+});
