@@ -112,3 +112,20 @@ app.controller('editaPagCtrl', function($scope){
   };
     
 });
+
+
+app.controller('imgMsgCtrl', function($scope){
+    $scope.images = [
+        {url:'img/teste/gus2016.jpg'}, 
+        {url:'img/teste/1.jpg'}, 
+        {url:'img/teste/2.jpg'}
+    ]
+    
+    $scope.addImg = function(){
+        // completar com os dados do Back.
+    }
+    
+    $scope.removeImg = function(){
+        // completar com os dados do Back.
+    }
+})

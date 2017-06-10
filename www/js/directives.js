@@ -134,15 +134,15 @@ app.directive('footerTueddin', [function(){
     return ddo;
 }]);
 
-app.directive('footerChat', [function(){
+app.directive('imgMsg', [function(){
     var ddo= {};
     ddo.restrict = 'AE';
     ddo.transclude = true;
     ddo.scope = {
-        
+        url :'@url',
     }
     
-    ddo.templateUrl = '/templates/card/footerChat.html';
+    ddo.templateUrl = '/templates/card/imgMensagem.html';
     
     return ddo;
 }]);

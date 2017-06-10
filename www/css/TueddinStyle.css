@@ -2482,6 +2482,71 @@ ion-footer-bar.barra-slide-away{
     margin-left:3px!important;
 }
 
+/*-----------------------------NOVA MENSAGEM*/
+
+.padding-msg{
+    padding: 10px 20px;
+}
+
+.margin-header{
+    margin: 3% 12% 0 16%; 
+}.margin-header p{
+    line-height:15px;
+    margin:3px 0 0 0;
+}
+
+.avatar-header{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+    padding: 0;
+    margin-right:3%;
+    float: left;
+}
+.button-enviar-header{
+    background: gray;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+}.button-enviar-header::before{
+    color:#fff;
+}
+
+.row-msg{
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    height: auto;
+    padding: 0 10%;
+    box-shadow: 0px 1px 1px #888888;
+}.row-msg .caixaescrever{
+    height: 40%;
+}
+
+.img-adiciona{
+    max-height:10%;
+    max-width:100%;
+    margin:3px
+}.img-adiciona i{
+    float:right;
+    bottom:6px;
+    right:6px;
+    position:relative;
+    color:red;
+}.img-adiciona img{
+    max-height: 55px;
+    max-width:100%;
+}
+
+.bar-mensagem{
+    background:none;
+    padding:0 20%
+}.bar-mensagem button::before{
+    font-size:1.5em;
+}
 
 /*------------------------------PERFIL PAGINA EDITAR*/
 

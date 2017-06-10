@@ -108,6 +108,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/conversas',
     templateUrl: 'templates/conversas.html'
   })
+
+  .state('novaMensagem', {
+    url: '/novaMensagem',
+    templateUrl: 'templates/novaMensagem.html'
+  })
   
   .state('modalPerfil', {
     url: '/modalPerfil',
