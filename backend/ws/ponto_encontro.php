@@ -2,6 +2,7 @@
     include_once '../lib/cors.php';
     include_once '../lib/Email.php';
     include_once '../lib/model/Encontro.php';
+    error_reporting(0);
 
     $encontro = new Encontro();
 

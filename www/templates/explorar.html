@@ -15,85 +15,13 @@
         </row>
         <span></span>
 <!--TELAS-->
-        <div class="row">
-            <div class="col col-33 colimgexplorar">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <span></span>
-            <div class="col col-33 colimgexplorarboate">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <span></span>
-            <div class="col col-33 colimgexplorarbar">
-                <button class="button button-full button-large button-clear"></button>
+        <div class="row" style="flex-wrap: wrap;">
+            <div class="col col-33" style="margin-bottom: 25px; padding: 0px" ng-repeat="c in categorias">
+                <button class="button button-full button-large button-clear" style="padding: 3px" ng-click="explorar(c.id_categoria)">
+                    <img src="img/explorar/{{c.icone}}" width="100%">
+                </button>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col col-33 colimgexplorarpop">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <span></span>
-            <div class="col col-33 colimgexplorarjazz">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <div class="col col-33 colimgexplorarrock">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col col-33 colimgexplorarautomotivo">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <span></span>
-            <div class="col col-33 colimgexplorarshows">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <div class="col col-33 colimgexplorartempo">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col col-33 colimgexplorarhip">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <span></span>
-            <div class="col col-33 colimgexplorarpunk">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <div class="col col-33 colimgexplorarchurrasco">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col col-33 colimgexplorarsertanejo">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <span></span>
-            <div class="col col-33 colimgexplorarblues">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <div class="col col-33 colimgexplorarreaggea">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col col-33 colimgexplorareletronica">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <span></span>
-            <div class="col col-33 colimgexplorargospel">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-            <div class="col col-33 colimgexplorarclassica">
-                <button class="button button-full button-large button-clear"></button>
-            </div>
-        </div>
-        <br><br>
     
     </ion-content>
     

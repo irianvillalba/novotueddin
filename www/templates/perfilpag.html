@@ -1,11 +1,11 @@
-<ion-view view-title="perfilpag" class="perfilPag">
+<ion-view view-title="perfilpag" class="perfilPag" ng-controller="perfilPagCtrl">
     <ion-content class="bgperfil fontetueddin">
         
 <!--fotoperfil-->
         <div class="row paddingPerfil">
            
             <div class="col imgPerfil" ng-style="{'background-image':'url('+imgBack+')'}">           
-                <a class="button button-icon voltarPerfil" ui-sref="pontoenc">
+                <a class="button button-icon voltarPerfil" ui-sref="locais">
                     <img src="img/perfil/icones/voltar@1x.svg">
                 </a>              
                 <a class="button button-icon opcoesPerfil" ng-click="popupOpcoes()">
@@ -15,9 +15,9 @@
                     <a class="textoPerfilPag">
                         <span style="font-size:1.5em;">@{{ perfil.nick }}</span>
                             <br>
-                            <p style="margin: 10 0 0 0 "><span style="font-size:2em;">{{ perfil.nome }}</span>
+                            <p style="margin: 10 0 0 0 "><span style="font-size:2em;">{{ local.pagina.local }}</span>
                             <i class="icon ion-checkmark-circled" style="font-size:1.5em;color:cornflowerblue;margin-left:5px"></i></p>
-                            <span style="font-size:1.2em;">Em novembro de 2017</span>
+                            <span style="font-size:1.2em;">Em {{local.pagina.dt_termino| date: 'MMMM'}} de {{local.pagina.dt_termino| date: 'y'}}</span>
                     </a>
                 </div>                    
                 </div>
@@ -48,19 +48,19 @@
         
         <div class="row paddingPerfil" style="background-color:#F6F6F6">
             <div class="col col-25 paddingPerfil botaoImgperfil">
-                <button class="button button-icon button-small ion-android-share-alt">           
+                <button class="button button-icon button-small ion-android-share-alt" ng-click="redeSocial()">
                 </button>
             </div>
             <div class="col col-25 paddingPerfil botaoImgperfil botaomid">
-                <button class="button button-icon button-small ion-heart">
+                <button class="button button-icon button-small ion-heart" ng-click="curtida()">
                 </button>
             </div>
             <div class="col col-25 paddingPerfil botaoImgperfil ">
-                <button class="button button-icon button-small ion-chatbubble">
+                <button class="button button-icon button-small ion-chatbubble" ng-click="comentario()">
                 </button>
             </div>
             <div class="col col-25 paddingPerfil botaoImgperfil  botaofim">
-                <button class="button button-icon button-small ion-android-person-add">
+                <button class="button button-icon button-small ion-android-person-add" ng-click="amigo()">
                 </button>
             </div>
         </div>
@@ -71,7 +71,7 @@
                     <h4 style="font-weight:600;">
                         Descrição
                     </h4>                    
-                    <div class="text-justify text-container" style="color:#939393" ng-class="!mostraTexto.clicked? 'text-container':'show'">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sequi, asperiores, beatae iusto ipsum dignissimos porro temporibus expedita voluptates officiis deleniti facilis aliquid id quod officia minima, molestias reprehenderit architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ea adipisci, unde molestiae provident odio deserunt vitae eaque temporibus expedita saepe, vero beatae quam, impedit quasi optio. Ex, voluptates? Mollitia?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis minima commodi sapiente quidem facere maxime tempore error ea? Earum neque repudiandae, explicabo quisquam culpa voluptatibus id illo nemo laborum deserunt!</div>
+                    <div class="text-justify text-container" style="color:#939393" ng-class="!mostraTexto.clicked? 'text-container':'show'">{{local.pagina.descricao}}</div>
                     <button class="button button-clear button-assertive" ng-model="mostraTexto" ng-click="mostraTexto.clicked = !mostraTexto.clicked">Ler Mais</button>                                                            
                 </div>
             </div>
@@ -84,70 +84,23 @@
                 <h5>Reviews</h5> 
                 </div>          
                  
-                  <div class="row">
+                  <div class="row" ng-repeat="a in local.avaliacoes">
                       
                         <div class="col no-padding col-20 text-left font-small">
-                            <i>Excelente</i>
+                            <i>{{a.txt_avaliacao}}</i>
                         </div>
                         <div class="col">
                             <div class="w3">
-                                <div id="myBar" class="w3-green" style="width:100%"></div>
+                                <div id="myBar" class="w3-green" style="width:{{(a.qtd / local.pagina.qtd_avaliacao) * 100}}%"></div>
                               </div>
                         </div>
                         <div class="col no-padding col-15 text-right font-small">
-                            <i>197</i>
+                            <i>{{a.qtd}}</i>
                         </div>
                       
                   </div>
                   
-                  <div class="row">
-                    
-                        <div class="col no-padding col-20 text-left font-small">
-                            <i>Bom</i>
-                        </div>
-                        
-                        <div class="col">
-                            <div class="w3">
-                                <div id="myBar" class="w3-green" style="width:70%"></div>
-                              </div>
-                        </div>
-                        
-                        <div class="col no-padding col-15 text-right font-small">
-                             <i>150</i>
-                        </div>
-                   
-                   </div>
-                  
-                   <div class="row">
-                     
-                        <div class="col no-padding col-20 text-left font-small">
-                            <i>Médio</i>
-                        </div>
-                        <div class="col">
-                            <div class="w3">
-                                <div id="myBar" class="w3-green" style="width:50%"></div>
-                              </div>
-                        </div>
-                        <div class="col no-padding col-15 text-right font-small">
-                            <i >100</i>
-                        </div>
-                     
-                   </div>
-                  
-                   <div class="row">
-                      
-                        <div class="col no-padding col-20 text-left">
-                            <i class="font-small">Terrível</i>
-                        </div>
-                        <div class="col">
-                            <div class="w3">
-                                <div id="myBar" class="w3-green" style="width:25%"></div>
-                              </div>
-                        </div>
-                        <div class="col no-padding col-15 text-right">
-                            <i class="font-small">50</i>
-                        </div>
-                  </div>
+
                    
               </div>                               
            </div>
@@ -159,27 +112,27 @@
                     </div> 
            </div>
                 <div class="col col-100">
-                    <h5 class="no-margin">500 Avaliações</h5>
+                    <h5 class="no-margin">{{local.pagina.qtd_avaliacao}} Avaliações</h5>
                 </div>
             </div>
       <div>
           <div class="row">
               <div class="col col-50">
-                  <i class="icon ion-ios-heart" style="color:red; margin-right:3vw;"></i> <span>400 Gostaram</span>
+                  <i class="icon ion-ios-heart" style="color:red; margin-right:3vw;"></i> <span>{{local.pagina.curtida}} Gostaram</span>
               </div>
               <div class="col col-50">
                   <i class="icon ion-ios-chatbubble" style="margin-right:3vw;"></i>
-                  <span>200 Comentarios</span>
+                  <span>{{local.pagina.comentario}} Comentarios</span>
               </div>
           </div>
           <div class="row">
               <div class="col col-50">
                   <i class="icon ion-eye" style="margin-right:3vw;"></i>
-                  <span>5.000 Visualizaram</span>
+                  <span>{{local.pagina.visualizacao}} Visualizaram</span>
               </div>
               <div class="col col-50">
                   <i class="icon ion-forward" style="margin-right:3vw;"></i>
-                  <span>500 Compartilhado</span>
+                  <span>0 Compartilhado</span>
               </div>
           </div>          
       </div>          
@@ -187,7 +140,7 @@
     <div id="map" data-tap-disabled="true"></div>
     
     <div class="row">
-        <p class="col icon icon-left ion-ios-location font-smaller text-center">  SHIP Trecho 3 21 - Asa Sul, Brasília - DF, 70297-400</p>
+        <p class="col icon icon-left ion-ios-location font-smaller text-center">  {{local.pagina.endereco}}</p>
     </div>
                
     <div class="containerSocial padding-top">
@@ -198,19 +151,26 @@
        </div>
        <br>
        <span></span>
-       <div ng-controller="comentCrl">
-           <coment-pag avatar="{{coment.avatar}}" nome="{{coment.nome}}" comentario="{{coment.comentario}}" data="{{coment.data}}" ng-repeat="coment in coments"></coment-pag>
-       </div>    
+       <div>
+           <div class="row rowSocial" ng-repeat="com in local.comentario">
+               <div class="item item-avatar">
+                   <img ng-src="{{com.foto_perfil}}">
+                   <h4>{{com.nome}}</h4>
+                   <p class="font-small">{{com.comentario}}</p>
+                   <i class="font-smallerx2">{{com.dt_comentario | date: 'd/M/yyyy h:mm'}}</i>
+               </div>
+           </div>
+       </div>
     </div>
      <span></span>
     <div class="row rowMsg">
         <div class="item item-input-inset">
             <label class="item-input-wrapper">
                 <button class="button button-icon ion-happy-outline"></button>
-              <input type="text" placeholder="Digite uma mensagem..">
+              <input type="text" ng-model="$parent.txt_comentario" placeholder="Digite uma mensagem..">
               <button class="button button-icon ion-camera"></button>
             </label>
-            <button class="button button-icon ion-arrow-right-c button-enviar"></button>
+            <button class="button button-icon ion-arrow-right-c button-enviar" ng-click="comentar()"></button>
           </div>
     </div>      
                      

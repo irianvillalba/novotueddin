@@ -73,8 +73,8 @@
 
 /*-----------------------------------Login*/
 .logo{
-    height:28%;
-    margin-top:25%;
+    height:20%;
+    margin-top:15%;
     opacity:0.9;
     background-repeat: no-repeat;
 }
@@ -1811,7 +1811,7 @@ ion-footer-bar.barra-slide-away{
 /*-------------------------------------LOCAIS*/
 
 .cartaolocais{
-    height: 150px;
+    height: 250px;
     width: 100%;
     background-color: transparent;
     border-radius: 13px;
@@ -2189,7 +2189,7 @@ ion-footer-bar.barra-slide-away{
     border:none;
     max-height:25px;
     background:none;
-    padding-top:0;
+    /*padding-top:0;*/
 }.perfilPag .item p{
     white-space: normal;
     margin:0;

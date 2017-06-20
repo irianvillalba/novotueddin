@@ -1,7 +1,19 @@
 
-var app = angular.module('starter', ['ionic', 'firebase', 'ngCordova', 'ionic.contrib.ui.tinderCards', 'ionic-datepicker', 'ionic-timepicker', 'ui.utils.masks', 'ionic-ratings'])
+var app = angular.module('starter', [
+    'ionic',
+    'firebase',
+    'ngCordova',
+    'ionic.contrib.ui.tinderCards',
+    'ionic-datepicker',
+    'ionic-timepicker',
+    'ui.utils.masks',
+    'ionic-ratings',
+    'auth0.auth0',
+    'angular-jwt'
+])
 
-app.run(function($ionicPlatform){
+
+app.run(function($ionicPlatform, authService){
    
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -15,12 +27,20 @@ app.run(function($ionicPlatform){
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    // Use the authManager from angular-jwt to check for
+    // the user's authentication state when the page is
+    // refreshed and maintain authentication
+    authService.checkAuthOnRefresh();
+
+    // Process the auth token if it exists and fetch the profile
+    authService.authenticateAndGetProfile();
   });
 })
 
 
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, angularAuth0Provider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -87,11 +107,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/pontoenc',
     templateUrl: 'templates/pontoenc.html'
   })
+
+  .state('cardenc', {
+      url: '/card/cardenc',
+      templateUrl: 'templates/card/cardPontoEnc.html'
+  })
       
   .state('perfilpag', {
     url: '/perfilpag',
-    templateUrl: 'templates/perfilpag.html',
-      controller: 'perfilPagCtrl'
+    templateUrl: 'templates/perfilpag.html'
   })
 
 
@@ -138,7 +162,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 
-    
-
+    // Initialization for the angular-auth0 library
+    angularAuth0Provider.init({
+        clientID: "u6MkN2NLHmtxO1U1oQHFOEWn7t9csnGY",
+        domain: "irian.auth0.com"
+    });
 
 });

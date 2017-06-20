@@ -1,4 +1,4 @@
-<ion-view view-title="turistico">
+<ion-view view-title="turistico" ng-controller="turisticoCtrl">
     <ion-content class="fontetueddin">
 
 <!--voltar pesquisar-->
@@ -16,99 +16,55 @@
         <br>
 
 <!--CARTAO PONTO DE ENCONTRO-->
-        <div class="row rowcartaoponto">            
-            <div class="col cartaoponto">
-                <div class="divimgback">
-                    <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">   
+<span ng-repeat="t in turistico">
+            <div class="row rowcartaoponto">
+                <div class="col cartaoponto">
+                    <div class="divimgback">
+                        <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">
+                        </div>
                     </div>
-                </div>
                     <div class="bottop">
-                        <button class="button button-icon">
+                        <button class="button button-icon" ng-click="notifica(t.id_turistico, 'id_turistico')">
                             <img src="img/pontoencontro/notificacoes.svg">
                         </button>
-                        <button class="button button-icon">
+                        <button class="button button-icon" ng-click="favorito(t.id_turistico, 'id_turistico')">
                             <img src="img/pontoencontro/favoritos.svg">
                         </button>
                     </div>
                     <div class="botbotTur">
                         <a class="plocalgps">
-                            <img src="img/pontoencontro/pin.svg"> 
-                                <p class="textolocalcimacartao">Bamboa</p>
-                                <p class="textolocalbaixocartao">Setor Hípico, Asa Sul, DF</p>
-                        </a>                      
+                            <img src="img/pontoencontro/pin.svg">
+                            <p class="textolocalcimacartao">{{t.ponto_turistico}}</p>
+                            <p class="textolocalbaixocartao">{{t.endereco}}</p>
+                        </a>
                     </div>
-                <div class="cartaopontobarra">
+                    <div class="cartaopontobarra">
                         <div class="row botsbarrapontoTur padding">
                             <div class="col col-33 colbotbarraponto">
-                                <button class="button button-icon botgosteiponto">
+                                <button class="button button-icon botgosteiponto" ng-click="curtida(t.id_turistico, 'id_turistico')">
                                     <img src="img/pontoencontro/gostei.svg">
-                                    <p>1234</p>
+                                    <p>{{t.curtida}}</p>
                                 </button>
-                            </div>                        
+                            </div>
                             <span></span>
                             <div class="col col-33 colbotbarraponto">
                                 <button class="button button-icon botcompartilharponto">
                                     <img src="img/pontoencontro/compartilhar.svg">
                                 </button>
-                            </div>                        
+                            </div>
                             <span></span>
                             <div class="col col-33 colbotbarraponto">
                                 <button class="button button-icon botgosteiponto">
                                     <img src="img/pontoencontro/comentarios.svg">
-                                    <p>45</p>
-                                </button> 
+                                    <p>{{t.comentario}}</p>
+                                </button>
                             </div>
                         </div>
-                    </div>               
-            </div>
-        </div>
-        <span></span>
-         <div class="row rowcartaoponto">            
-            <div class="col cartaoponto">
-                <div class="divimgback">
-                    <div style="background-image: url(img/teste/1.jpg)" class="cartaopontoimg">   
                     </div>
                 </div>
-                    <div class="bottop">
-                        <button class="button button-icon">
-                            <img src="img/pontoencontro/notificacoes.svg">
-                        </button>
-                        <button class="button button-icon">
-                            <img src="img/pontoencontro/favoritos.svg">
-                        </button>
-                    </div>
-                    <div class="botbotTur">
-                        <a class="plocalgps">
-                            <img src="img/pontoencontro/pin.svg"> 
-                                <p class="textolocalcimacartao">Bamboa</p>
-                                <p class="textolocalbaixocartao">Setor Hípico, Asa Sul, DF</p>
-                        </a>                      
-                    </div>
-                <div class="cartaopontobarra">
-                        <div class="row botsbarrapontoTur padding">
-                            <div class="col col-33 colbotbarraponto">
-                                <button class="button button-icon botgosteiponto">
-                                    <img src="img/pontoencontro/gostei.svg">
-                                    <p>1234</p>
-                                </button>
-                            </div>                        
-                            <span></span>
-                            <div class="col col-33 colbotbarraponto">
-                                <button class="button button-icon botcompartilharponto">
-                                    <img src="img/pontoencontro/compartilhar.svg">
-                                </button>
-                            </div>                        
-                            <span></span>
-                            <div class="col col-33 colbotbarraponto">
-                                <button class="button button-icon botgosteiponto">
-                                    <img src="img/pontoencontro/comentarios.svg">
-                                    <p>45</p>
-                                </button> 
-                            </div>
-                        </div>
-                    </div>            
             </div>
-        </div>    
+
+        </span>
     </ion-content>
     
 <!--Footer barra-->

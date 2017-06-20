@@ -1,7 +1,12 @@
-app.controller('loginCtrl', function($scope, $http, $window, $q, localStorage, carregando, $ionicLoading) {
-  var vm = $scope;
+app.controller('loginCtrl', function($scope, $http, $window, $q, localStorage, carregando, $ionicLoading, authService) {
 
-  ionic.Platform.ready(function() {
+    var vm = $scope;
+
+    vm.loginFacebook = authService.loginWithFacebook;
+    vm.loginInstagram = authService.loginWithInstagram;
+    vm.loginTwitter = authService.loginWithTwitter;
+
+  /*ionic.Platform.ready(function() {
 
     var fbLoginSuccess = function(response) {
 
@@ -83,7 +88,7 @@ app.controller('loginCtrl', function($scope, $http, $window, $q, localStorage, c
       });
     };
   })
-/*
+
   // AUTENTICAÇÃO COM TWITTER
   vm.loginTwitter = function() {
     provider = new firebase.auth.TwitterAuthProvider();

@@ -1,7 +1,10 @@
-app.controller('userCtrl', function($scope, $http, $window, localStorage, carregando, $ionicPopup) {
+app.controller('userCtrl', function($scope, $http, $window, carregando, $ionicPopup) {
   var vm = $scope;
 
-  vm.perfil = localStorage.getObject('perfil');
+  vm.perfil = JSON.parse(localStorage.getItem('perfil'));
+
+  console.log(vm.perfil);
+
   vm.raio_busca = vm.perfil.raio_busca;
   vm.idade_minima = vm.perfil.idade_minima;
   vm.idade_maxima = vm.perfil.idade_maxima;

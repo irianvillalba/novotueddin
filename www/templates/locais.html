@@ -1,4 +1,4 @@
-<ion-view view-title="locais">
+<ion-view view-title="locais" ng-controller="locaisCtrl">
     <ion-content class="fontetueddin">
 
 <!--voltar pesquisar-->
@@ -13,309 +13,56 @@
                 <button class="button button-icon button-small" ui-sref="pesquisar"><img src="img/timeline/icones/buscar.svg"></button>
             </div>            
         </row>
-        <span></span>
+        <span ng-repeat="l in locais">
+            <div class="row rowcartaoponto">
+                <div class="col cartaoponto">
+                    <div class="divimgback" ng-click="abrirPagina(l.id_local)">
+                        <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">
+                        </div>
+                    </div>
+                    <div class="bottop">
+                        <button class="button button-icon" ng-click="notifica(l.id_local, 'id_local')">
+                            <img src="img/pontoencontro/notificacoes.svg">
+                        </button>
+                        <button class="button button-icon" ng-click="favorito(l.id_local, 'id_local')">
+                            <img src="img/pontoencontro/favoritos.svg">
+                        </button>
+                    </div>
+                    <div class="botbotTur">
+                        <a class="plocalgps">
+                            <img src="img/pontoencontro/pin.svg">
+                            <p class="textolocalcimacartao">{{l.local}}</p>
+                            <p class="textolocalbaixocartao">{{l.endereco}}</p>
+                        </a>
+                    </div>
+                    <div class="cartaopontobarra">
+                        <div class="row botsbarrapontoTur padding">
+                            <div class="col col-33 colbotbarraponto">
+                                <button class="button button-icon botgosteiponto" ng-click="curtida(l.id_local, 'id_local')">
+                                    <img src="img/pontoencontro/gostei.svg">
+                                    <p>{{l.curtida}}</p>
+                                </button>
+                            </div>
+                            <span></span>
+                            <div class="col col-33 colbotbarraponto">
+                                <button class="button button-icon botcompartilharponto">
+                                    <img src="img/pontoencontro/compartilhar.svg">
+                                </button>
+                            </div>
+                            <span></span>
+                            <div class="col col-33 colbotbarraponto">
+                                <button class="button button-icon botgosteiponto">
+                                    <img src="img/pontoencontro/comentarios.svg">
+                                    <p>{{l.comentario}}</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!------------------CARDS-->       
-        <div class="row">
-            <div class="col">
-                <div class="row rowcartaopontolocais">            
-                <div class="col cartaolocais">
-                    <div class="divimgback">
-                        <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">   
-                        </div>
-                    </div>                
-                        <div class="bottoplocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/notificacoes.svg">
-                            </button>
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/favoritos.svg">
-                            </button>
-                        </div>
-                        <div class="botbotlocais">
-                            <div class="plocalgpslocais">
-                                <img src="img/pontoencontro/pin.svg"> 
-                                    <p class="textolocalcimacartaolocais">Bamboa</p>
-                                    <p class="textolocalbaixocartaolocais">Setor Hípico, Asa Sul, DF</p>
-                            </div>                      
-                        </div>
-                    <div class="cartaopontobarralocais">
-                        <div class="row botsbarrapontolocais">
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon button-small">
-                                    <img src="img/pontoencontro/gostei.svg">
-                                    <p>1234</p>
-                                </button>
-                            </div>                        
-                            <span></span>
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon botcompartilharlocais button-small">
-                                    <img src="img/pontoencontro/compartilhar.svg">
-                                </button>
-                            </div>                        
-                            <span></span>
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon button-small">
-                                    <img src="img/pontoencontro/comentarios.svg">
-                                    <p>45</p>
-                                </button> 
-                            </div>
-                        </div>
-                    </div>              
-                </div>
-                </div>
-            </div>            
-        <div class="col">
-            <div class="row rowcartaopontolocais">            
-            <div class="col cartaolocais">
-                <div class="divimgback">
-                    <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">   
-                    </div>
-                </div>                
-                    <div class="bottoplocais">
-                        <button class="button button-icon button-small">
-                            <img src="img/pontoencontro/notificacoes.svg">
-                        </button>
-                        <button class="button button-icon button-small">
-                            <img src="img/pontoencontro/favoritos.svg">
-                        </button>
-                    </div>
-                    <div class="botbotlocais">
-                        <div class="plocalgpslocais">
-                            <img src="img/pontoencontro/pin.svg"> 
-                                <p class="textolocalcimacartaolocais">Bamboa</p>
-                                <p class="textolocalbaixocartaolocais">Setor Hípico, Asa Sul, DF</p>
-                        </div>                      
-                    </div>
-                <div class="cartaopontobarralocais">
-                    <div class="row botsbarrapontolocais">
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/gostei.svg">
-                                <p>1234</p>
-                            </button>
-                        </div>                        
-                        <span></span>
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon botcompartilharlocais button-small">
-                                <img src="img/pontoencontro/compartilhar.svg">
-                            </button>
-                        </div>                        
-                        <span></span>
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/comentarios.svg">
-                                <p>45</p>
-                            </button> 
-                        </div>
-                    </div>
-                </div>              
-            </div>
-            </div>
-        </div>
-    </div>
-        
-        
-        <div class="row">
-            <div class="col">
-                <div class="row rowcartaopontolocais">            
-                <div class="col cartaolocais">
-                    <div class="divimgback">
-                        <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">   
-                        </div>
-                    </div>                
-                        <div class="bottoplocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/notificacoes.svg">
-                            </button>
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/favoritos.svg">
-                            </button>
-                        </div>
-                        <div class="botbotlocais">
-                            <div class="plocalgpslocais">
-                                <img src="img/pontoencontro/pin.svg"> 
-                                    <p class="textolocalcimacartaolocais">Bamboa</p>
-                                    <p class="textolocalbaixocartaolocais">Setor Hípico, Asa Sul, DF</p>
-                            </div>                      
-                        </div>
-                    <div class="cartaopontobarralocais">
-                        <div class="row botsbarrapontolocais">
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon button-small">
-                                    <img src="img/pontoencontro/gostei.svg">
-                                    <p>1234</p>
-                                </button>
-                            </div>                        
-                            <span></span>
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon botcompartilharlocais button-small">
-                                    <img src="img/pontoencontro/compartilhar.svg">
-                                </button>
-                            </div>                        
-                            <span></span>
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon button-small">
-                                    <img src="img/pontoencontro/comentarios.svg">
-                                    <p>45</p>
-                                </button> 
-                            </div>
-                        </div>
-                    </div>              
-                </div>
-                </div>
-            </div>            
-        <div class="col">
-            <div class="row rowcartaopontolocais">            
-            <div class="col cartaolocais">
-                <div class="divimgback">
-                    <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">   
-                    </div>
-                </div>                
-                    <div class="bottoplocais">
-                        <button class="button button-icon button-small">
-                            <img src="img/pontoencontro/notificacoes.svg">
-                        </button>
-                        <button class="button button-icon button-small">
-                            <img src="img/pontoencontro/favoritos.svg">
-                        </button>
-                    </div>
-                    <div class="botbotlocais">
-                        <div class="plocalgpslocais">
-                            <img src="img/pontoencontro/pin.svg"> 
-                                <p class="textolocalcimacartaolocais">Bamboa</p>
-                                <p class="textolocalbaixocartaolocais">Setor Hípico, Asa Sul, DF</p>
-                        </div>                      
-                    </div>
-                <div class="cartaopontobarralocais">
-                    <div class="row botsbarrapontolocais">
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/gostei.svg">
-                                <p>1234</p>
-                            </button>
-                        </div>                        
-                        <span></span>
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon botcompartilharlocais button-small">
-                                <img src="img/pontoencontro/compartilhar.svg">
-                            </button>
-                        </div>                        
-                        <span></span>
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/comentarios.svg">
-                                <p>45</p>
-                            </button> 
-                        </div>
-                    </div>
-                </div>              
-            </div>
-            </div>
-        </div>
-    </div>
-        
-        <div class="row">
-            <div class="col">
-                <div class="row rowcartaopontolocais">            
-                <div class="col cartaolocais">
-                    <div class="divimgback">
-                        <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">   
-                        </div>
-                    </div>                
-                        <div class="bottoplocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/notificacoes.svg">
-                            </button>
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/favoritos.svg">
-                            </button>
-                        </div>
-                        <div class="botbotlocais">
-                            <div class="plocalgpslocais">
-                                <img src="img/pontoencontro/pin.svg"> 
-                                    <p class="textolocalcimacartaolocais">Bamboa</p>
-                                    <p class="textolocalbaixocartaolocais">Setor Hípico, Asa Sul, DF</p>
-                            </div>                      
-                        </div>
-                    <div class="cartaopontobarralocais">
-                        <div class="row botsbarrapontolocais">
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon button-small">
-                                    <img src="img/pontoencontro/gostei.svg">
-                                    <p>1234</p>
-                                </button>
-                            </div>                        
-                            <span></span>
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon botcompartilharlocais button-small">
-                                    <img src="img/pontoencontro/compartilhar.svg">
-                                </button>
-                            </div>                        
-                            <span></span>
-                            <div class="col col-33 colbotbarralocais">
-                                <button class="button button-icon button-small">
-                                    <img src="img/pontoencontro/comentarios.svg">
-                                    <p>45</p>
-                                </button> 
-                            </div>
-                        </div>
-                    </div>              
-                </div>
-                </div>
-            </div>            
-        <div class="col">
-            <div class="row rowcartaopontolocais">            
-            <div class="col cartaolocais">
-                <div class="divimgback">
-                    <div style="background-image:url(img/teste/gus2016.jpg)" class="cartaopontoimg">   
-                    </div>
-                </div>                
-                    <div class="bottoplocais">
-                        <button class="button button-icon button-small">
-                            <img src="img/pontoencontro/notificacoes.svg">
-                        </button>
-                        <button class="button button-icon button-small">
-                            <img src="img/pontoencontro/favoritos.svg">
-                        </button>
-                    </div>
-                    <div class="botbotlocais">
-                        <div class="plocalgpslocais">
-                            <img src="img/pontoencontro/pin.svg"> 
-                                <p class="textolocalcimacartaolocais">Bamboa</p>
-                                <p class="textolocalbaixocartaolocais">Setor Hípico, Asa Sul, DF</p>
-                        </div>                      
-                    </div>
-                <div class="cartaopontobarralocais">
-                    <div class="row botsbarrapontolocais">
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/gostei.svg">
-                                <p>1234</p>
-                            </button>
-                        </div>                        
-                        <span></span>
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon botcompartilharlocais button-small">
-                                <img src="img/pontoencontro/compartilhar.svg">
-                            </button>
-                        </div>                        
-                        <span></span>
-                        <div class="col col-33 colbotbarralocais">
-                            <button class="button button-icon button-small">
-                                <img src="img/pontoencontro/comentarios.svg">
-                                <p>45</p>
-                            </button> 
-                        </div>
-                    </div>
-                </div>              
-            </div>
-            </div>
-        </div>
-    </div>
-    
-        
-    
+        </span>
+
 </ion-content>
     
 <!--Footer barra-->

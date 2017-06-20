@@ -1,9 +1,11 @@
-app.controller('cadastroCtrl', function($scope, $http, $window, localStorage, carregando, $ionicPopup) {
+app.controller('cadastroCtrl', function($scope, $http, $window, carregando, $ionicPopup) {
   var vm = $scope;
 
-  vm.perfil  = localStorage.getObject('perfil');
+  vm.perfil = JSON.parse(localStorage.getItem('perfil'));
   vm.nick = vm.perfil.nick;
   vm.sexo = vm.perfil.sexo;
+
+  console.log(vm.perfil);
 
   vm.id = [];
 

@@ -11,57 +11,120 @@ include_once ('abstractModel.php');
 
 class Perfil extends AbstractModel {
 
-  public function criaPerfil($dados, $redesocial) {
-    $nome = explode(' ',$dados->name);
+  public function criaPerfil($dados) {
 
-      if (!isset($dados->gender) || empty($dados->gender) || is_null($dados->gender))
-          $s = "";
-      else
-          $s = $dados->gender;
+      $usuario = explode("|", $dados->user_id);
 
-    $sexo = substr($s, 0, 1);
-    $nick = strtolower($nome[0]) . strtolower($nome[1]);
+      $existe_token = $this->countRows('perfil', "token = '{$usuario[1]}'");
 
-      if (!isset($dados->id) || empty($dados->id) || is_null($dados->id))
-          $id = "";
-      else
-          $id = $dados->id;
+      $cmp = array(
+          'nome',
+          'sobrenome',
+          'nick',
+          'foto_perfil',
+          'token',
+          'email',
+          'situacao',
+          'provedor_login',
+          'sexo',
+          'pref_mulher',
+          'pref_homem',
+          'raio_busca',
+          'idade_minima',
+          'idade_maxima',
+          'mostrar',
+          'notifica_combinacao',
+          'notifica_mensagem',
+          'notifica_curtida',
+          'notifica_evento',
+          'notifica_local',
+          'notifica_ponto',
+          'notifica_turistico',
+          'notifica_charme',
+          'notifica_crush',
+          'conecta_instagram',
+          'conecta_spotify');
 
-    $existe_nick = $this->countRows('perfil', "nick = '$nick'");
-    $existe_token = $this->countRows('perfil', "token = '{$id}'");
+      switch($usuario[0]) {
+          case 'facebook':
 
-    if ($existe_nick > 0) {
-        $nick = $nick . rand(1, 9999);
-    }
+              $existe_nick = $this->countRows('perfil', "nick = '{$dados->nickname}'");
+              if ($existe_nick > 0) {
+                  $nick = $dados->nickname . rand(1, 9999);
+              } else {
+                  $nick = $dados->nickname;
+              }
 
-    $cmp = array('nome', 'pref_mulher', 'pref_homem','raio_busca', 'idade_minima', 'idade_maxima', 'mostrar', 'notifica_combinacao',
-    'notifica_mensagem', 'notifica_curtida', 'notifica_evento', 'notifica_local', 'notifica_ponto', 'notifica_turistico',
-    'notifica_charme', 'notifica_crush','foto_perfil','nick', 'sobrenome', 'conecta_instagram', 'conecta_spotify', 'situacao', 'token', 'email', 'provedor_login', 'sexo');
+                $vlr_social = array(
+                    $dados->given_name,
+                    $dados->family_name,
+                    $nick,
+                    $dados->picture_large,
+                    $usuario[1],
+                    $dados->email,
+                    'ativo',
+                    'facebook',
+                    substr($dados->gender,0,1));
 
-    if (!isset($dados->picture->data->url) || empty($dados->picture->data->url) || is_null($dados->picture->data->url))
-        $foto = "";
-    else
-        $foto = $dados->picture->data->url;
+              break;
+          case 'instagram':
 
+              $existe_nick = $this->countRows('perfil', "nick = '{$dados->screen_name}'");
 
+              if ($existe_nick > 0) {
+                  $nick = $dados->screen_name . rand(1, 9999);
+              } else {
+                  $nick = $dados->screen_name;
+              }
 
-      if (!isset($dados->email) || empty($dados->email) || is_null($dados->email))
-          $email = "";
-      else
-          $email = $dados->email;
+              $nome = explode(" ", $dados->name);
+              $vlr_social = array(
+                  $nome[0],
+                  $nome[1],
+                  $nick,
+                  $dados->picture,
+                  $usuario[1],
+                  null,
+                  'ativo',
+                  'instagram',
+                  null);
 
-    $vlr = array($nome[0], 'n', 'n', 10, 18, 40, 's', 's', 's', 's', 's', 's', 's', 's', 'n', 'n', $foto, $nick,
-    $nome[1], 'n', 'n', 'ativo', $id, $email, $redesocial, $sexo);
+              break;
+          case 'twitter':
 
-    if ($existe_token == 0 ) {
-        $this->insertRow('perfil', $cmp, $vlr);
-        $row = $this->getRow('perfil', "token = {$dados->id}");
-    } else {
-        $row = $this->getRow('perfil', "token = {$dados->id}");
-        $row['existe'] = true;
-    }
+              $existe_nick = $this->countRows('perfil', "nick = '{$dados->screen_name}'");
+              if ($existe_nick > 0) {
+                  $nick = $dados->screen_name . rand(1, 9999);
+              } else {
+                  $nick = $dados->screen_name;
+              }
+              $nome = explode(" ", $dados->name);
+              $vlr_social = array(
+                  $nome[0],
+                  $nome[1],
+                  $nick,
+                  $dados->picture,
+                  $usuario[1],
+                  null,
+                  'ativo',
+                  'twitter',
+                  null);
 
-    echo json_encode($row);
+            break;
+      }
+
+      $vlr_default = array('n', 'n', 10, 18, 60, 's', 's', 's', 's', 's', 's', 's', 's', 'n', 'n', 'n', 'n');
+      $vlr = array_merge($vlr_social, $vlr_default);
+
+      if ($existe_token == 0 ) {
+          $this->insertRow('perfil', $cmp, $vlr);
+          $row = $this->getRow('perfil', "token = {$usuario[1]}");
+      } else {
+          $row = $this->getRow('perfil', "token = {$usuario[1]}");
+          $row['existe'] = true;
+      }
+
+      echo json_encode($row);
   }
 
   public function excluiPerfil($token) {

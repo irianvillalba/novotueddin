@@ -2,6 +2,7 @@
     include_once '../lib/cors.php';
     include_once '../lib/Email.php';
     include_once '../lib/model/Local.php';
+    //error_reporting(0);
 
     $local = new Local();
 
@@ -9,21 +10,13 @@
     $request = json_decode($postdata);
     $dt = date('Y-m-d H:i:s');
 
-    switch ($request->situacao) {
-        case 'novo':
-            $local->criaLocal($request);
-            break;
-        case 'avaliacao':
-            $local->avaliaLocal($request);
-            break;
-        case 'comentario':
-            $local->comentaLocal($request);
-            break;
-        case 'curtir':
-            $local->curtirLocal($request->id_perfil, $request->id_local);
-            break;
-        case 'favorito':
-            $local->favoritarLocal($request->id_perfil, $request->id_local);
-            break;
+    switch($request->tipo) {
+        case 'lista':
+            echo json_encode($local->listaLocal());
+        break;
+        case 'local':
+            echo json_encode($local->getLocal($request->id_local));
+        break;
     }
+
 ?>

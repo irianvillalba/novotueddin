@@ -1,9 +1,48 @@
-app.controller('perfilPagCtrl', function($scope, $ionicPopup, $timeout, localStorage, $http, $window, carregando, $ionicModal) {    
-  
+app.controller('perfilPagCtrl', function($scope, $ionicPopup, $timeout, $http, $window, carregando, $ionicModal, $rootScope, carregando) {
+    vm = $scope;
 
-  $scope.perfil = localStorage.getObject('perfil');
-    
-    
+    vm.perfil = JSON.parse(localStorage.getItem('perfil'));
+
+    regVisualizacao();
+    carregaLocal();
+
+    function regVisualizacao() {
+        var req = {
+            method: 'POST',
+            url: rotas.pagina.visualizacao,
+            data: {
+                "id_perfil":    vm.perfil.id_perfil,
+                "id_tipo":      $rootScope.id_local,
+                "tipo":         'id_local'
+            }
+        }
+
+        $http(req).then(sucesso);
+
+        function sucesso(s) {
+            console.log(s);
+        }
+    }
+
+    function carregaLocal() {
+        carregando.show();
+        var req = {
+            method: 'POST',
+            url: rotas.pagina.local,
+            data: {
+                "tipo":     "local",
+                "id_local": $rootScope.id_local
+            }
+        }
+
+        $http(req).then(sucesso);
+
+        function sucesso(s) {
+            carregando.hide();
+            vm.local = s.data;
+            console.log(vm.local);
+        }
+    }
     
 /*-----------------------------FOTO HORIZONTAIS*/ 
     
@@ -39,34 +78,105 @@ $scope.popupOpcoes = function() {
   $scope.data = {}; 
   var myPopup = $ionicPopup.show({
     template: '<ion-list>                           '+
-               '  <i class="button button-full popupperfilbot" ng-click=""> '+
+               '  <i class="button button-full popupperfilbot"> '+
                '    Editar Página                             '+
                '  </i>                             '+
-               '  <i class="button button-full popupperfilbot" ng-click=""> '+
-               '    Denunciar                             '+
+               '  <i> '+
+               '    <button class="button button-full popupperfilbot" ng-click="denunciar()">Denunciar</button>                             '+
                '  </i>                             '+
-               '  <i class="button button-full  popupperfilbot" ng-click=""> '+
+               '  <i class="button button-full  popupperfilbot"> '+
                '    Enviar Mensagem                          '+
                '  </i>                             '+
-               '  <i class="button button-full  popupperfilbot" ng-click=""> '+
+               '  <i class="button button-full  popupperfilbot" ng-click="notifica('+$rootScope.id_local+', \'id_local\')"> '+
                '    Desligar Notificacoes                 '+
                '  </i>                             '+
                '</ion-list>                               ',
+    scope: vm,
     buttons: [    
       {  
         text: '<i class="icon button-icon ion-ios-close-outline"></i>',
-		type:'popclose',          
+		type:'popclose'
       }
+
     ]
   });
  };
-    
+
+    vm.notifica = function(id_tipo, tipo) {
+        carregando.show();
+        var req = {
+            method: 'POST',
+            url: rotas.pagina.notificacao,
+            data: {
+                "id_perfil":    vm.perfil.id_perfil,
+                "id_tipo":      id_tipo,
+                "tipo":         tipo
+            }
+        }
+
+        $http(req).then(sucesso);
+
+        function sucesso(s) {
+            carregando.hide();
+            var msg = "";
+            if (s.data == 'adicionado')
+                msg = 'Você será notificado das atualizações desse local';
+            else
+                msg = "A notificação foi desligada";
+            $ionicPopup.alert({
+                title: 'Tueddin',
+                template: msg
+            });
+        }
+    }
+
+    vm.comentar = function() {
+        carregando.show();
+        var req = {
+            method: 'POST',
+            url: rotas.pagina.comentario,
+            data: {
+                "acao":         "novo",
+                "tipo":         "id_local",
+                "comentario":   vm.txt_comentario,
+                "id_tipo":      $rootScope.id_local,
+                "id_perfil":    vm.perfil.id_perfil
+            }
+        }
+
+        $http(req).then(sucesso);
+
+        function sucesso(s) {
+            carregando.hide();
+        }
+    }
+
+    vm.curtida = function(id_tipo, tipo) {
+        carregando.show();
+        var req = {
+            method: 'POST',
+            url: rotas.pagina.curtida,
+            data: {
+                "id_perfil":    vm.perfil.id_perfil,
+                "id_tipo":      $rootScope.id_local,
+                "tipo":         'id_local'
+            }
+        }
+
+        $http(req).then(sucesso);
+
+        function sucesso(s) {
+            carregando.hide();
+        }
+    }
+
+    vm.denunciar = function() {
+        console.log("ok");
+    }
 });
 
 
-app.controller('reviewCtrl', function($scope){
-    
-
+app.controller('reviewCtrl', function($scope, carregando, $rootScope, $http){
 
 $scope.ratingsObject = {
         iconOn: 'ion-ios-star',    //Optional
@@ -82,7 +192,23 @@ $scope.ratingsObject = {
       };
   
       $scope.ratingsCallback = function(rating, index) {
-        console.log('Selected rating is : ', rating, ' and the index is : ', index);
+          carregando.show();
+          var req = {
+              method: 'POST',
+              url: rotas.pagina.avaliacao,
+              data: {
+                  "id_perfil":    vm.perfil.id_perfil,
+                  "id_tipo":      $rootScope.id_local,
+                  "tipo":         'id_local',
+                  "avaliacao":    rating
+              }
+          }
+
+          $http(req).then(sucesso);
+
+          function sucesso(s) {
+              carregando.hide();
+          }
       };
     
 });

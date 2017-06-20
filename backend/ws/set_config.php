@@ -2,6 +2,7 @@
     include_once '../lib/cors.php';
     include_once '../lib/Email.php';
     include_once '../lib/model/Perfil.php';
+    error_reporting(0);
 
     $email = new Email();
     $perfil = new Perfil();
@@ -19,7 +20,7 @@
         break;
         //Cria um novo perfil na base de dados de acordo com a rede social escolhida
         case "adiciona":
-            $perfil->criaPerfil($request->perfil, $request->redesocial);
+            $perfil->criaPerfil($request->perfil);
         break;
         //consulta um perfil social
         case "consulta":

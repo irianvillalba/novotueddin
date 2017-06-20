@@ -18,7 +18,7 @@ class Database
         $db_host = "localhost";
         $db_nome = "tueddin";
         $db_usuario = "root";
-        $db_senha = "1234";
+        $db_senha = "";
         $db_driver = "mysql";
 
 
