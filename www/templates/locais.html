@@ -66,16 +66,6 @@
 
         </span>
 
-        <span></span>
-
-<!------------------CARDS-->       
-        <div ng-controller="cardLocaisCtrl" >
-           <div class="row no-padding" ng-repeat="card in cards" ng-if="$index % 2 == 0">
-            <card-locais class="col no-padding" ui-sref="perfilpag" imagem="{{card.imagem}}" titulo="{{card.titulo}}" local="{{card.local}}" ng-repeat="card in cards.slice($index, ($index+2 > cards.length ? cards.length : $index+2))">
-            </card-locais>
-            </div>
-        </div>
-
 </ion-content>
     
 <!--Footer barra-->
