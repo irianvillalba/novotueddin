@@ -16,20 +16,7 @@ app.controller('popupComent', function($scope, $ionicPopup){
   $scope.popupOpcoes = function() {
   $scope.data = {}; 
   var myPopup = $ionicPopup.show({
-    template: '<ion-list>                           '+
-               '  <i class="button button-full popupperfilbot" ng-click=""> '+
-               '    Bloquear                              '+
-               '  </i>                             '+
-               '  <i class="button button-full popupperfilbot" ng-click=""> '+
-               '    Denunciar                             '+
-               '  </i>                             '+
-               '  <i class="button button-full  popupperfilbot" ng-click=""> '+
-               '    Deletar Minhas Mensagens                          '+
-               '  </i>                             '+
-               '  <i class="button button-full  popupperfilbot" ng-click=""> '+
-               '    Ativar Notificacoes                 '+
-               '  </i>                             '+
-               '</ion-list>                               ',
+    templateUrl: 'templates/popup/popupComentarios.html',
     buttons: [    
       {  
         text: '<i class="icon button-icon ion-ios-close-outline"></i>',

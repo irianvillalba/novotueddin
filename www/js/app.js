@@ -118,6 +118,10 @@ app.config(function($stateProvider, $urlRouterProvider, angularAuth0Provider) {
     templateUrl: 'templates/perfilpag.html'
   })
 
+  .state('perfilPagEdita', {
+      url:'/perfilPagEdita',
+      templateUrl: 'templates/perfilPagEdita.html',
+  })
 
   .state('explorar', {
     url: '/explorar',
@@ -127,6 +131,11 @@ app.config(function($stateProvider, $urlRouterProvider, angularAuth0Provider) {
  .state('conversas', {
     url: '/conversas',
     templateUrl: 'templates/conversas.html'
+  })
+
+  .state('novaMensagem', {
+    url: '/novaMensagem',
+    templateUrl: 'templates/novaMensagem.html'
   })
   
   .state('modalPerfil', {

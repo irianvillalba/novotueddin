@@ -48,23 +48,24 @@
         
         <div class="row paddingPerfil" style="background-color:#F6F6F6">
             <div class="col col-25 paddingPerfil botaoImgperfil">
-                <button class="button button-icon button-small ion-android-share-alt" ng-click="redeSocial()">
-                </button>
+                <button class="button button-icon button-small ion-android-share-alt" ng-click="redeSocial()"></button>
             </div>
             <div class="col col-25 paddingPerfil botaoImgperfil botaomid">
-                <button class="button button-icon button-small ion-heart" ng-click="curtida()">
-                </button>
+                <button class="button button-icon button-small ion-heart" ng-click="curtida()"></button>
             </div>
             <div class="col col-25 paddingPerfil botaoImgperfil ">
-                <button class="button button-icon button-small ion-chatbubble" ng-click="comentario()">
-                </button>
+                <button class="button button-icon button-small ion-chatbubble" ng-click="comentario()"></button>
             </div>
             <div class="col col-25 paddingPerfil botaoImgperfil  botaofim">
-                <button class="button button-icon button-small ion-android-person-add" ng-click="amigo()">
-                </button>
+                <button class="button button-icon button-small ion-android-person-add" ng-click="amigo()"></button>
             </div>
         </div>
 <!--Sobre-->
+       
+       <div class="row no-margin row-checkin">
+           <button class="button button-full">Fazer Check-in</button>
+       </div>
+       
         <div class="row" style="border-bottom: 1px solid #939393;">
             <div class="col col-100 no-padding">                
                 <div class="padding">
@@ -91,7 +92,7 @@
                         </div>
                         <div class="col">
                             <div class="w3">
-                                <div id="myBar" class="w3-green" style="width:{{(a.qtd / local.pagina.qtd_avaliacao) * 100}}%"></div>
+                                <div id="myBar" class="w3-green" style="width:{{ (a.qtd / local.pagina.qtd_avaliacao) * 100}}%"></div>
                               </div>
                         </div>
                         <div class="col no-padding col-15 text-right font-small">
@@ -147,10 +148,11 @@
        <div class="col text-center">
                <button class="button button-small" ng-model="butComment" ng-click="butComment.clicked = true; butPubli.clicked = false; butSobre.clicked = false;" ng-class="!butComment.clicked?'button-outline':'button-clicked'">Comentários</button>
                <button class="button button-small" ng-model="butPubli" ng-click="butComment.clicked = false; butPubli.clicked = true; butSobre.clicked = false;" ng-class="!butPubli.clicked?'button-outline-mid':'button-clicked'">Publicações</button>
-               <button class="button button-small" ng-model="butSobre" ng-click="butComment.clicked = false; butPubli.clicked = false; butSobre.clicked = true;" ng-class="!butSobre.clicked?'button-outline-right':'button-clicked'">Sobre</button>
+               <button ng-controller="modalSobreCtrl" class="button button-small" ng-model="butSobre" ng-click="'butComment.clicked = false; butPubli.clicked = false; butSobre.clicked = true;'; showSobre()" ng-class="!butSobre.clicked?'button-outline-right':'button-clicked'">Sobre</button>
        </div>
        <br>
        <span></span>
+
        <div>
            <div class="row rowSocial" ng-repeat="com in local.comentario">
                <div class="item item-avatar">
@@ -172,11 +174,8 @@
             </label>
             <button class="button button-icon ion-arrow-right-c button-enviar" ng-click="comentar()"></button>
           </div>
-    </div>      
-                     
-    </ion-content>  
-    
-<!--Footer barra-->
-    
-    
+    </div>
+
+    </ion-content>
+        <footer-chat></footer-chat>  
 </ion-view>
