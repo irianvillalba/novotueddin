@@ -38,20 +38,7 @@ app.controller('perfilPagCtrl', function($scope, $ionicPopup, $timeout, localSto
 $scope.popupOpcoes = function() {
   $scope.data = {}; 
   var myPopup = $ionicPopup.show({
-    template: '<ion-list>                           '+
-               '  <i class="button button-full popupperfilbot" ng-click=""> '+
-               '    Editar Página                             '+
-               '  </i>                             '+
-               '  <i class="button button-full popupperfilbot" ng-click=""> '+
-               '    Denunciar                             '+
-               '  </i>                             '+
-               '  <i class="button button-full  popupperfilbot" ng-click=""> '+
-               '    Enviar Mensagem                          '+
-               '  </i>                             '+
-               '  <i class="button button-full  popupperfilbot" ng-click=""> '+
-               '    Desligar Notificacoes                 '+
-               '  </i>                             '+
-               '</ion-list>                               ',
+    templateUrl: 'templates/popup/popupPagPerfil.html',
     buttons: [    
       {  
         text: '<i class="icon button-icon ion-ios-close-outline"></i>',
@@ -95,3 +82,50 @@ $scope.coments = [
     {avatar:'img/teste/7.jpg', nome:'Juliana', comentario:'iusto! Quisquam facere aspernatur.', data:'hoje, 19h'}
 ]
 });
+
+app.controller('editaPagCtrl', function($scope){
+    
+    
+  $scope.class = "icon-pequeno-apaga ion-close-circled";
+  $scope.background = "fotoedita-pequena";
+  $scope.classG = "icon-grande-apaga ion-close-circled";
+  $scope.backgroundG = "fotoedita-grande";
+    
+  $scope.changeClass = function(){
+    if ($scope.class === "icon-pequeno-apaga ion-close-circled"){
+      $scope.class = "icon-pequeno-inclui ion-plus-circled";
+      $scope.background = "fotoedita-pequena-vazia";
+    }else{
+      $scope.class = "icon-pequeno-apaga ion-close-circled";
+      $scope.background = "fotoedita-pequena";
+    }
+  };
+    
+  $scope.changeClassG = function(){
+    if ($scope.classG === "icon-grande-apaga ion-close-circled"){
+      $scope.classG = "icon-pequeno-inclui ion-plus-circled";
+      $scope.backgroundG = "fotoedita-grande-vazia";
+    }else{
+      $scope.classG = "icon-grande-apaga ion-close-circled";
+      $scope.backgroundG = "fotoedita-grande";
+    }
+  };
+    
+});
+
+
+app.controller('imgMsgCtrl', function($scope){
+    $scope.images = [
+        {url:'img/teste/gus2016.jpg'}, 
+        {url:'img/teste/1.jpg'}, 
+        {url:'img/teste/2.jpg'}
+    ]
+    
+    $scope.addImg = function(){
+        // completar com os dados do Back.
+    }
+    
+    $scope.removeImg = function(){
+        // completar com os dados do Back.
+    }
+})

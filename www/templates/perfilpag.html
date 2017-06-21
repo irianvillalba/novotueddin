@@ -56,7 +56,7 @@
                 </button>
             </div>
             <div class="col col-25 paddingPerfil botaoImgperfil ">
-                <button class="button button-icon button-small ion-chatbubble">
+                <button class="button button-icon button-small ion-chatbubble" ng-controller="modalComentariosCtrl" ng-click="showComent()">
                 </button>
             </div>
             <div class="col col-25 paddingPerfil botaoImgperfil  botaofim">
@@ -65,6 +65,11 @@
             </div>
         </div>
 <!--Sobre-->
+       
+       <div class="row no-margin row-checkin">
+           <button class="button button-full">Fazer Check-in</button>
+       </div>
+       
         <div class="row" style="border-bottom: 1px solid #939393;">
             <div class="col col-100 no-padding">                
                 <div class="padding">
@@ -194,29 +199,16 @@
        <div class="col text-center">
                <button class="button button-small" ng-model="butComment" ng-click="butComment.clicked = true; butPubli.clicked = false; butSobre.clicked = false;" ng-class="!butComment.clicked?'button-outline':'button-clicked'">Comentários</button>
                <button class="button button-small" ng-model="butPubli" ng-click="butComment.clicked = false; butPubli.clicked = true; butSobre.clicked = false;" ng-class="!butPubli.clicked?'button-outline-mid':'button-clicked'">Publicações</button>
-               <button class="button button-small" ng-model="butSobre" ng-click="butComment.clicked = false; butPubli.clicked = false; butSobre.clicked = true;" ng-class="!butSobre.clicked?'button-outline-right':'button-clicked'">Sobre</button>
+               <button ng-controller="modalSobreCtrl" class="button button-small" ng-model="butSobre" ng-click="'butComment.clicked = false; butPubli.clicked = false; butSobre.clicked = true;'; showSobre()" ng-class="!butSobre.clicked?'button-outline-right':'button-clicked'">Sobre</button>
        </div>
        <br>
        <span></span>
-       <div ng-controller="comentCrl">
+       <div class="row-coments" ng-controller="comentCrl">
            <coment-pag avatar="{{coment.avatar}}" nome="{{coment.nome}}" comentario="{{coment.comentario}}" data="{{coment.data}}" ng-repeat="coment in coments"></coment-pag>
        </div>    
     </div>
-     <span></span>
-    <div class="row rowMsg">
-        <div class="item item-input-inset">
-            <label class="item-input-wrapper" ng-controller="modalComentariosCtrl" ng-click="showComent()">
-                <button class="button button-icon ion-happy-outline"></button>
-              <input type="text" placeholder="Digite uma mensagem..">
-              <button class="button button-icon ion-camera"></button>
-            </label>
-            <button class="button button-icon ion-arrow-right-c button-enviar"></button>
-          </div>
-    </div>      
+        <span></span>    
                      
-    </ion-content>  
-    
-<!--Footer barra-->
-    
-    
+    </ion-content>
+        <footer-chat></footer-chat>  
 </ion-view>

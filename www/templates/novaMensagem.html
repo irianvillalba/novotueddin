@@ -1,0 +1,41 @@
+<ion-view view-title="novamsg">
+    <ion-content class="fontetueddin padding-msg">
+
+<!--voltar pesquisar-->
+        <row class="row">
+            <div class="col">
+                <button class="button button-icon ion-close-round" ui-sref="mainmenu"></button>
+            </div>
+            <div class="col col-40 margin-header">
+                <div class="avatar-header" style="background-image:url('img/teste/1.jpg')"></div>
+                <p class="font-small">Josias dos Santos</p>
+            </div>
+            <div class="col padding">
+                <button class="button button-icon ion-arrow-right-c  button-enviar-header"></button>
+            </div>                       
+        </row>
+        
+        <div class="row-msg">
+            <div class="list width-full">
+               <label class="item item-input caixaescrever textarea-container">
+                <textarea placeholder="Digite suas idéias..." ></textarea>
+                   <div class="textarea-size"></div>
+              </label>
+            </div>
+            <div class="row" ng-controller="imgMsgCtrl">
+                <img-msg ng-repeat="imgs in images" url="{{imgs.url}}"></img-msg>
+            </div>
+        </div>    
+        <div class="row bar-mensagem">
+          <div class="col text-center">
+              <button class="button button-icon ion-happy-outline" style="color:#7647a2;"></button>
+          </div>
+          <div class="col text-center">
+              <button class="button button-icon ion-android-camera" style="color:limegreen;"></button>
+          </div>
+          <div class="col text-center">
+              <button class="button button-icon ion-android-pin" style="color:#1b95e0;"></button>
+          </div>
+        </div>  
+    </ion-content>
+</ion-view>

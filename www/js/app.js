@@ -94,6 +94,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: 'perfilPagCtrl'
   })
 
+  .state('perfilPagEdita', {
+      url:'/perfilPagEdita',
+      templateUrl: 'templates/perfilPagEdita.html',
+  })
 
   .state('explorar', {
     url: '/explorar',
@@ -103,6 +107,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
  .state('conversas', {
     url: '/conversas',
     templateUrl: 'templates/conversas.html'
+  })
+
+  .state('novaMensagem', {
+    url: '/novaMensagem',
+    templateUrl: 'templates/novaMensagem.html'
   })
   
   .state('modalPerfil', {

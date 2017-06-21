@@ -1111,7 +1111,7 @@ ion-footer-bar.barra-slide-away{
 
 .div1Scroll{
     width:auto; 
-    height:auto; 
+    height:75px; 
     float:left;
     padding:0;
 }
@@ -1119,6 +1119,7 @@ ion-footer-bar.barra-slide-away{
 .div2Scroll{
     margin:0; 
     padding:0;
+    height:75px
 }
 
 .div3Scroll{
@@ -2310,7 +2311,47 @@ ion-footer-bar.barra-slide-away{
     
 }
 
-/*--------------------------------------PERFIL DE PAGINAS--------*/
+/*------------------------------------------SOBRE PERFIL PAG-----*/
+
+.texto-sobre{
+    color:#330033!important;
+    line-height:20px;
+}
+
+.titulo-sobre{
+    width:80%
+}
+.container-sobre{
+    padding: 10% 20% 100px;
+}
+
+.row-evento{
+    border:1px solid #330033;
+    border-radius:25px;
+    margin: 0px 10px;
+    width:95% !important;
+    padding: 3% 20% !important;
+}.row-evento .icon{
+    margin-right:10%;
+}.row-sobre p{
+    margin-left:10%;
+    line-height:15px;
+}
+
+.icon-grande::before{
+    font-size:1.5em;
+}
+
+.icon-medio::before{
+    font-size:1.3em;
+    min-width:16px;
+}
+.row-sobre{
+    margin:5px 0;
+}
+
+
+/*--------------------------------------PERFIL DE PAGINAS----*/
 
 .perfilPag .item{
     border:none;
@@ -2327,12 +2368,28 @@ ion-footer-bar.barra-slide-away{
     margin:0 0 3 0;
 }
 
+.row-checkin{
+    padding:5% 18% 0!important;
+}.row-checkin .button{
+    padding: 2% 5%;
+    font-size:1.5em;
+    font-weight: 400;
+    color:#FFF;
+    background:linear-gradient(to right, #551A8B, #ff748c);
+    border-radius:10px;
+    line-height: 10px;
+}
+
 .perfilPag .voltarPerfil{
     margin-right:72%;
 }
 
 .perfilPag .opcoesPerfil{
     padding-left:0;
+}
+
+.row-coments{
+    padding-bottom:50px;
 }
 
 .perfilPag .nomePerfil{
@@ -2424,6 +2481,139 @@ ion-footer-bar.barra-slide-away{
     min-width:50px !important;
     margin-left:3px!important;
 }
+
+/*-----------------------------NOVA MENSAGEM*/
+
+.padding-msg{
+    padding: 10px 20px;
+}
+
+.margin-header{
+    margin: 3% 12% 0 16%; 
+}.margin-header p{
+    line-height:15px;
+    margin:3px 0 0 0;
+}
+
+.avatar-header{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+    padding: 0;
+    margin-right:3%;
+    float: left;
+}
+.button-enviar-header{
+    background: gray;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+}.button-enviar-header::before{
+    color:#fff;
+}
+
+.row-msg{
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    height: auto;
+    padding: 0 10%;
+    box-shadow: 0px 1px 1px #888888;
+}.row-msg .caixaescrever{
+    height: 40%;
+}
+
+.img-adiciona{
+    max-height:10%;
+    max-width:100%;
+    margin:3px
+}.img-adiciona i{
+    float:right;
+    bottom:6px;
+    right:6px;
+    position:relative;
+    color:red;
+}.img-adiciona img{
+    max-height: 55px;
+    max-width:100%;
+}
+
+.bar-mensagem{
+    background:none;
+    padding:0 20%
+}.bar-mensagem button::before{
+    font-size:1.5em;
+}
+
+/*------------------------------PERFIL PAGINA EDITAR*/
+
+.fotoedita-grande{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 30%;
+    border-radius:5px;
+}.fotoedita-grande-vazia{
+    background-image:none !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 30%;
+    border-radius:5px;
+}.botao-edita .icon-grande-apaga{
+    float: right;
+    position: relative;
+    bottom: 4px;
+    height: 0px;
+    z-index: 5;
+    left: 3px;
+    font-size: 1.3em;
+    color:red;
+}.botao-edita .icon-grande-inclui{
+    float: right;
+    position: relative;
+    bottom: 4px;
+    height: 0px;
+    z-index: 5;
+    left: 3px;
+    font-size: 1.3em;
+    color:limegreen;
+}.botao-edita .icon-pequeno-apaga{
+    float: right;
+    position: relative;
+    bottom:1px;
+    height: 0px;
+    z-index: 5;
+    font-size: 1em;
+    color:red;
+}.botao-edita .icon-pequeno-inclui{
+    float: right;
+    position: relative;
+    bottom:1px;
+    height: 0px;
+    z-index: 5;
+    font-size: 1em;
+    color:limegreen;
+}
+
+.fotoedita-pequena{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 10%;
+    border-radius:5px;
+}.fotoedita-pequena-vazia{
+    background-image:none !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 10%;
+    border-radius:5px;
+}
+
 /*-------------------------------------FONTES*/
 @font-face {
   font-family: "Tueddin";

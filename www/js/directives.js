@@ -120,3 +120,30 @@ app.directive('respostaCard', [function(){
     ddo.templateUrl = '/templates/card/cardChatResposta.html';
     return ddo;
 }]);
+
+app.directive('footerTueddin', [function(){
+    var ddo= {};
+    ddo.restrict = 'AE';
+    ddo.transclude = true;
+    ddo.scope = {
+        
+    }
+    
+    ddo.templateUrl = '/templates/card/footerTueddin.html';
+    
+    return ddo;
+}]);
+
+app.directive('imgMsg', [function(){
+    var ddo= {};
+    ddo.restrict = 'AE';
+    ddo.transclude = true;
+    ddo.scope = {
+        url :'@url',
+    }
+    
+    ddo.templateUrl = '/templates/card/imgMensagem.html';
+    
+    return ddo;
+}]);
+

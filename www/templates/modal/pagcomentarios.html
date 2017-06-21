@@ -1,5 +1,5 @@
 <ion-modal-view view-title="Comentários" class="modalComent">
-    <ion-content class="bgwhite modalComent padding-modal">
+    <ion-content class="bgwhite modalComent">
         <ion-header-bar>
             <button class="button button-icon ion-close botaoModal" ng-click="coment_modal.hide()">
             </button>
@@ -7,7 +7,8 @@
         </ion-header-bar>
         <ion-content ng-controller="comentConteudo">
         
-            <comentario-card ng-repeat="card in conteudo" nome="{{card.nome}}" avatar="{{card.avatar}}" mensagem="{{card.mensagem}}" hora="{{card.hora}}" >         <resposta-card ng-repeat="card in resposta" nome="{{card.nome}}" avatar="{{card.avatar}}" resposta="{{card.resposta}}" hora="{{card.hora}}"></resposta-card> 
+            <comentario-card ng-repeat="card in conteudo" nome="{{card.nome}}" avatar="{{card.avatar}}" mensagem="{{card.mensagem}}" hora="{{card.hora}}" >         
+                <resposta-card ng-repeat="card in resposta" nome="{{card.nome}}" avatar="{{card.avatar}}" resposta="{{card.resposta}}" hora="{{card.hora}}"></resposta-card> 
             </comentario-card>
                 
         
