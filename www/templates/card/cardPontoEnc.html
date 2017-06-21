@@ -1,7 +1,7 @@
 <div class="row rowcartaoponto">
-    <div class="col cartaoponto" >
-        <div class="divimgback" ng-click="go('/perfilpag')">
-            <div ng-style="{'background-image':'url('+imagem+')'}" class="cartaopontoimg">
+    <div class="col cartaoponto">
+        <div class="divimgback">
+            <div ui-sref="perfilpag" ng-style="{'background-image':'url('+imagem+')'}" class="cartaopontoimg">
             </div>
         </div>
         <div class="logotipo1">
@@ -9,11 +9,11 @@
         </div>
         <div class="bottop">
             <button class="button button-icon">
-                            <img src="img/pontoencontro/notificacoes.svg">
-                        </button>
+                <img src="img/pontoencontro/notificacoes.svg">
+            </button>
             <button class="button button-icon">
-                            <img src="img/pontoencontro/favoritos.svg">
-                        </button>
+                <img src="img/pontoencontro/favoritos.svg">
+            </button>
         </div>
         <div class="botbot">
             <a class="plocalgps">
@@ -26,22 +26,22 @@
             <div class="row botsbarraponto padding">
                 <div class="col col-33 colbotbarraponto">
                     <button class="button button-icon botgosteiponto">
-                                    <img src="img/pontoencontro/gostei.svg">
-                                    <p>1234</p>
-                                </button>
+                        <img src="img/pontoencontro/gostei.svg">
+                        <p>1234</p>
+                    </button>
                 </div>
                 <span></span>
                 <div class="col col-33 colbotbarraponto">
                     <button class="button button-icon botcompartilharponto">
-                                    <img src="img/pontoencontro/compartilhar.svg">
-                                </button>
+                        <img src="img/pontoencontro/compartilhar.svg">
+                    </button>
                 </div>
                 <span></span>
                 <div class="col col-33 colbotbarraponto">
-                    <button class="button button-icon botgosteiponto">
-                                    <img src="img/pontoencontro/comentarios.svg">
-                                    <p>45</p>
-                                </button>
+                    <button ng-click="showComent()" ng-controller="modalComentariosCtrl"  class="button button-icon botgosteiponto">
+                        <img src="img/pontoencontro/comentarios.svg">
+                        <p>45</p>
+                    </button>
                 </div>
             </div>
         </div>

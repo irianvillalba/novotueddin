@@ -34,8 +34,8 @@ app.directive('myTouchend', [function() {
   };
 }]);
 
-
-app.directive('tueddinCard', [function(){
+//CARD PONTO DE ENCONTRO
+app.directive('cardPontoenc', [function(){
     var ddo={};
     ddo.restrict = "AE";
     ddo.transclude = true;
@@ -49,6 +49,34 @@ app.directive('tueddinCard', [function(){
     return ddo;
 }]);
 
+//CARD LOCAIS
+app.directive('cardLocais', [function(){
+    var ddo={};
+    ddo.restrict = 'AE';
+    ddo.transclude = true;
+    ddo.scope={
+        titulo: '@titulo',
+        imagem: '@imagem',
+        local: '@local',
+    }
+    ddo.templateUrl='/templates/card/cardLocais.html';
+    return ddo;
+}]);
+
+app.directive('cardTur', [function(){
+    var ddo={};
+    ddo.restrict = 'AE';
+    ddo.transclude = true;
+    ddo.scope={
+        titulo: '@titulo',
+        imagem: '@imagem',
+        local: '@local',
+    }
+    ddo.templateUrl='/templates/card/cardTuristico.html';
+    return ddo;
+}]);
+
+
 app.directive('comentPag',[function(){
     var ddo={};
     ddo.restrict = "AE";
@@ -60,5 +88,35 @@ app.directive('comentPag',[function(){
         data:'@data'
     }
     ddo.templateUrl = '/templates/card/cardComentPag.html';
+    return ddo;
+}]);
+
+app.directive('comentarioCard', [function(){
+    var ddo = {};
+    ddo.restrict = 'AE';
+    ddo.transclude = true;
+    ddo.scope = {
+        avatar: '@avatar',
+        nome: '@nome',
+        mensagem: '@mensagem',
+        hora: '@hora'
+    }
+    
+    ddo.templateUrl = '/templates/card/cardChatComent.html';
+    return ddo;
+}]);
+
+app.directive('respostaCard', [function(){
+    var ddo = {};
+    ddo.restrict = 'AE';
+    ddo.transclude = true;
+    ddo.scope = {
+        avatar: '@avatar',
+        nome: '@nome',
+        resposta: '@resposta',
+        hora: '@hora'
+    }
+    
+    ddo.templateUrl = '/templates/card/cardChatResposta.html';
     return ddo;
 }]);

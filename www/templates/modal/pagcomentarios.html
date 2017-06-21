@@ -1,0 +1,36 @@
+<ion-modal-view view-title="Comentários" class="modalComent">
+    <ion-content class="bgwhite modalComent padding-modal">
+        <ion-header-bar>
+            <button class="button button-icon ion-close botaoModal" ng-click="coment_modal.hide()">
+            </button>
+            <button class="button button-icon ion-ios-more-outline botaoModal botaoRight" ng-controller="popupComent" ng-click="popupOpcoes()"></button>
+        </ion-header-bar>
+        <ion-content ng-controller="comentConteudo">
+        
+            <comentario-card ng-repeat="card in conteudo" nome="{{card.nome}}" avatar="{{card.avatar}}" mensagem="{{card.mensagem}}" hora="{{card.hora}}" >         <resposta-card ng-repeat="card in resposta" nome="{{card.nome}}" avatar="{{card.avatar}}" resposta="{{card.resposta}}" hora="{{card.hora}}"></resposta-card> 
+            </comentario-card>
+                
+        
+        </ion-content>
+    </ion-content>  
+    <div class="bar bar-footer rowMsg no-padding">
+           <div class="rowBot">
+               <button class="button button-icon ion-location no-padding buttonTop"></button>
+               <button class="button button-icon ion-share no-padding buttonTop"></button>
+               <button class="button button-icon ion-heart no-padding buttonTop"></button>
+               <button class="button button-icon ion-email no-padding buttonTop"></button>
+           </div>
+           <br>
+            <div class="row">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <button class="no-padding button button-icon ion-happy-outline"></button>
+                      <input type="text" style="width:80%;" placeholder="Digite uma mensagem..">
+                      <button class=" no-padding button button-icon ion-camera"></button>
+                    </label>
+                    <button class="button button-icon ion-arrow-right-c button-enviar"></button>
+                  </div>
+            </div>
+        </div> 
+               
+</ion-modal-view>

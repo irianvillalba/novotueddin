@@ -23,6 +23,8 @@
               <label class="item item-input">
                 <input type="text" ng-model="$parent.paginas.nome" placeholder="Dê um nome para sua página.">
               </label>
+              
+      <!--CATEGORIA-->        
               <label class="item item-input item-select">
                    <div class="input-label" style="color: #b3b3b3;font-size:4vw;">
                       Categoria:
@@ -31,6 +33,33 @@
                       <option value="local">Locais</option>
                       <option value="ponto">Ponto de Encontro</option>
                       <option value="turistico">Ponto Turístico</option>
+                    </select>                
+              </label> 
+                 
+       <!--ESTILO-->           
+              <label class="item item-input item-select">
+                   <div class="input-label" style="color: #b3b3b3;font-size:4vw;">
+                   Estilo:
+                    </div>
+                    <select ng-selected="false"  ng-model="paginas.categoria" style="color: #b3b3b3;font-size:4vw;">
+                      <option>Restaurante</option>
+                      <option>Boate/Balada</option>
+                      <option>Bar/Boteco</option>
+                      <option>Pop</option>
+                      <option>Jazz</option>
+                      <option>Rock</option>
+                      <option>Automotivo</option>
+                      <option>Shows</option>
+                      <option>Volta ao Tempo</option>
+                      <option>Hip Hop</option>
+                      <option>Punk</option>
+                      <option>Churrasco</option>
+                      <option>Sertanejo</option>
+                      <option>Blues</option>
+                      <option>Reggae</option>
+                      <option>Eletrônico</option>
+                      <option>Gospel</option>
+                      <option>Clássica</option>
                     </select>                
               </label>
               <label class="item item-input">

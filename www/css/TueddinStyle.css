@@ -15,6 +15,16 @@
     color:#F6F6F6;
 }
 
+.bgwhite{
+    background-color:#fafafa;
+}
+
+.width-full{
+    width:100%;
+}
+.margin-left{
+    margin-left:0.4em;
+}
 .fontetueddin{
     font-family:"Tueddin", "HelveticaNeue-Medium";
 }
@@ -29,6 +39,10 @@
 
 .text-justify{
     text-align:justify!important;
+}
+
+.botaoRight{
+    text-align:right !important;
 }
 
 .text-left{
@@ -47,6 +61,20 @@
     margin:0!important;
 }
 
+.padding-modal{
+    padding: 10 20 30vw;
+}
+
+.padding-left-only{
+    padding: 0 0 0 5;
+}
+.padding-right-only{
+    padding: 0 15 0 0;
+}
+
+.no-padding-top{
+    padding-top:0 !important;
+}
 .font-small{
     font-size: 0.9em !important;
 }
@@ -56,6 +84,8 @@
     font-size: 0.6em !important;
 }.font-smallerx3{
     font-size: 0.5em !important;
+}.font-smallerx4{
+    font-size: 0.3em !important;
 }
 
 /*------------------------------------GOOGLE MAPS*/
@@ -1285,6 +1315,104 @@ ion-footer-bar.barra-slide-away{
         color:black;
     }
 
+/*--------------------------------------COMENTÁRIOS MODAL*/
+
+.botaoModal{
+    color:#a8a8a8 !important;
+}
+
+.modalComent ion-header-bar{
+    background: #fafafa  !important;
+}
+
+.avatarChat{
+    border-radius:50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:40px;
+    min-width:40px;
+    width:40px
+}
+
+.avatarChat-small{
+    border-radius:50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:10px;
+    min-width:10px;
+    height: 30px;
+    width:30px;
+}
+
+.bolhaChat{
+    background-color: #dbdbdb;
+    border-radius: 5px;
+    min-height:50px;
+}.bolhaChat p{
+    line-height:1.2em;
+}
+
+.bolhaChat-small{
+    background-color: #dbdbdb;
+    border-radius: 5px;
+    min-height:20px;
+}.bolhaChat-small p{
+    line-height:1em;
+}
+
+.modalComent .chatResposta{
+    padding-left:4em;
+}
+
+.modalComent .rowMsg{
+   background: transparent;
+   padding-left:0;
+   height:7em; 
+   display: flex;
+   flex-direction: column;
+}.modalComent .rowMsg .item{
+   max-height: 60px;
+   width:100%;
+   z-index:5;
+   padding: 0 5px 0 12px;
+   border:none;
+   background:transparent;
+}
+.modalComent .rowMsg .buttonTop{
+    width:23% !important;
+}.modalComent .rowMsg .buttonTop::before{
+    font-size: 1.3em;
+}.modalComent .rowMsg .button::before{
+    font-size: 1.3em;
+}
+.modalComent .rowMsg .rowBot{
+    width:100%;
+    padding:0 30px;
+    height:20px;
+}
+
+.modalComent .botaoRight::before{
+    font-size:2.5em !important;
+}
+.modalComent .button-enviar{
+    border-radius:50%;
+    background: gray;
+    color:#fff;
+    min-width:40px !important;
+    margin-left:3px!important;
+}
+
+.modalComent .button-small{
+    min-height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+    margin-left: 23vw;
+}
+
+
+
 /*-------------------------------------MATCH*/
 
 .botaovisual{
@@ -1855,15 +1983,18 @@ ion-footer-bar.barra-slide-away{
 .botbotlocais{
     border-radius:50px;
     background-image:url('../img/pontoencontro/bg_icones@3x.png');
-    width:60%;
+    width:8em;
     float:left;
     background-repeat: no-repeat;
     background-size: cover;
-    bottom: 49px;
+    bottom: 74px;
     position: relative;
     z-index: 5;
     background-position: center center;
     height: 15%;
+    color: white;
+    text-align:left;
+    padding: 5 0 0 2;
 }
 
 .botbotlocais img{
@@ -1872,11 +2003,7 @@ ion-footer-bar.barra-slide-away{
     margin-right:3px;
 }
 
-.plocalgpslocais{
-    color: white;
-    text-align: -webkit-left;
-    margin:5px 0 0 2px;
-}
+
 
 .botcompartilharlocais{
     margin-left:0%;
@@ -1902,7 +2029,7 @@ ion-footer-bar.barra-slide-away{
     width: 100%;
     text-align: left;
     padding:0;
-    top:-21px;
+    bottom:3.1em;
 }
 
 .botsbarrapontolocais img{
@@ -2194,9 +2321,10 @@ ion-footer-bar.barra-slide-away{
     white-space: normal;
     margin:0;
     line-height: 15px;
+    min-height:2.5em;
 }
 .perfilPag .item h4{
-    margin:0;
+    margin:0 0 3 0;
 }
 
 .perfilPag .voltarPerfil{
@@ -2287,6 +2415,7 @@ ion-footer-bar.barra-slide-away{
    max-height: 60px;
    width:100%;
    z-index:5;
+   padding: 0 5px 0 12px;
 }
 .perfilPag .button-enviar{
     border-radius:50%;

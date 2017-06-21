@@ -1,0 +1,23 @@
+<div>
+   <div class="row padding-left-only">
+       <p class="no-margin font-smaller padding-left">{{nome}}</p>
+   </div>   
+    <div class="row">
+        <div class="col col-15">        
+            <div class="avatarChat" ng-style="{'background-image':'url('+avatar+')'}">
+            </div>
+        </div>
+        <div class="col col-80 no-padding margin-left">
+            <div class="bolhaChat" ng-click="comentClick.clicked=!comentClick.clicked" ng-model="comentClick">
+                <p class="font-small padding no-margin">{{mensagem}}</p>
+            </div>
+            <p class="font-smaller no-margin" style="color:#a8a8a8">{{hora}}
+                <a class="button button-clear button-small" style="color:#99cccc">Responder</a>
+            </p>
+            
+        </div>  
+    </div>              
+</div>
+<ng-transclude ng-show="comentClick.clicked">
+    
+</ng-transclude>
